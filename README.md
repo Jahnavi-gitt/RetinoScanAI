@@ -10,7 +10,7 @@
 
 ---
 
-## 🌟 Key Highlights & Scientific Innovations
+##  Key Highlights & Scientific Innovations
 
 1. **Spatial Visual–Radiomic Cross-Attention**:
    - Decomposes retinal fundus images into an anatomically localized $3 \times 3$ grid (9 regions).
@@ -29,7 +29,7 @@
 
 ---
 
-## 📊 End-to-End Quantitative Results on Held-Out Test Set (N = 1,251)
+##  End-to-End Quantitative Results on Held-Out Test Set (N = 1,251)
 
 | Architecture / Model Variant | Test QWK | Top-1 Accuracy | Test Macro-F1 | MAE (Grades) | Adjacent Errors ($|\Delta|=1$) | Catastrophic Errors ($|\Delta|\ge 2$) | Parameters |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
@@ -44,7 +44,7 @@
 
 ---
 
-## 📁 Repository Directory Structure
+##  Repository Directory Structure
 
 ```
 DL_proj/
@@ -82,7 +82,7 @@ DL_proj/
 
 ---
 
-## 🚀 Quickstart & Reproduction Guide
+##  Quickstart & Reproduction Guide
 
 ### 1. Environment Setup
 ```bash
@@ -116,7 +116,7 @@ Open your browser and navigate to **`http://localhost:8080`**.
 
 ---
 
-## 🔬 Scientific Methodology
+##  Scientific Methodology
 
 ### Spatial Cross-Attention Layer
 Visual tokens query the 9 localized radiomic tokens:
@@ -129,7 +129,7 @@ where $b_0 < b_1 < b_2 < b_3$ are strictly monotonic task bias parameters.
 
 ---
 
-## 🏥 Clinical Actionability Matrix
+##  Clinical Actionability Matrix
 
 | Grade | Disease Stage | Recommended Follow-up | Action Protocol | ICD-10 Code |
 | :---: | :--- | :--- | :--- | :---: |
@@ -141,7 +141,7 @@ where $b_0 < b_1 < b_2 < b_3$ are strictly monotonic task bias parameters.
 
 ---
 
-## 📜 Key References
+##  Key References
 1. **DDR Dataset**: Li et al., *"Diagnostic and meta-analysis of deep learning algorithms for diabetic retinopathy screening"*, Nature Communications.
 2. **Swin Transformer**: Liu et al., *"Swin Transformer: Hierarchical Vision Transformer using Shifted Windows"*, ICCV 2021.
 3. **CORAL**: Cao, Mirjalili, Raschka, *"Rank-consistent Ordinal Regression for Neural Networks"*, Pattern Recognition Letters 2020.
