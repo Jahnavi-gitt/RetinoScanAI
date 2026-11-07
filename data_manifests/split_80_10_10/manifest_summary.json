@@ -1,0 +1,45 @@
+{
+  "total_images": 12522,
+  "total_groups": 12324,
+  "train": {
+    "count": 10024,
+    "percentage": 80.05,
+    "per_grade": {
+      "0": 5012,
+      "1": 498,
+      "2": 3594,
+      "3": 187,
+      "4": 733
+    }
+  },
+  "val": {
+    "count": 1247,
+    "percentage": 9.96,
+    "per_grade": {
+      "0": 626,
+      "1": 66,
+      "2": 439,
+      "3": 28,
+      "4": 88
+    }
+  },
+  "test": {
+    "count": 1251,
+    "percentage": 9.99,
+    "per_grade": {
+      "0": 628,
+      "1": 66,
+      "2": 444,
+      "3": 21,
+      "4": 92
+    }
+  },
+  "overlap_checks": {
+    "train_val_group_overlap": 0,
+    "train_test_group_overlap": 0,
+    "val_test_group_overlap": 0,
+    "train_val_image_overlap": 0,
+    "train_test_image_overlap": 0,
+    "val_test_image_overlap": 0
+  }
+}
