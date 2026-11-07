@@ -1,0 +1,6 @@
+grade,grade_name,image_id,peak_attended_zone_idx,peak_attended_zone_name,peak_zone_attention_weight,macula_zone4_weight,sup_arcade_zone1_weight,inf_arcade_zone7_weight
+0,No DR,007-0046-000.jpg,3,R3: Nasal / Disc,0.4411,0.0355,0.0249,0.0084
+1,Mild NPDR,007-1791-100.jpg,0,R0: Superotemporal,0.2764,0.0468,0.1609,0.2146
+2,Moderate NPDR,007-1840-100.jpg,5,R5: Temporal Periphery,0.357,0.0037,0.1151,0.0015
+3,Severe NPDR,007-4564-200.jpg,3,R3: Nasal / Disc,0.4305,0.0261,0.0168,0.0508
+4,Proliferative DR (PDR),007-3489-200.jpg,7,R7: Inf. Arcade,0.3226,0.073,0.051,0.3226

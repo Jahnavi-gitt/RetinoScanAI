@@ -1,0 +1,39 @@
+explainability:
+  module: "Module 13: Explainability and Interpretability"
+  description: "Comprehensive multimodal interpretability suite combining Grad-CAM visual heatmaps, 49x9 spatial cross-attention maps, and 32 IBSI radiomic feature importance rankings."
+  target_swin_model: "outputs/Module_03_Baseline_Swin_Tiny/best_model.pth"
+  target_fusion_model: "outputs/Module_07_Visual_Radiomic_Cross_Attention_Fusion/best_model.pth"
+  target_integrated_model: "outputs/Module_10_Integrated_Proposed_Model/best_model.pth"
+  test_radiomics: "outputs/Module_06_Spatially_Localized_Radiomics/radiomic_features_test.npz"
+  train_radiomics: "outputs/Module_06_Spatially_Localized_Radiomics/radiomic_features_train.npz"
+  feature_dictionary: "outputs/Module_06_Spatially_Localized_Radiomics/feature_dictionary.csv"
+  img_size: 224
+  device: "mps"
+
+gradcam:
+  target_layer: "features[-1]"
+  colormap: "jet"
+  alpha_overlay: 0.5
+
+cross_attention:
+  num_visual_tokens: 49
+  num_radiomic_tokens: 9
+  grid_shape: [3, 3]
+  anatomical_zones:
+    0: "Zone 0: Superotemporal Peripheral"
+    1: "Zone 1: Superior Vascular Arcade"
+    2: "Zone 2: Superonasal Peripheral"
+    3: "Zone 3: Nasal Periphery / Optic Disc"
+    4: "Zone 4: Central Macula / Fovea"
+    5: "Zone 5: Temporal Periphery"
+    6: "Zone 6: Inferotemporal Peripheral"
+    7: "Zone 7: Inferior Vascular Arcade"
+    8: "Zone 8: Inferonasal Peripheral"
+
+feature_importance:
+  top_n_features: 15
+  categories:
+    - "First-Order"
+    - "GLCM"
+    - "LBP"
+    - "Morphology"

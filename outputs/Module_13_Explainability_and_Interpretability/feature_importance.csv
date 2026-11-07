@@ -1,0 +1,289 @@
+feature_index,column_name,region_index,region_name,patch_feature,category,clinical_description,importance
+238,R21_Inferior_Arcade__glcm_correlation,7,R21_Inferior_Arcade,glcm_correlation,GLCM,Linear dependency of gray levels between neighboring pixels,0.03381650392517169
+4,R00_Superior_Temporal__first_order_p10,0,R00_Superior_Temporal,first_order_p10,First-Order,10th percentile intensity value (background and hemorrhage floor),0.026318224135008145
+252,R21_Inferior_Arcade__morph_canny_edge_density,7,R21_Inferior_Arcade,morph_canny_edge_density,Morphology,Fraction of pixels identified as sharp anatomical or lesion edges,0.02619211571330011
+269,R22_Inferior_Nasal__glcm_energy,8,R22_Inferior_Nasal,glcm_energy,GLCM,Uniformity of GLCM matrix elements (texture regularity),0.025881803192438615
+205,R20_Inferior_Temporal__glcm_energy,6,R20_Inferior_Temporal,glcm_energy,GLCM,Uniformity of GLCM matrix elements (texture regularity),0.024189501376544218
+235,R21_Inferior_Arcade__glcm_dissimilarity,7,R21_Inferior_Arcade,glcm_dissimilarity,GLCM,Mean difference in gray levels between neighboring pixel pairs,0.02349471371097593
+260,R22_Inferior_Nasal__first_order_p10,8,R22_Inferior_Nasal,first_order_p10,First-Order,10th percentile intensity value (background and hemorrhage floor),0.021636602521741315
+207,R20_Inferior_Temporal__glcm_asm,6,R20_Inferior_Temporal,glcm_asm,GLCM,Angular Second Moment measuring orderliness of texture,0.018899084765930118
+68,R02_Superior_Nasal__first_order_p10,2,R02_Superior_Nasal,first_order_p10,First-Order,10th percentile intensity value (background and hemorrhage floor),0.018426432916767287
+236,R21_Inferior_Arcade__glcm_homogeneity,7,R21_Inferior_Arcade,glcm_homogeneity,GLCM,Inverse difference moment reflecting local structural uniformity,0.017694527691072038
+196,R20_Inferior_Temporal__first_order_p10,6,R20_Inferior_Temporal,first_order_p10,First-Order,10th percentile intensity value (background and hemorrhage floor),0.017426093955643606
+47,R01_Superior_Arcade__glcm_asm,1,R01_Superior_Arcade,glcm_asm,GLCM,Angular Second Moment measuring orderliness of texture,0.016184781777143612
+271,R22_Inferior_Nasal__glcm_asm,8,R22_Inferior_Nasal,glcm_asm,GLCM,Angular Second Moment measuring orderliness of texture,0.01562351435988047
+44,R01_Superior_Arcade__glcm_homogeneity,1,R01_Superior_Arcade,glcm_homogeneity,GLCM,Inverse difference moment reflecting local structural uniformity,0.015409392260774167
+250,R21_Inferior_Arcade__morph_gradient_mean,7,R21_Inferior_Arcade,morph_gradient_mean,Morphology,Average Sobel gradient magnitude reflecting microvascular boundary sharpness,0.015101387310553747
+60,R01_Superior_Arcade__morph_canny_edge_density,1,R01_Superior_Arcade,morph_canny_edge_density,Morphology,Fraction of pixels identified as sharp anatomical or lesion edges,0.013034917891429777
+13,R00_Superior_Temporal__glcm_energy,0,R00_Superior_Temporal,glcm_energy,GLCM,Uniformity of GLCM matrix elements (texture regularity),0.012412038000440884
+46,R01_Superior_Arcade__glcm_correlation,1,R01_Superior_Arcade,glcm_correlation,GLCM,Linear dependency of gray levels between neighboring pixels,0.012217450985410218
+85,R02_Superior_Nasal__lbp_bin_5,2,R02_Superior_Nasal,lbp_bin_5,LBP,Uniform LBP micro-texture histogram bin 5 (intermediate texture changes),0.010524057593035539
+284,R22_Inferior_Nasal__morph_canny_edge_density,8,R22_Inferior_Nasal,morph_canny_edge_density,Morphology,Fraction of pixels identified as sharp anatomical or lesion edges,0.010256724365925117
+15,R00_Superior_Temporal__glcm_asm,0,R00_Superior_Temporal,glcm_asm,GLCM,Angular Second Moment measuring orderliness of texture,0.009901860645275325
+144,R11_Central_Macula_Fovea__lbp_bin_0,4,R11_Central_Macula_Fovea,lbp_bin_0,LBP,Uniform local binary pattern micro-texture histogram bin 0 (flat/smooth regions),0.00941518436371671
+45,R01_Superior_Arcade__glcm_energy,1,R01_Superior_Arcade,glcm_energy,GLCM,Uniformity of GLCM matrix elements (texture regularity),0.009314723367948651
+35,R01_Superior_Arcade__first_order_kurtosis,1,R01_Superior_Arcade,first_order_kurtosis,First-Order,Peakedness of intensity distribution (clustering of lesion intensities),0.00931220730780806
+88,R02_Superior_Nasal__lbp_bin_8,2,R02_Superior_Nasal,lbp_bin_8,LBP,Uniform LBP micro-texture histogram bin 8 (dense texture transitions),0.009298812700109044
+220,R20_Inferior_Temporal__morph_canny_edge_density,6,R20_Inferior_Temporal,morph_canny_edge_density,Morphology,Fraction of pixels identified as sharp anatomical or lesion edges,0.008765730429598514
+77,R02_Superior_Nasal__glcm_energy,2,R02_Superior_Nasal,glcm_energy,GLCM,Uniformity of GLCM matrix elements (texture regularity),0.008637120966268648
+54,R01_Superior_Arcade__lbp_bin_6,1,R01_Superior_Arcade,lbp_bin_6,LBP,Uniform LBP micro-texture histogram bin 6 (corner/lesion boundary patterns),0.008123745161716
+239,R21_Inferior_Arcade__glcm_asm,7,R21_Inferior_Arcade,glcm_asm,GLCM,Angular Second Moment measuring orderliness of texture,0.007628285461512658
+79,R02_Superior_Nasal__glcm_asm,2,R02_Superior_Nasal,glcm_asm,GLCM,Angular Second Moment measuring orderliness of texture,0.007539028625742587
+130,R11_Central_Macula_Fovea__first_order_skewness,4,R11_Central_Macula_Fovea,first_order_skewness,First-Order,Asymmetry of intensity distribution (lesion asymmetry indicator),0.00747207150675774
+268,R22_Inferior_Nasal__glcm_homogeneity,8,R22_Inferior_Nasal,glcm_homogeneity,GLCM,Inverse difference moment reflecting local structural uniformity,0.007423139179260605
+286,R22_Inferior_Nasal__morph_hemorrhage_dark_ratio,8,R22_Inferior_Nasal,morph_hemorrhage_dark_ratio,Morphology,Fraction of dark non-background pixels indicative of retinal hemorrhages,0.007367758389817744
+140,R11_Central_Macula_Fovea__glcm_homogeneity,4,R11_Central_Macula_Fovea,glcm_homogeneity,GLCM,Inverse difference moment reflecting local structural uniformity,0.007357246818741264
+94,R02_Superior_Nasal__morph_hemorrhage_dark_ratio,2,R02_Superior_Nasal,morph_hemorrhage_dark_ratio,Morphology,Fraction of dark non-background pixels indicative of retinal hemorrhages,0.007331169786013479
+108,R10_Temporal_Mid__glcm_homogeneity,3,R10_Temporal_Mid,glcm_homogeneity,GLCM,Inverse difference moment reflecting local structural uniformity,0.007136754788161615
+277,R22_Inferior_Nasal__lbp_bin_5,8,R22_Inferior_Nasal,lbp_bin_5,LBP,Uniform LBP micro-texture histogram bin 5 (intermediate texture changes),0.0068520636907236174
+30,R00_Superior_Temporal__morph_hemorrhage_dark_ratio,0,R00_Superior_Temporal,morph_hemorrhage_dark_ratio,Morphology,Fraction of dark non-background pixels indicative of retinal hemorrhages,0.006727659622828016
+58,R01_Superior_Arcade__morph_gradient_mean,1,R01_Superior_Arcade,morph_gradient_mean,Morphology,Average Sobel gradient magnitude reflecting microvascular boundary sharpness,0.00652118105625507
+237,R21_Inferior_Arcade__glcm_energy,7,R21_Inferior_Arcade,glcm_energy,GLCM,Uniformity of GLCM matrix elements (texture regularity),0.006408784114958392
+245,R21_Inferior_Arcade__lbp_bin_5,7,R21_Inferior_Arcade,lbp_bin_5,LBP,Uniform LBP micro-texture histogram bin 5 (intermediate texture changes),0.006069562126841874
+149,R11_Central_Macula_Fovea__lbp_bin_5,4,R11_Central_Macula_Fovea,lbp_bin_5,LBP,Uniform LBP micro-texture histogram bin 5 (intermediate texture changes),0.005965104440968426
+244,R21_Inferior_Arcade__lbp_bin_4,7,R21_Inferior_Arcade,lbp_bin_4,LBP,Uniform LBP micro-texture histogram bin 4 (spot/microaneurysm candidates),0.005933271480573108
+172,R12_Nasal_Mid__glcm_homogeneity,5,R12_Nasal_Mid,glcm_homogeneity,GLCM,Inverse difference moment reflecting local structural uniformity,0.00587424901397604
+206,R20_Inferior_Temporal__glcm_correlation,6,R20_Inferior_Temporal,glcm_correlation,GLCM,Linear dependency of gray levels between neighboring pixels,0.00559009761457214
+186,R12_Nasal_Mid__morph_gradient_mean,5,R12_Nasal_Mid,morph_gradient_mean,Morphology,Average Sobel gradient magnitude reflecting microvascular boundary sharpness,0.005573689713731777
+249,R21_Inferior_Arcade__lbp_bin_9,7,R21_Inferior_Arcade,lbp_bin_9,LBP,Uniform LBP micro-texture histogram bin 9 (non-uniform texture artifacts),0.005564243523850859
+156,R11_Central_Macula_Fovea__morph_canny_edge_density,4,R11_Central_Macula_Fovea,morph_canny_edge_density,Morphology,Fraction of pixels identified as sharp anatomical or lesion edges,0.005531341339524182
+243,R21_Inferior_Arcade__lbp_bin_3,7,R21_Inferior_Arcade,lbp_bin_3,LBP,Uniform LBP micro-texture histogram bin 3 (texture irregularities),0.005496227476462441
+128,R11_Central_Macula_Fovea__first_order_mean,4,R11_Central_Macula_Fovea,first_order_mean,First-Order,Arithmetic mean of gray-level pixel intensities within the sub-region,0.005331838853634441
+255,R21_Inferior_Arcade__morph_michelson_contrast,7,R21_Inferior_Arcade,morph_michelson_contrast,Morphology,Michelson contrast ratio (Imax - Imin) / (Imax + Imin),0.0052990213648561775
+43,R01_Superior_Arcade__glcm_dissimilarity,1,R01_Superior_Arcade,glcm_dissimilarity,GLCM,Mean difference in gray levels between neighboring pixel pairs,0.0052379924414827665
+222,R20_Inferior_Temporal__morph_hemorrhage_dark_ratio,6,R20_Inferior_Temporal,morph_hemorrhage_dark_ratio,Morphology,Fraction of dark non-background pixels indicative of retinal hemorrhages,0.004919058443620201
+21,R00_Superior_Temporal__lbp_bin_5,0,R00_Superior_Temporal,lbp_bin_5,LBP,Uniform LBP micro-texture histogram bin 5 (intermediate texture changes),0.004697566332098025
+267,R22_Inferior_Nasal__glcm_dissimilarity,8,R22_Inferior_Nasal,glcm_dissimilarity,GLCM,Mean difference in gray levels between neighboring pixel pairs,0.004662350301785681
+270,R22_Inferior_Nasal__glcm_correlation,8,R22_Inferior_Nasal,glcm_correlation,GLCM,Linear dependency of gray levels between neighboring pixels,0.004498731046423254
+78,R02_Superior_Nasal__glcm_correlation,2,R02_Superior_Nasal,glcm_correlation,GLCM,Linear dependency of gray levels between neighboring pixels,0.004413498619064269
+14,R00_Superior_Temporal__glcm_correlation,0,R00_Superior_Temporal,glcm_correlation,GLCM,Linear dependency of gray levels between neighboring pixels,0.004388815643814159
+28,R00_Superior_Temporal__morph_canny_edge_density,0,R00_Superior_Temporal,morph_canny_edge_density,Morphology,Fraction of pixels identified as sharp anatomical or lesion edges,0.004383844215231598
+197,R20_Inferior_Temporal__first_order_p50,6,R20_Inferior_Temporal,first_order_p50,First-Order,Median intensity value,0.004369746376312497
+62,R01_Superior_Arcade__morph_hemorrhage_dark_ratio,1,R01_Superior_Arcade,morph_hemorrhage_dark_ratio,Morphology,Fraction of dark non-background pixels indicative of retinal hemorrhages,0.0042042175976866655
+148,R11_Central_Macula_Fovea__lbp_bin_4,4,R11_Central_Macula_Fovea,lbp_bin_4,LBP,Uniform LBP micro-texture histogram bin 4 (spot/microaneurysm candidates),0.004183600063647099
+24,R00_Superior_Temporal__lbp_bin_8,0,R00_Superior_Temporal,lbp_bin_8,LBP,Uniform LBP micro-texture histogram bin 8 (dense texture transitions),0.004003978072867033
+152,R11_Central_Macula_Fovea__lbp_bin_8,4,R11_Central_Macula_Fovea,lbp_bin_8,LBP,Uniform LBP micro-texture histogram bin 8 (dense texture transitions),0.003966878662096643
+48,R01_Superior_Arcade__lbp_bin_0,1,R01_Superior_Arcade,lbp_bin_0,LBP,Uniform local binary pattern micro-texture histogram bin 0 (flat/smooth regions),0.003917152495265315
+95,R02_Superior_Nasal__morph_michelson_contrast,2,R02_Superior_Nasal,morph_michelson_contrast,Morphology,Michelson contrast ratio (Imax - Imin) / (Imax + Imin),0.0038936944109964704
+63,R01_Superior_Arcade__morph_michelson_contrast,1,R01_Superior_Arcade,morph_michelson_contrast,Morphology,Michelson contrast ratio (Imax - Imin) / (Imax + Imin),0.003831006958465935
+171,R12_Nasal_Mid__glcm_dissimilarity,5,R12_Nasal_Mid,glcm_dissimilarity,GLCM,Mean difference in gray levels between neighboring pixel pairs,0.0037438235875546146
+133,R11_Central_Macula_Fovea__first_order_p50,4,R11_Central_Macula_Fovea,first_order_p50,First-Order,Median intensity value,0.0036821376521073527
+280,R22_Inferior_Nasal__lbp_bin_8,8,R22_Inferior_Nasal,lbp_bin_8,LBP,Uniform LBP micro-texture histogram bin 8 (dense texture transitions),0.0036740610654974
+142,R11_Central_Macula_Fovea__glcm_correlation,4,R11_Central_Macula_Fovea,glcm_correlation,GLCM,Linear dependency of gray levels between neighboring pixels,0.003604147216514378
+213,R20_Inferior_Temporal__lbp_bin_5,6,R20_Inferior_Temporal,lbp_bin_5,LBP,Uniform LBP micro-texture histogram bin 5 (intermediate texture changes),0.003563015297887793
+158,R11_Central_Macula_Fovea__morph_hemorrhage_dark_ratio,4,R11_Central_Macula_Fovea,morph_hemorrhage_dark_ratio,Morphology,Fraction of dark non-background pixels indicative of retinal hemorrhages,0.003517269809212722
+5,R00_Superior_Temporal__first_order_p50,0,R00_Superior_Temporal,first_order_p50,First-Order,Median intensity value,0.00349941249695938
+16,R00_Superior_Temporal__lbp_bin_0,0,R00_Superior_Temporal,lbp_bin_0,LBP,Uniform local binary pattern micro-texture histogram bin 0 (flat/smooth regions),0.0034847149970780845
+104,R10_Temporal_Mid__first_order_entropy,3,R10_Temporal_Mid,first_order_entropy,First-Order,Shannon entropy of intensity histogram (structural complexity),0.003443503671208921
+204,R20_Inferior_Temporal__glcm_homogeneity,6,R20_Inferior_Temporal,glcm_homogeneity,GLCM,Inverse difference moment reflecting local structural uniformity,0.003439375353583522
+147,R11_Central_Macula_Fovea__lbp_bin_3,4,R11_Central_Macula_Fovea,lbp_bin_3,LBP,Uniform LBP micro-texture histogram bin 3 (texture irregularities),0.003423692755950109
+153,R11_Central_Macula_Fovea__lbp_bin_9,4,R11_Central_Macula_Fovea,lbp_bin_9,LBP,Uniform LBP micro-texture histogram bin 9 (non-uniform texture artifacts),0.0034033642038724084
+139,R11_Central_Macula_Fovea__glcm_dissimilarity,4,R11_Central_Macula_Fovea,glcm_dissimilarity,GLCM,Mean difference in gray levels between neighboring pixel pairs,0.003297090635397186
+216,R20_Inferior_Temporal__lbp_bin_8,6,R20_Inferior_Temporal,lbp_bin_8,LBP,Uniform LBP micro-texture histogram bin 8 (dense texture transitions),0.003283776838834161
+143,R11_Central_Macula_Fovea__glcm_asm,4,R11_Central_Macula_Fovea,glcm_asm,GLCM,Angular Second Moment measuring orderliness of texture,0.003264076366273683
+126,R10_Temporal_Mid__morph_hemorrhage_dark_ratio,3,R10_Temporal_Mid,morph_hemorrhage_dark_ratio,Morphology,Fraction of dark non-background pixels indicative of retinal hemorrhages,0.0031599916777503515
+159,R11_Central_Macula_Fovea__morph_michelson_contrast,4,R11_Central_Macula_Fovea,morph_michelson_contrast,Morphology,Michelson contrast ratio (Imax - Imin) / (Imax + Imin),0.003114858264130703
+287,R22_Inferior_Nasal__morph_michelson_contrast,8,R22_Inferior_Nasal,morph_michelson_contrast,Morphology,Michelson contrast ratio (Imax - Imin) / (Imax + Imin),0.003092568226785462
+251,R21_Inferior_Arcade__morph_gradient_variance,7,R21_Inferior_Arcade,morph_gradient_variance,Morphology,Variance of gradient magnitude reflecting vascular branching heterogeneity,0.003070929945554192
+151,R11_Central_Macula_Fovea__lbp_bin_7,4,R11_Central_Macula_Fovea,lbp_bin_7,LBP,Uniform LBP micro-texture histogram bin 7 (vascular curvature patterns),0.0030701449312804862
+59,R01_Superior_Arcade__morph_gradient_variance,1,R01_Superior_Arcade,morph_gradient_variance,Morphology,Variance of gradient magnitude reflecting vascular branching heterogeneity,0.00306893944185519
+76,R02_Superior_Nasal__glcm_homogeneity,2,R02_Superior_Nasal,glcm_homogeneity,GLCM,Inverse difference moment reflecting local structural uniformity,0.0029598106498653983
+228,R21_Inferior_Arcade__first_order_p10,7,R21_Inferior_Arcade,first_order_p10,First-Order,10th percentile intensity value (background and hemorrhage floor),0.002889100581753508
+64,R02_Superior_Nasal__first_order_mean,2,R02_Superior_Nasal,first_order_mean,First-Order,Arithmetic mean of gray-level pixel intensities within the sub-region,0.0028861434555021216
+3,R00_Superior_Temporal__first_order_kurtosis,0,R00_Superior_Temporal,first_order_kurtosis,First-Order,Peakedness of intensity distribution (clustering of lesion intensities),0.0027945310311029135
+92,R02_Superior_Nasal__morph_canny_edge_density,2,R02_Superior_Nasal,morph_canny_edge_density,Morphology,Fraction of pixels identified as sharp anatomical or lesion edges,0.002720988473196247
+134,R11_Central_Macula_Fovea__first_order_p90,4,R11_Central_Macula_Fovea,first_order_p90,First-Order,90th percentile intensity value (bright exudate ceiling),0.0026966003560765445
+194,R20_Inferior_Temporal__first_order_skewness,6,R20_Inferior_Temporal,first_order_skewness,First-Order,Asymmetry of intensity distribution (lesion asymmetry indicator),0.002661277084483102
+182,R12_Nasal_Mid__lbp_bin_6,5,R12_Nasal_Mid,lbp_bin_6,LBP,Uniform LBP micro-texture histogram bin 6 (corner/lesion boundary patterns),0.0026556364121935855
+137,R11_Central_Macula_Fovea__first_order_rms,4,R11_Central_Macula_Fovea,first_order_rms,First-Order,Root mean square intensity,0.0026497798091573693
+2,R00_Superior_Temporal__first_order_skewness,0,R00_Superior_Temporal,first_order_skewness,First-Order,Asymmetry of intensity distribution (lesion asymmetry indicator),0.0026292910840812556
+223,R20_Inferior_Temporal__morph_michelson_contrast,6,R20_Inferior_Temporal,morph_michelson_contrast,Morphology,Michelson contrast ratio (Imax - Imin) / (Imax + Imin),0.0026239592351393805
+248,R21_Inferior_Arcade__lbp_bin_8,7,R21_Inferior_Arcade,lbp_bin_8,LBP,Uniform LBP micro-texture histogram bin 8 (dense texture transitions),0.002610874076744003
+240,R21_Inferior_Arcade__lbp_bin_0,7,R21_Inferior_Arcade,lbp_bin_0,LBP,Uniform local binary pattern micro-texture histogram bin 0 (flat/smooth regions),0.0025912355299385305
+51,R01_Superior_Arcade__lbp_bin_3,1,R01_Superior_Arcade,lbp_bin_3,LBP,Uniform LBP micro-texture histogram bin 3 (texture irregularities),0.002525200590584303
+203,R20_Inferior_Temporal__glcm_dissimilarity,6,R20_Inferior_Temporal,glcm_dissimilarity,GLCM,Mean difference in gray levels between neighboring pixel pairs,0.0024963286273792813
+56,R01_Superior_Arcade__lbp_bin_8,1,R01_Superior_Arcade,lbp_bin_8,LBP,Uniform LBP micro-texture histogram bin 8 (dense texture transitions),0.002493018587241865
+230,R21_Inferior_Arcade__first_order_p90,7,R21_Inferior_Arcade,first_order_p90,First-Order,90th percentile intensity value (bright exudate ceiling),0.00247395623662577
+154,R11_Central_Macula_Fovea__morph_gradient_mean,4,R11_Central_Macula_Fovea,morph_gradient_mean,Morphology,Average Sobel gradient magnitude reflecting microvascular boundary sharpness,0.002450846562462711
+246,R21_Inferior_Arcade__lbp_bin_6,7,R21_Inferior_Arcade,lbp_bin_6,LBP,Uniform LBP micro-texture histogram bin 6 (corner/lesion boundary patterns),0.0024448072063702315
+157,R11_Central_Macula_Fovea__morph_exudate_bright_ratio,4,R11_Central_Macula_Fovea,morph_exudate_bright_ratio,Morphology,Fraction of bright pixels indicative of hard/soft exudates,0.0024016834095154545
+118,R10_Temporal_Mid__lbp_bin_6,3,R10_Temporal_Mid,lbp_bin_6,LBP,Uniform LBP micro-texture histogram bin 6 (corner/lesion boundary patterns),0.0023984590813467947
+12,R00_Superior_Temporal__glcm_homogeneity,0,R00_Superior_Temporal,glcm_homogeneity,GLCM,Inverse difference moment reflecting local structural uniformity,0.0023516605985639135
+150,R11_Central_Macula_Fovea__lbp_bin_6,4,R11_Central_Macula_Fovea,lbp_bin_6,LBP,Uniform LBP micro-texture histogram bin 6 (corner/lesion boundary patterns),0.002333953449614809
+53,R01_Superior_Arcade__lbp_bin_5,1,R01_Superior_Arcade,lbp_bin_5,LBP,Uniform LBP micro-texture histogram bin 5 (intermediate texture changes),0.002323817598244611
+215,R20_Inferior_Temporal__lbp_bin_7,6,R20_Inferior_Temporal,lbp_bin_7,LBP,Uniform LBP micro-texture histogram bin 7 (vascular curvature patterns),0.002295566400974198
+65,R02_Superior_Nasal__first_order_variance,2,R02_Superior_Nasal,first_order_variance,First-Order,Spread of gray-level intensities around the mean,0.0022869369094107948
+0,R00_Superior_Temporal__first_order_mean,0,R00_Superior_Temporal,first_order_mean,First-Order,Arithmetic mean of gray-level pixel intensities within the sub-region,0.0022768657979535217
+261,R22_Inferior_Nasal__first_order_p50,8,R22_Inferior_Nasal,first_order_p50,First-Order,Median intensity value,0.002267080502199398
+258,R22_Inferior_Nasal__first_order_skewness,8,R22_Inferior_Nasal,first_order_skewness,First-Order,Asymmetry of intensity distribution (lesion asymmetry indicator),0.0022347056694197055
+25,R00_Superior_Temporal__lbp_bin_9,0,R00_Superior_Temporal,lbp_bin_9,LBP,Uniform LBP micro-texture histogram bin 9 (non-uniform texture artifacts),0.0022274615448217966
+227,R21_Inferior_Arcade__first_order_kurtosis,7,R21_Inferior_Arcade,first_order_kurtosis,First-Order,Peakedness of intensity distribution (clustering of lesion intensities),0.0022137272648328557
+135,R11_Central_Macula_Fovea__first_order_energy,4,R11_Central_Macula_Fovea,first_order_energy,First-Order,Sum of squared pixel intensities normalized by region area,0.0022007030954083666
+42,R01_Superior_Arcade__glcm_contrast,1,R01_Superior_Arcade,glcm_contrast,GLCM,Local intensity variation and edge contrast in spatial co-occurrence,0.002188227358299867
+38,R01_Superior_Arcade__first_order_p90,1,R01_Superior_Arcade,first_order_p90,First-Order,90th percentile intensity value (bright exudate ceiling),0.002162906189656014
+57,R01_Superior_Arcade__lbp_bin_9,1,R01_Superior_Arcade,lbp_bin_9,LBP,Uniform LBP micro-texture histogram bin 9 (non-uniform texture artifacts),0.0021566607565605737
+234,R21_Inferior_Arcade__glcm_contrast,7,R21_Inferior_Arcade,glcm_contrast,GLCM,Local intensity variation and edge contrast in spatial co-occurrence,0.002154122929050751
+233,R21_Inferior_Arcade__first_order_rms,7,R21_Inferior_Arcade,first_order_rms,First-Order,Root mean square intensity,0.0021126682005966836
+229,R21_Inferior_Arcade__first_order_p50,7,R21_Inferior_Arcade,first_order_p50,First-Order,Median intensity value,0.0020994792823514742
+34,R01_Superior_Arcade__first_order_skewness,1,R01_Superior_Arcade,first_order_skewness,First-Order,Asymmetry of intensity distribution (lesion asymmetry indicator),0.002085611815705806
+69,R02_Superior_Nasal__first_order_p50,2,R02_Superior_Nasal,first_order_p50,First-Order,Median intensity value,0.0020622560632192442
+87,R02_Superior_Nasal__lbp_bin_7,2,R02_Superior_Nasal,lbp_bin_7,LBP,Uniform LBP micro-texture histogram bin 7 (vascular curvature patterns),0.0020617709800853875
+188,R12_Nasal_Mid__morph_canny_edge_density,5,R12_Nasal_Mid,morph_canny_edge_density,Morphology,Fraction of pixels identified as sharp anatomical or lesion edges,0.002046612305823301
+257,R22_Inferior_Nasal__first_order_variance,8,R22_Inferior_Nasal,first_order_variance,First-Order,Spread of gray-level intensities around the mean,0.002017845890153252
+81,R02_Superior_Nasal__lbp_bin_1,2,R02_Superior_Nasal,lbp_bin_1,LBP,Uniform LBP micro-texture histogram bin 1 (fine edge transitions),0.0019958456505892726
+70,R02_Superior_Nasal__first_order_p90,2,R02_Superior_Nasal,first_order_p90,First-Order,90th percentile intensity value (bright exudate ceiling),0.0019541966607612275
+124,R10_Temporal_Mid__morph_canny_edge_density,3,R10_Temporal_Mid,morph_canny_edge_density,Morphology,Fraction of pixels identified as sharp anatomical or lesion edges,0.0019421268998110204
+40,R01_Superior_Arcade__first_order_entropy,1,R01_Superior_Arcade,first_order_entropy,First-Order,Shannon entropy of intensity histogram (structural complexity),0.0019315143824174096
+83,R02_Superior_Nasal__lbp_bin_3,2,R02_Superior_Nasal,lbp_bin_3,LBP,Uniform LBP micro-texture histogram bin 3 (texture irregularities),0.0019194603086830472
+111,R10_Temporal_Mid__glcm_asm,3,R10_Temporal_Mid,glcm_asm,GLCM,Angular Second Moment measuring orderliness of texture,0.0019190985125318778
+279,R22_Inferior_Nasal__lbp_bin_7,8,R22_Inferior_Nasal,lbp_bin_7,LBP,Uniform LBP micro-texture histogram bin 7 (vascular curvature patterns),0.0019180677887665398
+208,R20_Inferior_Temporal__lbp_bin_0,6,R20_Inferior_Temporal,lbp_bin_0,LBP,Uniform local binary pattern micro-texture histogram bin 0 (flat/smooth regions),0.0019114387336320322
+265,R22_Inferior_Nasal__first_order_rms,8,R22_Inferior_Nasal,first_order_rms,First-Order,Root mean square intensity,0.0018869449917165457
+107,R10_Temporal_Mid__glcm_dissimilarity,3,R10_Temporal_Mid,glcm_dissimilarity,GLCM,Mean difference in gray levels between neighboring pixel pairs,0.0018829270309128662
+27,R00_Superior_Temporal__morph_gradient_variance,0,R00_Superior_Temporal,morph_gradient_variance,Morphology,Variance of gradient magnitude reflecting vascular branching heterogeneity,0.0018720248139943438
+254,R21_Inferior_Arcade__morph_hemorrhage_dark_ratio,7,R21_Inferior_Arcade,morph_hemorrhage_dark_ratio,Morphology,Fraction of dark non-background pixels indicative of retinal hemorrhages,0.0018425732618571175
+37,R01_Superior_Arcade__first_order_p50,1,R01_Superior_Arcade,first_order_p50,First-Order,Median intensity value,0.0017501746595409962
+67,R02_Superior_Nasal__first_order_kurtosis,2,R02_Superior_Nasal,first_order_kurtosis,First-Order,Peakedness of intensity distribution (clustering of lesion intensities),0.0017158928674788831
+164,R12_Nasal_Mid__first_order_p10,5,R12_Nasal_Mid,first_order_p10,First-Order,10th percentile intensity value (background and hemorrhage floor),0.0016957873641021378
+174,R12_Nasal_Mid__glcm_correlation,5,R12_Nasal_Mid,glcm_correlation,GLCM,Linear dependency of gray levels between neighboring pixels,0.0016908217985710137
+66,R02_Superior_Nasal__first_order_skewness,2,R02_Superior_Nasal,first_order_skewness,First-Order,Asymmetry of intensity distribution (lesion asymmetry indicator),0.0016887929300725393
+225,R21_Inferior_Arcade__first_order_variance,7,R21_Inferior_Arcade,first_order_variance,First-Order,Spread of gray-level intensities around the mean,0.0016868346220118783
+231,R21_Inferior_Arcade__first_order_energy,7,R21_Inferior_Arcade,first_order_energy,First-Order,Sum of squared pixel intensities normalized by region area,0.0016859011726189236
+73,R02_Superior_Nasal__first_order_rms,2,R02_Superior_Nasal,first_order_rms,First-Order,Root mean square intensity,0.0016802548245420843
+132,R11_Central_Macula_Fovea__first_order_p10,4,R11_Central_Macula_Fovea,first_order_p10,First-Order,10th percentile intensity value (background and hemorrhage floor),0.001679882106748198
+242,R21_Inferior_Arcade__lbp_bin_2,7,R21_Inferior_Arcade,lbp_bin_2,LBP,Uniform LBP micro-texture histogram bin 2 (micro-vascular patterns),0.0016727310256192717
+80,R02_Superior_Nasal__lbp_bin_0,2,R02_Superior_Nasal,lbp_bin_0,LBP,Uniform local binary pattern micro-texture histogram bin 0 (flat/smooth regions),0.001625659182317766
+11,R00_Superior_Temporal__glcm_dissimilarity,0,R00_Superior_Temporal,glcm_dissimilarity,GLCM,Mean difference in gray levels between neighboring pixel pairs,0.0016155531605753831
+86,R02_Superior_Nasal__lbp_bin_6,2,R02_Superior_Nasal,lbp_bin_6,LBP,Uniform LBP micro-texture histogram bin 6 (corner/lesion boundary patterns),0.001604480726741391
+49,R01_Superior_Arcade__lbp_bin_1,1,R01_Superior_Arcade,lbp_bin_1,LBP,Uniform LBP micro-texture histogram bin 1 (fine edge transitions),0.0015930584293361296
+138,R11_Central_Macula_Fovea__glcm_contrast,4,R11_Central_Macula_Fovea,glcm_contrast,GLCM,Local intensity variation and edge contrast in spatial co-occurrence,0.001590137550766107
+41,R01_Superior_Arcade__first_order_rms,1,R01_Superior_Arcade,first_order_rms,First-Order,Root mean square intensity,0.0015748734388432112
+36,R01_Superior_Arcade__first_order_p10,1,R01_Superior_Arcade,first_order_p10,First-Order,10th percentile intensity value (background and hemorrhage floor),0.0015492082883344928
+272,R22_Inferior_Nasal__lbp_bin_0,8,R22_Inferior_Nasal,lbp_bin_0,LBP,Uniform local binary pattern micro-texture histogram bin 0 (flat/smooth regions),0.0015434671967941252
+55,R01_Superior_Arcade__lbp_bin_7,1,R01_Superior_Arcade,lbp_bin_7,LBP,Uniform LBP micro-texture histogram bin 7 (vascular curvature patterns),0.0015400946518196906
+173,R12_Nasal_Mid__glcm_energy,5,R12_Nasal_Mid,glcm_energy,GLCM,Uniformity of GLCM matrix elements (texture regularity),0.0015129377409805727
+145,R11_Central_Macula_Fovea__lbp_bin_1,4,R11_Central_Macula_Fovea,lbp_bin_1,LBP,Uniform LBP micro-texture histogram bin 1 (fine edge transitions),0.0014947840599390083
+259,R22_Inferior_Nasal__first_order_kurtosis,8,R22_Inferior_Nasal,first_order_kurtosis,First-Order,Peakedness of intensity distribution (clustering of lesion intensities),0.0014404964609169505
+253,R21_Inferior_Arcade__morph_exudate_bright_ratio,7,R21_Inferior_Arcade,morph_exudate_bright_ratio,Morphology,Fraction of bright pixels indicative of hard/soft exudates,0.0014351496637718003
+1,R00_Superior_Temporal__first_order_variance,0,R00_Superior_Temporal,first_order_variance,First-Order,Spread of gray-level intensities around the mean,0.0014333293146507233
+23,R00_Superior_Temporal__lbp_bin_7,0,R00_Superior_Temporal,lbp_bin_7,LBP,Uniform LBP micro-texture histogram bin 7 (vascular curvature patterns),0.0014248313099030864
+122,R10_Temporal_Mid__morph_gradient_mean,3,R10_Temporal_Mid,morph_gradient_mean,Morphology,Average Sobel gradient magnitude reflecting microvascular boundary sharpness,0.0013918656191767068
+17,R00_Superior_Temporal__lbp_bin_1,0,R00_Superior_Temporal,lbp_bin_1,LBP,Uniform LBP micro-texture histogram bin 1 (fine edge transitions),0.0013826810682252993
+22,R00_Superior_Temporal__lbp_bin_6,0,R00_Superior_Temporal,lbp_bin_6,LBP,Uniform LBP micro-texture histogram bin 6 (corner/lesion boundary patterns),0.0013644890167745177
+52,R01_Superior_Arcade__lbp_bin_4,1,R01_Superior_Arcade,lbp_bin_4,LBP,Uniform LBP micro-texture histogram bin 4 (spot/microaneurysm candidates),0.001351122148172083
+89,R02_Superior_Nasal__lbp_bin_9,2,R02_Superior_Nasal,lbp_bin_9,LBP,Uniform LBP micro-texture histogram bin 9 (non-uniform texture artifacts),0.0013508511962655706
+226,R21_Inferior_Arcade__first_order_skewness,7,R21_Inferior_Arcade,first_order_skewness,First-Order,Asymmetry of intensity distribution (lesion asymmetry indicator),0.0013446881786293014
+209,R20_Inferior_Temporal__lbp_bin_1,6,R20_Inferior_Temporal,lbp_bin_1,LBP,Uniform LBP micro-texture histogram bin 1 (fine edge transitions),0.0013403940695227612
+214,R20_Inferior_Temporal__lbp_bin_6,6,R20_Inferior_Temporal,lbp_bin_6,LBP,Uniform LBP micro-texture histogram bin 6 (corner/lesion boundary patterns),0.0013245742629184312
+264,R22_Inferior_Nasal__first_order_entropy,8,R22_Inferior_Nasal,first_order_entropy,First-Order,Shannon entropy of intensity histogram (structural complexity),0.0013244719411127012
+72,R02_Superior_Nasal__first_order_entropy,2,R02_Superior_Nasal,first_order_entropy,First-Order,Shannon entropy of intensity histogram (structural complexity),0.0013237794099587416
+50,R01_Superior_Arcade__lbp_bin_2,1,R01_Superior_Arcade,lbp_bin_2,LBP,Uniform LBP micro-texture histogram bin 2 (micro-vascular patterns),0.0013088973284789223
+31,R00_Superior_Temporal__morph_michelson_contrast,0,R00_Superior_Temporal,morph_michelson_contrast,Morphology,Michelson contrast ratio (Imax - Imin) / (Imax + Imin),0.0013008324593379312
+61,R01_Superior_Arcade__morph_exudate_bright_ratio,1,R01_Superior_Arcade,morph_exudate_bright_ratio,Morphology,Fraction of bright pixels indicative of hard/soft exudates,0.0012968698135366616
+109,R10_Temporal_Mid__glcm_energy,3,R10_Temporal_Mid,glcm_energy,GLCM,Uniformity of GLCM matrix elements (texture regularity),0.0012950571197842063
+195,R20_Inferior_Temporal__first_order_kurtosis,6,R20_Inferior_Temporal,first_order_kurtosis,First-Order,Peakedness of intensity distribution (clustering of lesion intensities),0.00127984789389455
+141,R11_Central_Macula_Fovea__glcm_energy,4,R11_Central_Macula_Fovea,glcm_energy,GLCM,Uniformity of GLCM matrix elements (texture regularity),0.0012716306128522697
+32,R01_Superior_Arcade__first_order_mean,1,R01_Superior_Arcade,first_order_mean,First-Order,Arithmetic mean of gray-level pixel intensities within the sub-region,0.001271548242069014
+75,R02_Superior_Nasal__glcm_dissimilarity,2,R02_Superior_Nasal,glcm_dissimilarity,GLCM,Mean difference in gray levels between neighboring pixel pairs,0.0012698039211922847
+93,R02_Superior_Nasal__morph_exudate_bright_ratio,2,R02_Superior_Nasal,morph_exudate_bright_ratio,Morphology,Fraction of bright pixels indicative of hard/soft exudates,0.0012503317260770153
+256,R22_Inferior_Nasal__first_order_mean,8,R22_Inferior_Nasal,first_order_mean,First-Order,Arithmetic mean of gray-level pixel intensities within the sub-region,0.0012428937383820902
+273,R22_Inferior_Nasal__lbp_bin_1,8,R22_Inferior_Nasal,lbp_bin_1,LBP,Uniform LBP micro-texture histogram bin 1 (fine edge transitions),0.0012100591860729087
+193,R20_Inferior_Temporal__first_order_variance,6,R20_Inferior_Temporal,first_order_variance,First-Order,Spread of gray-level intensities around the mean,0.0011990411269876035
+20,R00_Superior_Temporal__lbp_bin_4,0,R00_Superior_Temporal,lbp_bin_4,LBP,Uniform LBP micro-texture histogram bin 4 (spot/microaneurysm candidates),0.001197664762748838
+212,R20_Inferior_Temporal__lbp_bin_4,6,R20_Inferior_Temporal,lbp_bin_4,LBP,Uniform LBP micro-texture histogram bin 4 (spot/microaneurysm candidates),0.0011477787939539838
+112,R10_Temporal_Mid__lbp_bin_0,3,R10_Temporal_Mid,lbp_bin_0,LBP,Uniform local binary pattern micro-texture histogram bin 0 (flat/smooth regions),0.0011472181928137593
+39,R01_Superior_Arcade__first_order_energy,1,R01_Superior_Arcade,first_order_energy,First-Order,Sum of squared pixel intensities normalized by region area,0.0011381892020452316
+101,R10_Temporal_Mid__first_order_p50,3,R10_Temporal_Mid,first_order_p50,First-Order,Median intensity value,0.0011201242228745043
+129,R11_Central_Macula_Fovea__first_order_variance,4,R11_Central_Macula_Fovea,first_order_variance,First-Order,Spread of gray-level intensities around the mean,0.001089912113253844
+9,R00_Superior_Temporal__first_order_rms,0,R00_Superior_Temporal,first_order_rms,First-Order,Root mean square intensity,0.0010873758013754341
+190,R12_Nasal_Mid__morph_hemorrhage_dark_ratio,5,R12_Nasal_Mid,morph_hemorrhage_dark_ratio,Morphology,Fraction of dark non-background pixels indicative of retinal hemorrhages,0.0010702692202927602
+131,R11_Central_Macula_Fovea__first_order_kurtosis,4,R11_Central_Macula_Fovea,first_order_kurtosis,First-Order,Peakedness of intensity distribution (clustering of lesion intensities),0.001068896072957696
+97,R10_Temporal_Mid__first_order_variance,3,R10_Temporal_Mid,first_order_variance,First-Order,Spread of gray-level intensities around the mean,0.0010671408240280663
+199,R20_Inferior_Temporal__first_order_energy,6,R20_Inferior_Temporal,first_order_energy,First-Order,Sum of squared pixel intensities normalized by region area,0.0010667706845779263
+110,R10_Temporal_Mid__glcm_correlation,3,R10_Temporal_Mid,glcm_correlation,GLCM,Linear dependency of gray levels between neighboring pixels,0.0010336651600910739
+183,R12_Nasal_Mid__lbp_bin_7,5,R12_Nasal_Mid,lbp_bin_7,LBP,Uniform LBP micro-texture histogram bin 7 (vascular curvature patterns),0.0010257480544442208
+263,R22_Inferior_Nasal__first_order_energy,8,R22_Inferior_Nasal,first_order_energy,First-Order,Sum of squared pixel intensities normalized by region area,0.0010018870052941765
+163,R12_Nasal_Mid__first_order_kurtosis,5,R12_Nasal_Mid,first_order_kurtosis,First-Order,Peakedness of intensity distribution (clustering of lesion intensities),0.0010004899695147057
+198,R20_Inferior_Temporal__first_order_p90,6,R20_Inferior_Temporal,first_order_p90,First-Order,90th percentile intensity value (bright exudate ceiling),0.0009686372928367154
+191,R12_Nasal_Mid__morph_michelson_contrast,5,R12_Nasal_Mid,morph_michelson_contrast,Morphology,Michelson contrast ratio (Imax - Imin) / (Imax + Imin),0.0009494799802127188
+201,R20_Inferior_Temporal__first_order_rms,6,R20_Inferior_Temporal,first_order_rms,First-Order,Root mean square intensity,0.0009480503869891341
+202,R20_Inferior_Temporal__glcm_contrast,6,R20_Inferior_Temporal,glcm_contrast,GLCM,Local intensity variation and edge contrast in spatial co-occurrence,0.0009469102638055585
+281,R22_Inferior_Nasal__lbp_bin_9,8,R22_Inferior_Nasal,lbp_bin_9,LBP,Uniform LBP micro-texture histogram bin 9 (non-uniform texture artifacts),0.0009445459570652347
+91,R02_Superior_Nasal__morph_gradient_variance,2,R02_Superior_Nasal,morph_gradient_variance,Morphology,Variance of gradient magnitude reflecting vascular branching heterogeneity,0.000908720207464798
+18,R00_Superior_Temporal__lbp_bin_2,0,R00_Superior_Temporal,lbp_bin_2,LBP,Uniform LBP micro-texture histogram bin 2 (micro-vascular patterns),0.0009047507442708201
+170,R12_Nasal_Mid__glcm_contrast,5,R12_Nasal_Mid,glcm_contrast,GLCM,Local intensity variation and edge contrast in spatial co-occurrence,0.0008974170611205364
+162,R12_Nasal_Mid__first_order_skewness,5,R12_Nasal_Mid,first_order_skewness,First-Order,Asymmetry of intensity distribution (lesion asymmetry indicator),0.0008959564636605573
+262,R22_Inferior_Nasal__first_order_p90,8,R22_Inferior_Nasal,first_order_p90,First-Order,90th percentile intensity value (bright exudate ceiling),0.0008823087749500889
+74,R02_Superior_Nasal__glcm_contrast,2,R02_Superior_Nasal,glcm_contrast,GLCM,Local intensity variation and edge contrast in spatial co-occurrence,0.0008727467756470166
+210,R20_Inferior_Temporal__lbp_bin_2,6,R20_Inferior_Temporal,lbp_bin_2,LBP,Uniform LBP micro-texture histogram bin 2 (micro-vascular patterns),0.000862543931311346
+168,R12_Nasal_Mid__first_order_entropy,5,R12_Nasal_Mid,first_order_entropy,First-Order,Shannon entropy of intensity histogram (structural complexity),0.0008625174148522587
+176,R12_Nasal_Mid__lbp_bin_0,5,R12_Nasal_Mid,lbp_bin_0,LBP,Uniform local binary pattern micro-texture histogram bin 0 (flat/smooth regions),0.0008583869925064556
+71,R02_Superior_Nasal__first_order_energy,2,R02_Superior_Nasal,first_order_energy,First-Order,Sum of squared pixel intensities normalized by region area,0.000854402128174667
+217,R20_Inferior_Temporal__lbp_bin_9,6,R20_Inferior_Temporal,lbp_bin_9,LBP,Uniform LBP micro-texture histogram bin 9 (non-uniform texture artifacts),0.0008403711445719784
+276,R22_Inferior_Nasal__lbp_bin_4,8,R22_Inferior_Nasal,lbp_bin_4,LBP,Uniform LBP micro-texture histogram bin 4 (spot/microaneurysm candidates),0.0008380619412948189
+136,R11_Central_Macula_Fovea__first_order_entropy,4,R11_Central_Macula_Fovea,first_order_entropy,First-Order,Shannon entropy of intensity histogram (structural complexity),0.0008314463931526415
+161,R12_Nasal_Mid__first_order_variance,5,R12_Nasal_Mid,first_order_variance,First-Order,Spread of gray-level intensities around the mean,0.0008272572159789083
+7,R00_Superior_Temporal__first_order_energy,0,R00_Superior_Temporal,first_order_energy,First-Order,Sum of squared pixel intensities normalized by region area,0.0008146128319734869
+106,R10_Temporal_Mid__glcm_contrast,3,R10_Temporal_Mid,glcm_contrast,GLCM,Local intensity variation and edge contrast in spatial co-occurrence,0.0008017195915409323
+6,R00_Superior_Temporal__first_order_p90,0,R00_Superior_Temporal,first_order_p90,First-Order,90th percentile intensity value (bright exudate ceiling),0.000794250656242908
+181,R12_Nasal_Mid__lbp_bin_5,5,R12_Nasal_Mid,lbp_bin_5,LBP,Uniform LBP micro-texture histogram bin 5 (intermediate texture changes),0.0007912645144694205
+218,R20_Inferior_Temporal__morph_gradient_mean,6,R20_Inferior_Temporal,morph_gradient_mean,Morphology,Average Sobel gradient magnitude reflecting microvascular boundary sharpness,0.000785501517052618
+211,R20_Inferior_Temporal__lbp_bin_3,6,R20_Inferior_Temporal,lbp_bin_3,LBP,Uniform LBP micro-texture histogram bin 3 (texture irregularities),0.0007753895372831509
+127,R10_Temporal_Mid__morph_michelson_contrast,3,R10_Temporal_Mid,morph_michelson_contrast,Morphology,Michelson contrast ratio (Imax - Imin) / (Imax + Imin),0.0007607425187664543
+19,R00_Superior_Temporal__lbp_bin_3,0,R00_Superior_Temporal,lbp_bin_3,LBP,Uniform LBP micro-texture histogram bin 3 (texture irregularities),0.000759225179359968
+232,R21_Inferior_Arcade__first_order_entropy,7,R21_Inferior_Arcade,first_order_entropy,First-Order,Shannon entropy of intensity histogram (structural complexity),0.0007513075313607408
+100,R10_Temporal_Mid__first_order_p10,3,R10_Temporal_Mid,first_order_p10,First-Order,10th percentile intensity value (background and hemorrhage floor),0.0007505183708854885
+115,R10_Temporal_Mid__lbp_bin_3,3,R10_Temporal_Mid,lbp_bin_3,LBP,Uniform LBP micro-texture histogram bin 3 (texture irregularities),0.0007454636971216118
+224,R21_Inferior_Arcade__first_order_mean,7,R21_Inferior_Arcade,first_order_mean,First-Order,Arithmetic mean of gray-level pixel intensities within the sub-region,0.0007379312716020212
+120,R10_Temporal_Mid__lbp_bin_8,3,R10_Temporal_Mid,lbp_bin_8,LBP,Uniform LBP micro-texture histogram bin 8 (dense texture transitions),0.0007153279483007218
+146,R11_Central_Macula_Fovea__lbp_bin_2,4,R11_Central_Macula_Fovea,lbp_bin_2,LBP,Uniform LBP micro-texture histogram bin 2 (micro-vascular patterns),0.000715137089003723
+33,R01_Superior_Arcade__first_order_variance,1,R01_Superior_Arcade,first_order_variance,First-Order,Spread of gray-level intensities around the mean,0.0007140471175703007
+275,R22_Inferior_Nasal__lbp_bin_3,8,R22_Inferior_Nasal,lbp_bin_3,LBP,Uniform LBP micro-texture histogram bin 3 (texture irregularities),0.0007138328575498477
+179,R12_Nasal_Mid__lbp_bin_3,5,R12_Nasal_Mid,lbp_bin_3,LBP,Uniform LBP micro-texture histogram bin 3 (texture irregularities),0.0007117941034625546
+278,R22_Inferior_Nasal__lbp_bin_6,8,R22_Inferior_Nasal,lbp_bin_6,LBP,Uniform LBP micro-texture histogram bin 6 (corner/lesion boundary patterns),0.000707426667202218
+283,R22_Inferior_Nasal__morph_gradient_variance,8,R22_Inferior_Nasal,morph_gradient_variance,Morphology,Variance of gradient magnitude reflecting vascular branching heterogeneity,0.0006973871214382382
+167,R12_Nasal_Mid__first_order_energy,5,R12_Nasal_Mid,first_order_energy,First-Order,Sum of squared pixel intensities normalized by region area,0.0006969181974065423
+180,R12_Nasal_Mid__lbp_bin_4,5,R12_Nasal_Mid,lbp_bin_4,LBP,Uniform LBP micro-texture histogram bin 4 (spot/microaneurysm candidates),0.0006947971646244238
+117,R10_Temporal_Mid__lbp_bin_5,3,R10_Temporal_Mid,lbp_bin_5,LBP,Uniform LBP micro-texture histogram bin 5 (intermediate texture changes),0.0006868071869475034
+192,R20_Inferior_Temporal__first_order_mean,6,R20_Inferior_Temporal,first_order_mean,First-Order,Arithmetic mean of gray-level pixel intensities within the sub-region,0.000684577284542128
+103,R10_Temporal_Mid__first_order_energy,3,R10_Temporal_Mid,first_order_energy,First-Order,Sum of squared pixel intensities normalized by region area,0.000672308489847077
+113,R10_Temporal_Mid__lbp_bin_1,3,R10_Temporal_Mid,lbp_bin_1,LBP,Uniform LBP micro-texture histogram bin 1 (fine edge transitions),0.0006693333928152134
+105,R10_Temporal_Mid__first_order_rms,3,R10_Temporal_Mid,first_order_rms,First-Order,Root mean square intensity,0.0006676173321332938
+178,R12_Nasal_Mid__lbp_bin_2,5,R12_Nasal_Mid,lbp_bin_2,LBP,Uniform LBP micro-texture histogram bin 2 (micro-vascular patterns),0.0006300368784382278
+82,R02_Superior_Nasal__lbp_bin_2,2,R02_Superior_Nasal,lbp_bin_2,LBP,Uniform LBP micro-texture histogram bin 2 (micro-vascular patterns),0.0006292970017109179
+116,R10_Temporal_Mid__lbp_bin_4,3,R10_Temporal_Mid,lbp_bin_4,LBP,Uniform LBP micro-texture histogram bin 4 (spot/microaneurysm candidates),0.0006183564697608162
+98,R10_Temporal_Mid__first_order_skewness,3,R10_Temporal_Mid,first_order_skewness,First-Order,Asymmetry of intensity distribution (lesion asymmetry indicator),0.00061563742101281
+90,R02_Superior_Nasal__morph_gradient_mean,2,R02_Superior_Nasal,morph_gradient_mean,Morphology,Average Sobel gradient magnitude reflecting microvascular boundary sharpness,0.0006085370442037286
+285,R22_Inferior_Nasal__morph_exudate_bright_ratio,8,R22_Inferior_Nasal,morph_exudate_bright_ratio,Morphology,Fraction of bright pixels indicative of hard/soft exudates,0.0005957894796007521
+121,R10_Temporal_Mid__lbp_bin_9,3,R10_Temporal_Mid,lbp_bin_9,LBP,Uniform LBP micro-texture histogram bin 9 (non-uniform texture artifacts),0.0005953018526373361
+165,R12_Nasal_Mid__first_order_p50,5,R12_Nasal_Mid,first_order_p50,First-Order,Median intensity value,0.0005948496606692435
+247,R21_Inferior_Arcade__lbp_bin_7,7,R21_Inferior_Arcade,lbp_bin_7,LBP,Uniform LBP micro-texture histogram bin 7 (vascular curvature patterns),0.0005703508717009873
+175,R12_Nasal_Mid__glcm_asm,5,R12_Nasal_Mid,glcm_asm,GLCM,Angular Second Moment measuring orderliness of texture,0.0005596969071082947
+160,R12_Nasal_Mid__first_order_mean,5,R12_Nasal_Mid,first_order_mean,First-Order,Arithmetic mean of gray-level pixel intensities within the sub-region,0.0005334771865173781
+241,R21_Inferior_Arcade__lbp_bin_1,7,R21_Inferior_Arcade,lbp_bin_1,LBP,Uniform LBP micro-texture histogram bin 1 (fine edge transitions),0.0005325981267187562
+114,R10_Temporal_Mid__lbp_bin_2,3,R10_Temporal_Mid,lbp_bin_2,LBP,Uniform LBP micro-texture histogram bin 2 (micro-vascular patterns),0.0005312696406642286
+200,R20_Inferior_Temporal__first_order_entropy,6,R20_Inferior_Temporal,first_order_entropy,First-Order,Shannon entropy of intensity histogram (structural complexity),0.0005244756692229144
+96,R10_Temporal_Mid__first_order_mean,3,R10_Temporal_Mid,first_order_mean,First-Order,Arithmetic mean of gray-level pixel intensities within the sub-region,0.0004976834289035785
+219,R20_Inferior_Temporal__morph_gradient_variance,6,R20_Inferior_Temporal,morph_gradient_variance,Morphology,Variance of gradient magnitude reflecting vascular branching heterogeneity,0.000488886121860099
+84,R02_Superior_Nasal__lbp_bin_4,2,R02_Superior_Nasal,lbp_bin_4,LBP,Uniform LBP micro-texture histogram bin 4 (spot/microaneurysm candidates),0.0004824897007733412
+274,R22_Inferior_Nasal__lbp_bin_2,8,R22_Inferior_Nasal,lbp_bin_2,LBP,Uniform LBP micro-texture histogram bin 2 (micro-vascular patterns),0.0004816692895535846
+123,R10_Temporal_Mid__morph_gradient_variance,3,R10_Temporal_Mid,morph_gradient_variance,Morphology,Variance of gradient magnitude reflecting vascular branching heterogeneity,0.0004746985266717344
+282,R22_Inferior_Nasal__morph_gradient_mean,8,R22_Inferior_Nasal,morph_gradient_mean,Morphology,Average Sobel gradient magnitude reflecting microvascular boundary sharpness,0.0004616185056145251
+184,R12_Nasal_Mid__lbp_bin_8,5,R12_Nasal_Mid,lbp_bin_8,LBP,Uniform LBP micro-texture histogram bin 8 (dense texture transitions),0.0004610910792832018
+185,R12_Nasal_Mid__lbp_bin_9,5,R12_Nasal_Mid,lbp_bin_9,LBP,Uniform LBP micro-texture histogram bin 9 (non-uniform texture artifacts),0.00046098843485907747
+8,R00_Superior_Temporal__first_order_entropy,0,R00_Superior_Temporal,first_order_entropy,First-Order,Shannon entropy of intensity histogram (structural complexity),0.00043173963457343123
+119,R10_Temporal_Mid__lbp_bin_7,3,R10_Temporal_Mid,lbp_bin_7,LBP,Uniform LBP micro-texture histogram bin 7 (vascular curvature patterns),0.0004142133508605755
+187,R12_Nasal_Mid__morph_gradient_variance,5,R12_Nasal_Mid,morph_gradient_variance,Morphology,Variance of gradient magnitude reflecting vascular branching heterogeneity,0.00041301655207050925
+155,R11_Central_Macula_Fovea__morph_gradient_variance,4,R11_Central_Macula_Fovea,morph_gradient_variance,Morphology,Variance of gradient magnitude reflecting vascular branching heterogeneity,0.0004093356568914732
+169,R12_Nasal_Mid__first_order_rms,5,R12_Nasal_Mid,first_order_rms,First-Order,Root mean square intensity,0.00039759644068453314
+29,R00_Superior_Temporal__morph_exudate_bright_ratio,0,R00_Superior_Temporal,morph_exudate_bright_ratio,Morphology,Fraction of bright pixels indicative of hard/soft exudates,0.0003928818062164977
+166,R12_Nasal_Mid__first_order_p90,5,R12_Nasal_Mid,first_order_p90,First-Order,90th percentile intensity value (bright exudate ceiling),0.0003808536690478599
+221,R20_Inferior_Temporal__morph_exudate_bright_ratio,6,R20_Inferior_Temporal,morph_exudate_bright_ratio,Morphology,Fraction of bright pixels indicative of hard/soft exudates,0.0003678611838545172
+266,R22_Inferior_Nasal__glcm_contrast,8,R22_Inferior_Nasal,glcm_contrast,GLCM,Local intensity variation and edge contrast in spatial co-occurrence,0.00033135058785942916
+10,R00_Superior_Temporal__glcm_contrast,0,R00_Superior_Temporal,glcm_contrast,GLCM,Local intensity variation and edge contrast in spatial co-occurrence,0.000322590615114177
+177,R12_Nasal_Mid__lbp_bin_1,5,R12_Nasal_Mid,lbp_bin_1,LBP,Uniform LBP micro-texture histogram bin 1 (fine edge transitions),0.0002940103086906913
+26,R00_Superior_Temporal__morph_gradient_mean,0,R00_Superior_Temporal,morph_gradient_mean,Morphology,Average Sobel gradient magnitude reflecting microvascular boundary sharpness,0.0002826639399476325
+99,R10_Temporal_Mid__first_order_kurtosis,3,R10_Temporal_Mid,first_order_kurtosis,First-Order,Peakedness of intensity distribution (clustering of lesion intensities),0.00024956024996882376
+125,R10_Temporal_Mid__morph_exudate_bright_ratio,3,R10_Temporal_Mid,morph_exudate_bright_ratio,Morphology,Fraction of bright pixels indicative of hard/soft exudates,0.00018089001248197917
+189,R12_Nasal_Mid__morph_exudate_bright_ratio,5,R12_Nasal_Mid,morph_exudate_bright_ratio,Morphology,Fraction of bright pixels indicative of hard/soft exudates,0.00011746915080438632
+102,R10_Temporal_Mid__first_order_p90,3,R10_Temporal_Mid,first_order_p90,First-Order,90th percentile intensity value (bright exudate ceiling),0.00010496537947744116
