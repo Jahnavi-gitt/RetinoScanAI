@@ -1,0 +1,59 @@
+model:
+  name: Integrated Multimodal Retinopathy Network
+  architecture: Swin-Tiny + 3x3 Spatial Radiomics + Cross-Attention + CORAL Head
+  visual_backbone:
+    name: Swin-Tiny
+    visual_tokens: 49
+    feature_dim: 768
+  radiomics_stream:
+    grid_size:
+    - 3
+    - 3
+    num_regions: 9
+    descriptors_per_region: 32
+    total_handcrafted_features: 288
+  fusion_engine:
+    type: Spatial Multi-Head Cross-Attention
+    num_heads: 8
+    embed_dim: 768
+    dropout: 0.2
+    queries: Visual Spatial Tokens (B, 49, 768)
+    keys_values: Radiomic Regional Tokens (B, 9, 768)
+  heads:
+    primary:
+      type: CORAL Ordinal Head
+      num_ordinal_tasks: 4
+      threshold: 0.5
+    auxiliary:
+      type: Categorical Linear Head
+      num_classes: 5
+      weight: 0.3
+
+training:
+  batch_size: 8
+  epochs: 5
+  optimizer:
+    name: AdamW
+    lr: 0.0001
+    weight_decay: 0.01
+  scheduler:
+    name: CosineAnnealingLR
+    eta_min: 1.0e-06
+  hybrid_loss:
+    coral_loss_weight: 1.0
+    aux_ce_loss_weight: 0.3
+  device: mps
+
+evaluation:
+  primary_metric: quadratic_weighted_kappa
+  secondary_metrics:
+  - macro_f1
+  - balanced_accuracy
+  - accuracy
+  - mean_absolute_error
+
+paths:
+  radiomics_train: outputs/Module_06_Spatially_Localized_Radiomics/radiomic_features_train.npz
+  radiomics_val: outputs/Module_06_Spatially_Localized_Radiomics/radiomic_features_val.npz
+  output_dir: outputs/Module_10_Integrated_Proposed_Model
+  checkpoint: outputs/Module_10_Integrated_Proposed_Model/best_model.pth

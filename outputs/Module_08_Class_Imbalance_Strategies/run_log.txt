@@ -1,0 +1,78 @@
+==================================================================
+  MODULE 08: CLASS IMBALANCE STRATEGIES EVALUATION
+  Device: mps (Apple Silicon MPS / CPU)
+==================================================================
+
+--- [Phase 1/5] Running Loss Function Verification Tests ---
+  Effective Number Weights: [0.1419910043478012, 1.082756757736206, 0.18317899107933044, 2.834425687789917, 0.7576476335525513]
+  Focal Loss: 0.9666 - Backward passed
+  CB-Focal Loss: 0.5635 - Backward passed
+  Cost-Sensitive Loss: 2.0312 - Backward passed
+  [SUCCESS] All imbalance loss functions verified.
+
+Saved effective weights metadata -> outputs/Module_08_Class_Imbalance_Strategies/effective_weights.json
+
+--- [Phase 2/5] Building Multi-Modal DataLoaders ---
+
+--- [Phase 3/5] Benchmarking Imbalance Loss Formulations ---
+
+>> Evaluating Strategy: Cross-Entropy (Baseline)
+[Swin-Tiny] Loading cached torchvision weights: /Users/jahnavi/.cache/torch/hub/checkpoints/swin_t-704ceda3.pth
+[FusionModel] Loading best Swin-Tiny weights: outputs/Module_03_Baseline_Swin_Tiny/best_model.pth
+[FusionModel] Successfully loaded fine-tuned Swin-Tiny weights.
+  Epoch 01 | Val Loss: 1.0250 Acc: 0.714 QWK: 0.9314 F1: 0.5200
+  Epoch 02 | Val Loss: 0.7317 Acc: 0.857 QWK: 0.9630 F1: 0.8667
+  Epoch 03 | Val Loss: 0.5433 Acc: 0.857 QWK: 0.9692 F1: 0.7600
+  Epoch 04 | Val Loss: 0.4457 Acc: 1.000 QWK: 1.0000 F1: 1.0000
+  Epoch 05 | Val Loss: 0.4144 Acc: 0.857 QWK: 0.9630 F1: 0.8667
+
+>> Evaluating Strategy: Weighted Cross-Entropy
+[Swin-Tiny] Loading cached torchvision weights: /Users/jahnavi/.cache/torch/hub/checkpoints/swin_t-704ceda3.pth
+[FusionModel] Loading best Swin-Tiny weights: outputs/Module_03_Baseline_Swin_Tiny/best_model.pth
+[FusionModel] Successfully loaded fine-tuned Swin-Tiny weights.
+  Epoch 01 | Val Loss: 0.9694 Acc: 0.429 QWK: 0.8158 F1: 0.2400
+  Epoch 02 | Val Loss: 0.7382 Acc: 0.571 QWK: 0.9014 F1: 0.2933
+  Epoch 03 | Val Loss: 0.7044 Acc: 0.429 QWK: 0.8158 F1: 0.2400
+  Epoch 04 | Val Loss: 0.6911 Acc: 0.429 QWK: 0.8158 F1: 0.2400
+  Epoch 05 | Val Loss: 0.6542 Acc: 0.429 QWK: 0.8158 F1: 0.2400
+
+>> Evaluating Strategy: Focal Loss (gamma=2.0)
+[Swin-Tiny] Loading cached torchvision weights: /Users/jahnavi/.cache/torch/hub/checkpoints/swin_t-704ceda3.pth
+[FusionModel] Loading best Swin-Tiny weights: outputs/Module_03_Baseline_Swin_Tiny/best_model.pth
+[FusionModel] Successfully loaded fine-tuned Swin-Tiny weights.
+  Epoch 01 | Val Loss: 0.6488 Acc: 0.571 QWK: 0.7094 F1: 0.4667
+  Epoch 02 | Val Loss: 0.3986 Acc: 0.429 QWK: 0.7322 F1: 0.3667
+  Epoch 03 | Val Loss: 0.1446 Acc: 0.714 QWK: 0.9314 F1: 0.5200
+  Epoch 04 | Val Loss: 0.1758 Acc: 0.571 QWK: 0.8865 F1: 0.4600
+  Epoch 05 | Val Loss: 0.1399 Acc: 0.571 QWK: 0.8865 F1: 0.4600
+
+>> Evaluating Strategy: Class-Balanced Focal Loss
+[Swin-Tiny] Loading cached torchvision weights: /Users/jahnavi/.cache/torch/hub/checkpoints/swin_t-704ceda3.pth
+[FusionModel] Loading best Swin-Tiny weights: outputs/Module_03_Baseline_Swin_Tiny/best_model.pth
+[FusionModel] Successfully loaded fine-tuned Swin-Tiny weights.
+  Epoch 01 | Val Loss: 0.4325 Acc: 0.429 QWK: 0.8158 F1: 0.2400
+  Epoch 02 | Val Loss: 0.4021 Acc: 0.571 QWK: 0.8158 F1: 0.2933
+  Epoch 03 | Val Loss: 0.2204 Acc: 0.429 QWK: 0.8158 F1: 0.2400
+  Epoch 04 | Val Loss: 0.2975 Acc: 0.429 QWK: 0.8158 F1: 0.2400
+  Epoch 05 | Val Loss: 0.2259 Acc: 0.429 QWK: 0.8158 F1: 0.2400
+
+[Comparison Summary]
+                    Strategy  Validation QWK  Validation Macro-F1  Validation Accuracy  Validation Balanced Acc  Validation MAE  Validation Loss
+0   Cross-Entropy (Baseline)          1.0000               1.0000               1.0000                      1.0          0.0000           0.4457
+1     Focal Loss (gamma=2.0)          0.9314               0.5200               0.7143                      0.6          0.2857           0.1446
+2     Weighted Cross-Entropy          0.9014               0.2933               0.5714                      0.4          0.4286           0.7382
+3  Class-Balanced Focal Loss          0.8158               0.2400               0.4286                      0.4          0.5714           0.2259
+
+[Model Selection] Winning Imbalance Strategy: Cross-Entropy (Baseline)
+Saved evaluation artifacts to outputs/Module_08_Class_Imbalance_Strategies
+
+--- [Phase 4/5] Generating Publication Visualizations ---
+Saved comparison chart -> outputs/Module_08_Class_Imbalance_Strategies/imbalance_comparison.png
+
+==================================================================
+  MODULE 08 COMPLETED IN 23.5s
+  Winning Loss Strategy: Cross-Entropy (Baseline)
+  Primary Metric (QWK):  1.0000
+  Secondary (Macro-F1):  1.0000
+  Validation Loss:       0.4457
+==================================================================

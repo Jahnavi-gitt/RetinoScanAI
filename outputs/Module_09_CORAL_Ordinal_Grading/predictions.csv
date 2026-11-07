@@ -1,0 +1,8 @@
+image_id,ground_truth,ground_truth_label,predicted_grade,predicted_label,prob_grade_0,prob_grade_1,prob_grade_2,prob_grade_3,prob_grade_4
+ddr_sample_grade0_004.jpg,0,No DR,0,No DR,1.0,0.0,0.0,0.0,0.0
+ddr_sample_grade1_002.jpg,1,Mild NPDR,0,No DR,0.9999,0.0001,0.0,0.0,0.0
+ddr_sample_grade1_006.jpg,1,Mild NPDR,0,No DR,1.0,0.0,0.0,0.0,0.0
+ddr_sample_grade2_001.jpg,2,Moderate NPDR,3,Severe NPDR,0.0482,0.1129,0.2607,0.3129,0.2654
+ddr_sample_grade3_009.jpg,3,Severe NPDR,4,Proliferative DR,0.0,0.0,0.0,0.0,1.0
+ddr_sample_grade4_002.jpg,4,Proliferative DR,4,Proliferative DR,0.0,0.0,0.0,0.0,1.0
+ddr_sample_grade4_009.jpg,4,Proliferative DR,4,Proliferative DR,0.0,0.0,0.0,0.0,1.0

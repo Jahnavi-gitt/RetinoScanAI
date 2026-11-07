@@ -1,0 +1,47 @@
+==================================================================
+  MODULE 09: CORAL ORDINAL RETINOPATHY GRADING
+  Device: mps (Apple Silicon MPS / CPU)
+==================================================================
+
+--- [Phase 2/5] Initializing CORAL Multimodal Model ---
+[Swin-Tiny] Loading cached torchvision weights: /Users/jahnavi/.cache/torch/hub/checkpoints/swin_t-704ceda3.pth
+[FusionModel] Loading best Swin-Tiny weights: outputs/Module_03_Baseline_Swin_Tiny/best_model.pth
+[FusionModel] Successfully loaded fine-tuned Swin-Tiny weights.
+[CORAL] Loading pre-trained fusion weights: outputs/Module_07_Visual_Radiomic_Cross_Attention_Fusion/best_model.pth
+[CORAL] Successfully loaded fusion feature extractor weights.
+CORAL Model: Total Parameters = 32,892,291 | Trainable = 32,892,291
+
+--- [Phase 1/5] Running CORAL Verification Tests ---
+  Forward Pass: Images + Radiomics -> Rank Logits torch.Size([2, 4]) (Expected: (2, 4))
+  Predictions: [4, 4] | Probabilities shape: torch.Size([2, 5])
+  CORAL Loss: 54.2091 - Backward step passed.
+  [SUCCESS] CORAL verification test passed: All ordinal ranks and gradients verified.
+
+--- [Phase 3/5] Building Multi-Modal DataLoaders ---
+
+--- [Phase 4/5] Executing CORAL Fine-Tuning ---
+[Trainer] Training CORAL Ordinal model on mps for 5 epochs...
+Epoch 01/05 [1.7s] | Train CORAL Loss: 20.0254 Acc: 0.343 | Val Loss: 23.6067 Acc: 0.000 QWK: -0.7725 F1: 0.0000 MAE: 2.714
+  --> Saved new best checkpoint to outputs/Module_09_CORAL_Ordinal_Grading/best_model.pth (QWK: -0.7725)
+Epoch 02/05 [1.0s] | Train CORAL Loss: 25.3181 Acc: 0.229 | Val Loss: 8.9942 Acc: 0.429 QWK: 0.8350 F1: 0.2333 MAE: 0.714
+  --> Saved new best checkpoint to outputs/Module_09_CORAL_Ordinal_Grading/best_model.pth (QWK: 0.8350)
+Epoch 03/05 [1.0s] | Train CORAL Loss: 10.6750 Acc: 0.371 | Val Loss: 5.1952 Acc: 0.429 QWK: 0.8993 F1: 0.2600 MAE: 0.571
+  --> Saved new best checkpoint to outputs/Module_09_CORAL_Ordinal_Grading/best_model.pth (QWK: 0.8993)
+Epoch 04/05 [1.0s] | Train CORAL Loss: 9.6717 Acc: 0.371 | Val Loss: 11.0670 Acc: 0.286 QWK: 0.3488 F1: 0.1000 MAE: 1.429
+Epoch 05/05 [1.0s] | Train CORAL Loss: 14.5089 Acc: 0.343 | Val Loss: 3.5512 Acc: 0.429 QWK: 0.8151 F1: 0.2667 MAE: 0.714
+Saved evaluation artifacts to outputs/Module_09_CORAL_Ordinal_Grading
+Saved predictions -> outputs/Module_09_CORAL_Ordinal_Grading/predictions.csv
+
+--- [Phase 5/5] Visualizing CORAL Ordinal Rank Curves ---
+Saved CORAL rank curves -> outputs/Module_09_CORAL_Ordinal_Grading/coral_rank_curves.png
+
+==================================================================
+  MODULE 09 COMPLETED IN 8.4s
+  Final Validation QWK:              0.8993
+  Final Validation Macro-F1:         0.2600
+  Final Validation Accuracy:         0.4286
+  Final Validation Balanced Acc:     0.4000
+  Final Validation MAE:              0.5714
+  Final Validation CORAL Loss:       5.1952
+==================================================================
+[SUCCESS] Module 09 deliverables saved to outputs/Module_09_CORAL_Ordinal_Grading

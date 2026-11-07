@@ -1,0 +1,53 @@
+imbalance_strategies:
+  candidate_losses:
+  - name: Cross-Entropy (Baseline)
+    type: ce
+  - name: Inverse Frequency Weighted CE
+    type: inverse_freq
+  - name: Focal Loss
+    type: focal
+    gamma: 2.0
+  - name: Class-Balanced Focal Loss
+    type: cb_focal
+    beta: 0.9999
+    gamma: 2.0
+
+class_distribution:
+  dataset: DDR (Official)
+  counts:
+    0: 6266
+    1: 630
+    2: 4477
+    3: 236
+    4: 913
+  total: 12522
+  minority_classes:
+  - 1
+  - 3
+
+training:
+  model: Visual-Radiomic Cross-Attention Network
+  batch_size: 8
+  epochs: 5
+  optimizer:
+    name: AdamW
+    lr: 0.0001
+    weight_decay: 0.01
+  scheduler:
+    name: CosineAnnealingLR
+    eta_min: 1.0e-06
+  device: mps
+
+evaluation:
+  primary_metric: quadratic_weighted_kappa
+  secondary_metrics:
+  - macro_f1
+  - balanced_accuracy
+  - accuracy
+  - mean_absolute_error
+
+paths:
+  radiomics_train: outputs/Module_06_Spatially_Localized_Radiomics/radiomic_features_train.npz
+  radiomics_val: outputs/Module_06_Spatially_Localized_Radiomics/radiomic_features_val.npz
+  output_dir: outputs/Module_08_Class_Imbalance_Strategies
+  checkpoint: outputs/Module_08_Class_Imbalance_Strategies/best_model.pth

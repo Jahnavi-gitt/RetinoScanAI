@@ -1,0 +1,44 @@
+==================================================================
+  MODULE 10: INTEGRATED PROPOSED MODEL
+  Device: mps (Apple Silicon MPS / CPU)
+==================================================================
+
+--- [Phase 2/5] Initializing Integrated Retinopathy Network ---
+[Swin-Tiny] Loading cached torchvision weights: /Users/jahnavi/.cache/torch/hub/checkpoints/swin_t-704ceda3.pth
+[IntegratedModel] Loading pre-trained fusion weights: outputs/Module_07_Visual_Radiomic_Cross_Attention_Fusion/best_model.pth
+[IntegratedModel] Successfully loaded 203 pre-trained parameter tensors.
+Integrated Model: Total Parameters = 32,896,136 | Trainable = 32,896,136
+
+--- [Phase 1/5] Running Integrated Model Verification Tests ---
+  Forward Pass: Image + Radiomics -> Rank Logits torch.Size([2, 4]), Aux Logits torch.Size([2, 5])
+  Predictions: [0, 0] | Probabilities: torch.Size([2, 5])
+  Hybrid Loss: Total=1.0308 (CORAL=0.4615, Aux=1.8975) - Backward passed.
+  [SUCCESS] Integrated model verification test passed: Dual heads and hybrid supervision verified.
+
+--- [Phase 3/5] Building Multi-Modal DataLoaders ---
+
+--- [Phase 4/5] Executing Integrated Model Training ---
+[Trainer] Training Integrated Model on mps for 5 epochs (lambda_aux=0.3)...
+Epoch 01/05 [1.3s] | Train Loss: 29.3063 Acc: 0.343 | Val Loss: 6.9649 Acc: 0.429 QWK: 0.8350 F1: 0.2333 MAE: 0.714
+  --> Saved new best checkpoint to outputs/Module_10_Integrated_Proposed_Model/best_model.pth (QWK: 0.8350)
+Epoch 02/05 [1.0s] | Train Loss: 20.1441 Acc: 0.257 | Val Loss: 3.9821 Acc: 0.571 QWK: 0.8264 F1: 0.4667 MAE: 0.571
+Epoch 03/05 [1.0s] | Train Loss: 16.6017 Acc: 0.343 | Val Loss: 4.9754 Acc: 0.429 QWK: 0.8393 F1: 0.2400 MAE: 0.714
+  --> Saved new best checkpoint to outputs/Module_10_Integrated_Proposed_Model/best_model.pth (QWK: 0.8393)
+Epoch 04/05 [1.0s] | Train Loss: 8.5076 Acc: 0.371 | Val Loss: 4.0753 Acc: 0.429 QWK: 0.8993 F1: 0.2600 MAE: 0.571
+  --> Saved new best checkpoint to outputs/Module_10_Integrated_Proposed_Model/best_model.pth (QWK: 0.8993)
+Epoch 05/05 [1.0s] | Train Loss: 9.0706 Acc: 0.400 | Val Loss: 4.4280 Acc: 0.429 QWK: 0.9007 F1: 0.2600 MAE: 0.571
+  --> Saved new best checkpoint to outputs/Module_10_Integrated_Proposed_Model/best_model.pth (QWK: 0.9007)
+Saved evaluation artifacts to outputs/Module_10_Integrated_Proposed_Model
+Saved predictions -> outputs/Module_10_Integrated_Proposed_Model/predictions.csv
+Saved architecture diagram -> outputs/Module_10_Integrated_Proposed_Model/model_architecture.png
+
+==================================================================
+  MODULE 10 COMPLETED IN 7.2s
+  Final Validation QWK:              0.9007
+  Final Validation Macro-F1:         0.2600
+  Final Validation Accuracy:         0.4286
+  Final Validation Balanced Acc:     0.4000
+  Final Validation MAE:              0.5714
+  Final Validation Hybrid Loss:      4.4280
+==================================================================
+[SUCCESS] Module 10 deliverables saved to outputs/Module_10_Integrated_Proposed_Model

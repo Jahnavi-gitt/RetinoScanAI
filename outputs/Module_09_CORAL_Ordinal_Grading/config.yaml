@@ -1,0 +1,44 @@
+model:
+  name: Multimodal Visual-Radiomic CORAL Network
+  visual_backbone: Swin-Tiny (49 visual tokens, d=768)
+  radiomic_modality: Spatially Localized 3x3 Grid (9 regional tokens, d=32)
+  fusion: Multi-Head Spatial Cross-Attention (8 heads, d=768)
+  head:
+    type: CoralLayer
+    in_features: 768
+    num_classes: 5
+    num_ordinal_tasks: 4
+    tasks:
+      0: Grade > 0 (Grade >= 1)
+      1: Grade > 1 (Grade >= 2)
+      2: Grade > 2 (Grade >= 3)
+      3: Grade > 3 (Grade >= 4)
+    loss: Binary Cross-Entropy with Logits across tasks
+
+training:
+  batch_size: 8
+  epochs: 5
+  optimizer:
+    name: AdamW
+    lr: 0.0001
+    weight_decay: 0.01
+  scheduler:
+    name: CosineAnnealingLR
+    eta_min: 1.0e-06
+  device: mps
+
+evaluation:
+  primary_metric: quadratic_weighted_kappa
+  secondary_metrics:
+  - macro_f1
+  - balanced_accuracy
+  - accuracy
+  - mean_absolute_error
+  threshold: 0.5
+
+paths:
+  fusion_checkpoint: outputs/Module_07_Visual_Radiomic_Cross_Attention_Fusion/best_model.pth
+  radiomics_train: outputs/Module_06_Spatially_Localized_Radiomics/radiomic_features_train.npz
+  radiomics_val: outputs/Module_06_Spatially_Localized_Radiomics/radiomic_features_val.npz
+  output_dir: outputs/Module_09_CORAL_Ordinal_Grading
+  checkpoint: outputs/Module_09_CORAL_Ordinal_Grading/best_model.pth

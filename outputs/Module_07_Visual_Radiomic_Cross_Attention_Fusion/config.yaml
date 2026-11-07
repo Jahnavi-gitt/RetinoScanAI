@@ -1,0 +1,54 @@
+model:
+  name: Visual-Radiomic Cross-Attention Fusion
+  backbone: Swin-Tiny (Hierarchical Vision Transformer)
+  visual_feature_dim: 768
+  visual_spatial_tokens: 49
+  radiomics_dim: 32
+  radiomics_spatial_tokens: 9
+  cross_attention:
+    embed_dim: 768
+    num_heads: 8
+    dropout: 0.1
+    query: Visual Spatial Tokens (B, 49, 768)
+    key_value: Radiomic Spatial Tokens (B, 9, 768)
+    output: Contextualized Visual-Radiomic Tokens (B, 49, 768)
+  classifier:
+    pooling: Global Average Pooling (B, 768)
+    dropout: 0.2
+    num_classes: 5
+
+training:
+  batch_size: 8
+  epochs: 5
+  optimizer:
+    name: AdamW
+    lr: 0.0001
+    weight_decay: 0.01
+  scheduler:
+    name: CosineAnnealingLR
+    eta_min: 1.0e-06
+  loss_function: CrossEntropyLoss
+  gradient_clip_norm: 2.0
+  early_stopping_patience: 3
+  device: mps
+
+evaluation:
+  primary_metric: quadratic_weighted_kappa
+  secondary_metrics:
+  - macro_f1
+  - balanced_accuracy
+  - accuracy
+  - mean_absolute_error
+  labels:
+    0: No DR
+    1: Mild NPDR
+    2: Moderate NPDR
+    3: Severe NPDR
+    4: Proliferative DR
+
+paths:
+  swin_checkpoint: outputs/Module_03_Baseline_Swin_Tiny/best_model.pth
+  radiomics_train: outputs/Module_06_Spatially_Localized_Radiomics/radiomic_features_train.npz
+  radiomics_val: outputs/Module_06_Spatially_Localized_Radiomics/radiomic_features_val.npz
+  output_dir: outputs/Module_07_Visual_Radiomic_Cross_Attention_Fusion
+  checkpoint: outputs/Module_07_Visual_Radiomic_Cross_Attention_Fusion/best_model.pth

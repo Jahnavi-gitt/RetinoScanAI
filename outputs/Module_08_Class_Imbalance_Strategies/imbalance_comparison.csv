@@ -1,0 +1,5 @@
+Strategy,Validation QWK,Validation Macro-F1,Validation Accuracy,Validation Balanced Acc,Validation MAE,Validation Loss
+Cross-Entropy (Baseline),1.0,1.0,1.0,1.0,0.0,0.4457
+Focal Loss (gamma=2.0),0.9314,0.52,0.7143,0.6,0.2857,0.1446
+Weighted Cross-Entropy,0.9014,0.2933,0.5714,0.4,0.4286,0.7382
+Class-Balanced Focal Loss,0.8158,0.24,0.4286,0.4,0.5714,0.2259

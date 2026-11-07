@@ -1,0 +1,46 @@
+==================================================================
+  MODULE 07: SPATIAL VISUAL-RADIOMIC CROSS-ATTENTION FUSION
+  Device: mps (Apple Silicon MPS / CPU)
+==================================================================
+
+--- [Phase 2/5] Initializing Visual-Radiomic Fusion Model ---
+[Swin-Tiny] Loading cached torchvision weights: /Users/jahnavi/.cache/torch/hub/checkpoints/swin_t-704ceda3.pth
+[FusionModel] Loading best Swin-Tiny weights: outputs/Module_03_Baseline_Swin_Tiny/best_model.pth
+[FusionModel] Successfully loaded fine-tuned Swin-Tiny weights.
+Fusion Model: Total Parameters = 32,895,364 | Trainable = 32,895,364
+
+--- [Phase 1/5] Running Multi-Modal Forward & Backward Verification Test ---
+  Forward Pass: Image torch.Size([2, 3, 224, 224]) + Radiomics torch.Size([2, 9, 32]) -> Logits torch.Size([2, 5])
+  Cross-Attention: 49 Visual Tokens x 9 Radiomic Regions -> Map torch.Size([2, 49, 9])
+  Backward Pass: Loss = 1.8486
+  [SUCCESS] Multi-Modal Verification test passed: All tensor shapes and gradients verified.
+
+--- [Phase 3/5] Building Multi-Modal DataLoaders ---
+[Dataset] Aligned with radiomics: Loaded 35 train samples, 7 val samples from data_manifests/sample_dataset/images.
+
+--- [Phase 4/5] Executing Multi-Modal Fusion Training ---
+[Trainer] Training Multi-Modal Cross-Attention model on mps for 5 epochs...
+Epoch 01/05 [1.3s] | Train Loss: 1.5970 Acc: 0.314 | Val Loss: 1.1104 Acc: 0.857 QWK: 0.9692 F1: 0.7600 MAE: 0.143
+  --> Saved new best checkpoint to outputs/Module_07_Visual_Radiomic_Cross_Attention_Fusion/best_model.pth (QWK: 0.9692)
+Epoch 02/05 [1.0s] | Train Loss: 1.0363 Acc: 0.686 | Val Loss: 0.6761 Acc: 0.857 QWK: 0.9692 F1: 0.7600 MAE: 0.143
+  --> Saved new best checkpoint to outputs/Module_07_Visual_Radiomic_Cross_Attention_Fusion/best_model.pth (QWK: 0.9692)
+Epoch 03/05 [1.0s] | Train Loss: 0.7877 Acc: 0.714 | Val Loss: 0.5893 Acc: 0.714 QWK: 0.9176 F1: 0.7000 MAE: 0.286
+Epoch 04/05 [1.0s] | Train Loss: 0.5705 Acc: 0.800 | Val Loss: 0.4724 Acc: 0.714 QWK: 0.9440 F1: 0.6267 MAE: 0.286
+Epoch 05/05 [1.1s] | Train Loss: 0.4859 Acc: 0.800 | Val Loss: 0.4000 Acc: 1.000 QWK: 1.0000 F1: 1.0000 MAE: 0.000
+  --> Saved new best checkpoint to outputs/Module_07_Visual_Radiomic_Cross_Attention_Fusion/best_model.pth (QWK: 1.0000)
+[Trainer] Saved training history -> outputs/Module_07_Visual_Radiomic_Cross_Attention_Fusion/training_history.csv
+Saved evaluation artifacts to outputs/Module_07_Visual_Radiomic_Cross_Attention_Fusion
+Saved predictions -> outputs/Module_07_Visual_Radiomic_Cross_Attention_Fusion/predictions.csv
+
+--- [Phase 5/5] Visualizing Visual-Radiomic Cross-Attention Maps ---
+Saved cross-attention visualization -> outputs/Module_07_Visual_Radiomic_Cross_Attention_Fusion/cross_attention_map.png
+
+==================================================================
+  CROSS-ATTENTION FUSION TRAINING COMPLETED IN 7.5s
+  Final Validation QWK:              1.0000
+  Final Validation Macro-F1:         1.0000
+  Final Validation Accuracy:         1.0000
+  Final Validation Balanced Acc:     1.0000
+  Final Validation MAE:              0.0000
+==================================================================
+[SUCCESS] Module 07 deliverables saved to outputs/Module_07_Visual_Radiomic_Cross_Attention_Fusion
