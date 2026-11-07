@@ -1,0 +1,289 @@
+feature_index,column_name,region_index,region_name,patch_feature,category,clinical_description
+0,R00_Superior_Temporal__first_order_mean,0,R00_Superior_Temporal,first_order_mean,First-Order,Arithmetic mean of gray-level pixel intensities within the sub-region
+1,R00_Superior_Temporal__first_order_variance,0,R00_Superior_Temporal,first_order_variance,First-Order,Spread of gray-level intensities around the mean
+2,R00_Superior_Temporal__first_order_skewness,0,R00_Superior_Temporal,first_order_skewness,First-Order,Asymmetry of intensity distribution (lesion asymmetry indicator)
+3,R00_Superior_Temporal__first_order_kurtosis,0,R00_Superior_Temporal,first_order_kurtosis,First-Order,Peakedness of intensity distribution (clustering of lesion intensities)
+4,R00_Superior_Temporal__first_order_p10,0,R00_Superior_Temporal,first_order_p10,First-Order,10th percentile intensity value (background and hemorrhage floor)
+5,R00_Superior_Temporal__first_order_p50,0,R00_Superior_Temporal,first_order_p50,First-Order,Median intensity value
+6,R00_Superior_Temporal__first_order_p90,0,R00_Superior_Temporal,first_order_p90,First-Order,90th percentile intensity value (bright exudate ceiling)
+7,R00_Superior_Temporal__first_order_energy,0,R00_Superior_Temporal,first_order_energy,First-Order,Sum of squared pixel intensities normalized by region area
+8,R00_Superior_Temporal__first_order_entropy,0,R00_Superior_Temporal,first_order_entropy,First-Order,Shannon entropy of intensity histogram (structural complexity)
+9,R00_Superior_Temporal__first_order_rms,0,R00_Superior_Temporal,first_order_rms,First-Order,Root mean square intensity
+10,R00_Superior_Temporal__glcm_contrast,0,R00_Superior_Temporal,glcm_contrast,GLCM,Local intensity variation and edge contrast in spatial co-occurrence
+11,R00_Superior_Temporal__glcm_dissimilarity,0,R00_Superior_Temporal,glcm_dissimilarity,GLCM,Mean difference in gray levels between neighboring pixel pairs
+12,R00_Superior_Temporal__glcm_homogeneity,0,R00_Superior_Temporal,glcm_homogeneity,GLCM,Inverse difference moment reflecting local structural uniformity
+13,R00_Superior_Temporal__glcm_energy,0,R00_Superior_Temporal,glcm_energy,GLCM,Uniformity of GLCM matrix elements (texture regularity)
+14,R00_Superior_Temporal__glcm_correlation,0,R00_Superior_Temporal,glcm_correlation,GLCM,Linear dependency of gray levels between neighboring pixels
+15,R00_Superior_Temporal__glcm_asm,0,R00_Superior_Temporal,glcm_asm,GLCM,Angular Second Moment measuring orderliness of texture
+16,R00_Superior_Temporal__lbp_bin_0,0,R00_Superior_Temporal,lbp_bin_0,LBP,Uniform local binary pattern micro-texture histogram bin 0 (flat/smooth regions)
+17,R00_Superior_Temporal__lbp_bin_1,0,R00_Superior_Temporal,lbp_bin_1,LBP,Uniform LBP micro-texture histogram bin 1 (fine edge transitions)
+18,R00_Superior_Temporal__lbp_bin_2,0,R00_Superior_Temporal,lbp_bin_2,LBP,Uniform LBP micro-texture histogram bin 2 (micro-vascular patterns)
+19,R00_Superior_Temporal__lbp_bin_3,0,R00_Superior_Temporal,lbp_bin_3,LBP,Uniform LBP micro-texture histogram bin 3 (texture irregularities)
+20,R00_Superior_Temporal__lbp_bin_4,0,R00_Superior_Temporal,lbp_bin_4,LBP,Uniform LBP micro-texture histogram bin 4 (spot/microaneurysm candidates)
+21,R00_Superior_Temporal__lbp_bin_5,0,R00_Superior_Temporal,lbp_bin_5,LBP,Uniform LBP micro-texture histogram bin 5 (intermediate texture changes)
+22,R00_Superior_Temporal__lbp_bin_6,0,R00_Superior_Temporal,lbp_bin_6,LBP,Uniform LBP micro-texture histogram bin 6 (corner/lesion boundary patterns)
+23,R00_Superior_Temporal__lbp_bin_7,0,R00_Superior_Temporal,lbp_bin_7,LBP,Uniform LBP micro-texture histogram bin 7 (vascular curvature patterns)
+24,R00_Superior_Temporal__lbp_bin_8,0,R00_Superior_Temporal,lbp_bin_8,LBP,Uniform LBP micro-texture histogram bin 8 (dense texture transitions)
+25,R00_Superior_Temporal__lbp_bin_9,0,R00_Superior_Temporal,lbp_bin_9,LBP,Uniform LBP micro-texture histogram bin 9 (non-uniform texture artifacts)
+26,R00_Superior_Temporal__morph_gradient_mean,0,R00_Superior_Temporal,morph_gradient_mean,Morphology,Average Sobel gradient magnitude reflecting microvascular boundary sharpness
+27,R00_Superior_Temporal__morph_gradient_variance,0,R00_Superior_Temporal,morph_gradient_variance,Morphology,Variance of gradient magnitude reflecting vascular branching heterogeneity
+28,R00_Superior_Temporal__morph_canny_edge_density,0,R00_Superior_Temporal,morph_canny_edge_density,Morphology,Fraction of pixels identified as sharp anatomical or lesion edges
+29,R00_Superior_Temporal__morph_exudate_bright_ratio,0,R00_Superior_Temporal,morph_exudate_bright_ratio,Morphology,Fraction of bright pixels indicative of hard/soft exudates
+30,R00_Superior_Temporal__morph_hemorrhage_dark_ratio,0,R00_Superior_Temporal,morph_hemorrhage_dark_ratio,Morphology,Fraction of dark non-background pixels indicative of retinal hemorrhages
+31,R00_Superior_Temporal__morph_michelson_contrast,0,R00_Superior_Temporal,morph_michelson_contrast,Morphology,Michelson contrast ratio (Imax - Imin) / (Imax + Imin)
+32,R01_Superior_Arcade__first_order_mean,1,R01_Superior_Arcade,first_order_mean,First-Order,Arithmetic mean of gray-level pixel intensities within the sub-region
+33,R01_Superior_Arcade__first_order_variance,1,R01_Superior_Arcade,first_order_variance,First-Order,Spread of gray-level intensities around the mean
+34,R01_Superior_Arcade__first_order_skewness,1,R01_Superior_Arcade,first_order_skewness,First-Order,Asymmetry of intensity distribution (lesion asymmetry indicator)
+35,R01_Superior_Arcade__first_order_kurtosis,1,R01_Superior_Arcade,first_order_kurtosis,First-Order,Peakedness of intensity distribution (clustering of lesion intensities)
+36,R01_Superior_Arcade__first_order_p10,1,R01_Superior_Arcade,first_order_p10,First-Order,10th percentile intensity value (background and hemorrhage floor)
+37,R01_Superior_Arcade__first_order_p50,1,R01_Superior_Arcade,first_order_p50,First-Order,Median intensity value
+38,R01_Superior_Arcade__first_order_p90,1,R01_Superior_Arcade,first_order_p90,First-Order,90th percentile intensity value (bright exudate ceiling)
+39,R01_Superior_Arcade__first_order_energy,1,R01_Superior_Arcade,first_order_energy,First-Order,Sum of squared pixel intensities normalized by region area
+40,R01_Superior_Arcade__first_order_entropy,1,R01_Superior_Arcade,first_order_entropy,First-Order,Shannon entropy of intensity histogram (structural complexity)
+41,R01_Superior_Arcade__first_order_rms,1,R01_Superior_Arcade,first_order_rms,First-Order,Root mean square intensity
+42,R01_Superior_Arcade__glcm_contrast,1,R01_Superior_Arcade,glcm_contrast,GLCM,Local intensity variation and edge contrast in spatial co-occurrence
+43,R01_Superior_Arcade__glcm_dissimilarity,1,R01_Superior_Arcade,glcm_dissimilarity,GLCM,Mean difference in gray levels between neighboring pixel pairs
+44,R01_Superior_Arcade__glcm_homogeneity,1,R01_Superior_Arcade,glcm_homogeneity,GLCM,Inverse difference moment reflecting local structural uniformity
+45,R01_Superior_Arcade__glcm_energy,1,R01_Superior_Arcade,glcm_energy,GLCM,Uniformity of GLCM matrix elements (texture regularity)
+46,R01_Superior_Arcade__glcm_correlation,1,R01_Superior_Arcade,glcm_correlation,GLCM,Linear dependency of gray levels between neighboring pixels
+47,R01_Superior_Arcade__glcm_asm,1,R01_Superior_Arcade,glcm_asm,GLCM,Angular Second Moment measuring orderliness of texture
+48,R01_Superior_Arcade__lbp_bin_0,1,R01_Superior_Arcade,lbp_bin_0,LBP,Uniform local binary pattern micro-texture histogram bin 0 (flat/smooth regions)
+49,R01_Superior_Arcade__lbp_bin_1,1,R01_Superior_Arcade,lbp_bin_1,LBP,Uniform LBP micro-texture histogram bin 1 (fine edge transitions)
+50,R01_Superior_Arcade__lbp_bin_2,1,R01_Superior_Arcade,lbp_bin_2,LBP,Uniform LBP micro-texture histogram bin 2 (micro-vascular patterns)
+51,R01_Superior_Arcade__lbp_bin_3,1,R01_Superior_Arcade,lbp_bin_3,LBP,Uniform LBP micro-texture histogram bin 3 (texture irregularities)
+52,R01_Superior_Arcade__lbp_bin_4,1,R01_Superior_Arcade,lbp_bin_4,LBP,Uniform LBP micro-texture histogram bin 4 (spot/microaneurysm candidates)
+53,R01_Superior_Arcade__lbp_bin_5,1,R01_Superior_Arcade,lbp_bin_5,LBP,Uniform LBP micro-texture histogram bin 5 (intermediate texture changes)
+54,R01_Superior_Arcade__lbp_bin_6,1,R01_Superior_Arcade,lbp_bin_6,LBP,Uniform LBP micro-texture histogram bin 6 (corner/lesion boundary patterns)
+55,R01_Superior_Arcade__lbp_bin_7,1,R01_Superior_Arcade,lbp_bin_7,LBP,Uniform LBP micro-texture histogram bin 7 (vascular curvature patterns)
+56,R01_Superior_Arcade__lbp_bin_8,1,R01_Superior_Arcade,lbp_bin_8,LBP,Uniform LBP micro-texture histogram bin 8 (dense texture transitions)
+57,R01_Superior_Arcade__lbp_bin_9,1,R01_Superior_Arcade,lbp_bin_9,LBP,Uniform LBP micro-texture histogram bin 9 (non-uniform texture artifacts)
+58,R01_Superior_Arcade__morph_gradient_mean,1,R01_Superior_Arcade,morph_gradient_mean,Morphology,Average Sobel gradient magnitude reflecting microvascular boundary sharpness
+59,R01_Superior_Arcade__morph_gradient_variance,1,R01_Superior_Arcade,morph_gradient_variance,Morphology,Variance of gradient magnitude reflecting vascular branching heterogeneity
+60,R01_Superior_Arcade__morph_canny_edge_density,1,R01_Superior_Arcade,morph_canny_edge_density,Morphology,Fraction of pixels identified as sharp anatomical or lesion edges
+61,R01_Superior_Arcade__morph_exudate_bright_ratio,1,R01_Superior_Arcade,morph_exudate_bright_ratio,Morphology,Fraction of bright pixels indicative of hard/soft exudates
+62,R01_Superior_Arcade__morph_hemorrhage_dark_ratio,1,R01_Superior_Arcade,morph_hemorrhage_dark_ratio,Morphology,Fraction of dark non-background pixels indicative of retinal hemorrhages
+63,R01_Superior_Arcade__morph_michelson_contrast,1,R01_Superior_Arcade,morph_michelson_contrast,Morphology,Michelson contrast ratio (Imax - Imin) / (Imax + Imin)
+64,R02_Superior_Nasal__first_order_mean,2,R02_Superior_Nasal,first_order_mean,First-Order,Arithmetic mean of gray-level pixel intensities within the sub-region
+65,R02_Superior_Nasal__first_order_variance,2,R02_Superior_Nasal,first_order_variance,First-Order,Spread of gray-level intensities around the mean
+66,R02_Superior_Nasal__first_order_skewness,2,R02_Superior_Nasal,first_order_skewness,First-Order,Asymmetry of intensity distribution (lesion asymmetry indicator)
+67,R02_Superior_Nasal__first_order_kurtosis,2,R02_Superior_Nasal,first_order_kurtosis,First-Order,Peakedness of intensity distribution (clustering of lesion intensities)
+68,R02_Superior_Nasal__first_order_p10,2,R02_Superior_Nasal,first_order_p10,First-Order,10th percentile intensity value (background and hemorrhage floor)
+69,R02_Superior_Nasal__first_order_p50,2,R02_Superior_Nasal,first_order_p50,First-Order,Median intensity value
+70,R02_Superior_Nasal__first_order_p90,2,R02_Superior_Nasal,first_order_p90,First-Order,90th percentile intensity value (bright exudate ceiling)
+71,R02_Superior_Nasal__first_order_energy,2,R02_Superior_Nasal,first_order_energy,First-Order,Sum of squared pixel intensities normalized by region area
+72,R02_Superior_Nasal__first_order_entropy,2,R02_Superior_Nasal,first_order_entropy,First-Order,Shannon entropy of intensity histogram (structural complexity)
+73,R02_Superior_Nasal__first_order_rms,2,R02_Superior_Nasal,first_order_rms,First-Order,Root mean square intensity
+74,R02_Superior_Nasal__glcm_contrast,2,R02_Superior_Nasal,glcm_contrast,GLCM,Local intensity variation and edge contrast in spatial co-occurrence
+75,R02_Superior_Nasal__glcm_dissimilarity,2,R02_Superior_Nasal,glcm_dissimilarity,GLCM,Mean difference in gray levels between neighboring pixel pairs
+76,R02_Superior_Nasal__glcm_homogeneity,2,R02_Superior_Nasal,glcm_homogeneity,GLCM,Inverse difference moment reflecting local structural uniformity
+77,R02_Superior_Nasal__glcm_energy,2,R02_Superior_Nasal,glcm_energy,GLCM,Uniformity of GLCM matrix elements (texture regularity)
+78,R02_Superior_Nasal__glcm_correlation,2,R02_Superior_Nasal,glcm_correlation,GLCM,Linear dependency of gray levels between neighboring pixels
+79,R02_Superior_Nasal__glcm_asm,2,R02_Superior_Nasal,glcm_asm,GLCM,Angular Second Moment measuring orderliness of texture
+80,R02_Superior_Nasal__lbp_bin_0,2,R02_Superior_Nasal,lbp_bin_0,LBP,Uniform local binary pattern micro-texture histogram bin 0 (flat/smooth regions)
+81,R02_Superior_Nasal__lbp_bin_1,2,R02_Superior_Nasal,lbp_bin_1,LBP,Uniform LBP micro-texture histogram bin 1 (fine edge transitions)
+82,R02_Superior_Nasal__lbp_bin_2,2,R02_Superior_Nasal,lbp_bin_2,LBP,Uniform LBP micro-texture histogram bin 2 (micro-vascular patterns)
+83,R02_Superior_Nasal__lbp_bin_3,2,R02_Superior_Nasal,lbp_bin_3,LBP,Uniform LBP micro-texture histogram bin 3 (texture irregularities)
+84,R02_Superior_Nasal__lbp_bin_4,2,R02_Superior_Nasal,lbp_bin_4,LBP,Uniform LBP micro-texture histogram bin 4 (spot/microaneurysm candidates)
+85,R02_Superior_Nasal__lbp_bin_5,2,R02_Superior_Nasal,lbp_bin_5,LBP,Uniform LBP micro-texture histogram bin 5 (intermediate texture changes)
+86,R02_Superior_Nasal__lbp_bin_6,2,R02_Superior_Nasal,lbp_bin_6,LBP,Uniform LBP micro-texture histogram bin 6 (corner/lesion boundary patterns)
+87,R02_Superior_Nasal__lbp_bin_7,2,R02_Superior_Nasal,lbp_bin_7,LBP,Uniform LBP micro-texture histogram bin 7 (vascular curvature patterns)
+88,R02_Superior_Nasal__lbp_bin_8,2,R02_Superior_Nasal,lbp_bin_8,LBP,Uniform LBP micro-texture histogram bin 8 (dense texture transitions)
+89,R02_Superior_Nasal__lbp_bin_9,2,R02_Superior_Nasal,lbp_bin_9,LBP,Uniform LBP micro-texture histogram bin 9 (non-uniform texture artifacts)
+90,R02_Superior_Nasal__morph_gradient_mean,2,R02_Superior_Nasal,morph_gradient_mean,Morphology,Average Sobel gradient magnitude reflecting microvascular boundary sharpness
+91,R02_Superior_Nasal__morph_gradient_variance,2,R02_Superior_Nasal,morph_gradient_variance,Morphology,Variance of gradient magnitude reflecting vascular branching heterogeneity
+92,R02_Superior_Nasal__morph_canny_edge_density,2,R02_Superior_Nasal,morph_canny_edge_density,Morphology,Fraction of pixels identified as sharp anatomical or lesion edges
+93,R02_Superior_Nasal__morph_exudate_bright_ratio,2,R02_Superior_Nasal,morph_exudate_bright_ratio,Morphology,Fraction of bright pixels indicative of hard/soft exudates
+94,R02_Superior_Nasal__morph_hemorrhage_dark_ratio,2,R02_Superior_Nasal,morph_hemorrhage_dark_ratio,Morphology,Fraction of dark non-background pixels indicative of retinal hemorrhages
+95,R02_Superior_Nasal__morph_michelson_contrast,2,R02_Superior_Nasal,morph_michelson_contrast,Morphology,Michelson contrast ratio (Imax - Imin) / (Imax + Imin)
+96,R10_Temporal_Mid__first_order_mean,3,R10_Temporal_Mid,first_order_mean,First-Order,Arithmetic mean of gray-level pixel intensities within the sub-region
+97,R10_Temporal_Mid__first_order_variance,3,R10_Temporal_Mid,first_order_variance,First-Order,Spread of gray-level intensities around the mean
+98,R10_Temporal_Mid__first_order_skewness,3,R10_Temporal_Mid,first_order_skewness,First-Order,Asymmetry of intensity distribution (lesion asymmetry indicator)
+99,R10_Temporal_Mid__first_order_kurtosis,3,R10_Temporal_Mid,first_order_kurtosis,First-Order,Peakedness of intensity distribution (clustering of lesion intensities)
+100,R10_Temporal_Mid__first_order_p10,3,R10_Temporal_Mid,first_order_p10,First-Order,10th percentile intensity value (background and hemorrhage floor)
+101,R10_Temporal_Mid__first_order_p50,3,R10_Temporal_Mid,first_order_p50,First-Order,Median intensity value
+102,R10_Temporal_Mid__first_order_p90,3,R10_Temporal_Mid,first_order_p90,First-Order,90th percentile intensity value (bright exudate ceiling)
+103,R10_Temporal_Mid__first_order_energy,3,R10_Temporal_Mid,first_order_energy,First-Order,Sum of squared pixel intensities normalized by region area
+104,R10_Temporal_Mid__first_order_entropy,3,R10_Temporal_Mid,first_order_entropy,First-Order,Shannon entropy of intensity histogram (structural complexity)
+105,R10_Temporal_Mid__first_order_rms,3,R10_Temporal_Mid,first_order_rms,First-Order,Root mean square intensity
+106,R10_Temporal_Mid__glcm_contrast,3,R10_Temporal_Mid,glcm_contrast,GLCM,Local intensity variation and edge contrast in spatial co-occurrence
+107,R10_Temporal_Mid__glcm_dissimilarity,3,R10_Temporal_Mid,glcm_dissimilarity,GLCM,Mean difference in gray levels between neighboring pixel pairs
+108,R10_Temporal_Mid__glcm_homogeneity,3,R10_Temporal_Mid,glcm_homogeneity,GLCM,Inverse difference moment reflecting local structural uniformity
+109,R10_Temporal_Mid__glcm_energy,3,R10_Temporal_Mid,glcm_energy,GLCM,Uniformity of GLCM matrix elements (texture regularity)
+110,R10_Temporal_Mid__glcm_correlation,3,R10_Temporal_Mid,glcm_correlation,GLCM,Linear dependency of gray levels between neighboring pixels
+111,R10_Temporal_Mid__glcm_asm,3,R10_Temporal_Mid,glcm_asm,GLCM,Angular Second Moment measuring orderliness of texture
+112,R10_Temporal_Mid__lbp_bin_0,3,R10_Temporal_Mid,lbp_bin_0,LBP,Uniform local binary pattern micro-texture histogram bin 0 (flat/smooth regions)
+113,R10_Temporal_Mid__lbp_bin_1,3,R10_Temporal_Mid,lbp_bin_1,LBP,Uniform LBP micro-texture histogram bin 1 (fine edge transitions)
+114,R10_Temporal_Mid__lbp_bin_2,3,R10_Temporal_Mid,lbp_bin_2,LBP,Uniform LBP micro-texture histogram bin 2 (micro-vascular patterns)
+115,R10_Temporal_Mid__lbp_bin_3,3,R10_Temporal_Mid,lbp_bin_3,LBP,Uniform LBP micro-texture histogram bin 3 (texture irregularities)
+116,R10_Temporal_Mid__lbp_bin_4,3,R10_Temporal_Mid,lbp_bin_4,LBP,Uniform LBP micro-texture histogram bin 4 (spot/microaneurysm candidates)
+117,R10_Temporal_Mid__lbp_bin_5,3,R10_Temporal_Mid,lbp_bin_5,LBP,Uniform LBP micro-texture histogram bin 5 (intermediate texture changes)
+118,R10_Temporal_Mid__lbp_bin_6,3,R10_Temporal_Mid,lbp_bin_6,LBP,Uniform LBP micro-texture histogram bin 6 (corner/lesion boundary patterns)
+119,R10_Temporal_Mid__lbp_bin_7,3,R10_Temporal_Mid,lbp_bin_7,LBP,Uniform LBP micro-texture histogram bin 7 (vascular curvature patterns)
+120,R10_Temporal_Mid__lbp_bin_8,3,R10_Temporal_Mid,lbp_bin_8,LBP,Uniform LBP micro-texture histogram bin 8 (dense texture transitions)
+121,R10_Temporal_Mid__lbp_bin_9,3,R10_Temporal_Mid,lbp_bin_9,LBP,Uniform LBP micro-texture histogram bin 9 (non-uniform texture artifacts)
+122,R10_Temporal_Mid__morph_gradient_mean,3,R10_Temporal_Mid,morph_gradient_mean,Morphology,Average Sobel gradient magnitude reflecting microvascular boundary sharpness
+123,R10_Temporal_Mid__morph_gradient_variance,3,R10_Temporal_Mid,morph_gradient_variance,Morphology,Variance of gradient magnitude reflecting vascular branching heterogeneity
+124,R10_Temporal_Mid__morph_canny_edge_density,3,R10_Temporal_Mid,morph_canny_edge_density,Morphology,Fraction of pixels identified as sharp anatomical or lesion edges
+125,R10_Temporal_Mid__morph_exudate_bright_ratio,3,R10_Temporal_Mid,morph_exudate_bright_ratio,Morphology,Fraction of bright pixels indicative of hard/soft exudates
+126,R10_Temporal_Mid__morph_hemorrhage_dark_ratio,3,R10_Temporal_Mid,morph_hemorrhage_dark_ratio,Morphology,Fraction of dark non-background pixels indicative of retinal hemorrhages
+127,R10_Temporal_Mid__morph_michelson_contrast,3,R10_Temporal_Mid,morph_michelson_contrast,Morphology,Michelson contrast ratio (Imax - Imin) / (Imax + Imin)
+128,R11_Central_Macula_Fovea__first_order_mean,4,R11_Central_Macula_Fovea,first_order_mean,First-Order,Arithmetic mean of gray-level pixel intensities within the sub-region
+129,R11_Central_Macula_Fovea__first_order_variance,4,R11_Central_Macula_Fovea,first_order_variance,First-Order,Spread of gray-level intensities around the mean
+130,R11_Central_Macula_Fovea__first_order_skewness,4,R11_Central_Macula_Fovea,first_order_skewness,First-Order,Asymmetry of intensity distribution (lesion asymmetry indicator)
+131,R11_Central_Macula_Fovea__first_order_kurtosis,4,R11_Central_Macula_Fovea,first_order_kurtosis,First-Order,Peakedness of intensity distribution (clustering of lesion intensities)
+132,R11_Central_Macula_Fovea__first_order_p10,4,R11_Central_Macula_Fovea,first_order_p10,First-Order,10th percentile intensity value (background and hemorrhage floor)
+133,R11_Central_Macula_Fovea__first_order_p50,4,R11_Central_Macula_Fovea,first_order_p50,First-Order,Median intensity value
+134,R11_Central_Macula_Fovea__first_order_p90,4,R11_Central_Macula_Fovea,first_order_p90,First-Order,90th percentile intensity value (bright exudate ceiling)
+135,R11_Central_Macula_Fovea__first_order_energy,4,R11_Central_Macula_Fovea,first_order_energy,First-Order,Sum of squared pixel intensities normalized by region area
+136,R11_Central_Macula_Fovea__first_order_entropy,4,R11_Central_Macula_Fovea,first_order_entropy,First-Order,Shannon entropy of intensity histogram (structural complexity)
+137,R11_Central_Macula_Fovea__first_order_rms,4,R11_Central_Macula_Fovea,first_order_rms,First-Order,Root mean square intensity
+138,R11_Central_Macula_Fovea__glcm_contrast,4,R11_Central_Macula_Fovea,glcm_contrast,GLCM,Local intensity variation and edge contrast in spatial co-occurrence
+139,R11_Central_Macula_Fovea__glcm_dissimilarity,4,R11_Central_Macula_Fovea,glcm_dissimilarity,GLCM,Mean difference in gray levels between neighboring pixel pairs
+140,R11_Central_Macula_Fovea__glcm_homogeneity,4,R11_Central_Macula_Fovea,glcm_homogeneity,GLCM,Inverse difference moment reflecting local structural uniformity
+141,R11_Central_Macula_Fovea__glcm_energy,4,R11_Central_Macula_Fovea,glcm_energy,GLCM,Uniformity of GLCM matrix elements (texture regularity)
+142,R11_Central_Macula_Fovea__glcm_correlation,4,R11_Central_Macula_Fovea,glcm_correlation,GLCM,Linear dependency of gray levels between neighboring pixels
+143,R11_Central_Macula_Fovea__glcm_asm,4,R11_Central_Macula_Fovea,glcm_asm,GLCM,Angular Second Moment measuring orderliness of texture
+144,R11_Central_Macula_Fovea__lbp_bin_0,4,R11_Central_Macula_Fovea,lbp_bin_0,LBP,Uniform local binary pattern micro-texture histogram bin 0 (flat/smooth regions)
+145,R11_Central_Macula_Fovea__lbp_bin_1,4,R11_Central_Macula_Fovea,lbp_bin_1,LBP,Uniform LBP micro-texture histogram bin 1 (fine edge transitions)
+146,R11_Central_Macula_Fovea__lbp_bin_2,4,R11_Central_Macula_Fovea,lbp_bin_2,LBP,Uniform LBP micro-texture histogram bin 2 (micro-vascular patterns)
+147,R11_Central_Macula_Fovea__lbp_bin_3,4,R11_Central_Macula_Fovea,lbp_bin_3,LBP,Uniform LBP micro-texture histogram bin 3 (texture irregularities)
+148,R11_Central_Macula_Fovea__lbp_bin_4,4,R11_Central_Macula_Fovea,lbp_bin_4,LBP,Uniform LBP micro-texture histogram bin 4 (spot/microaneurysm candidates)
+149,R11_Central_Macula_Fovea__lbp_bin_5,4,R11_Central_Macula_Fovea,lbp_bin_5,LBP,Uniform LBP micro-texture histogram bin 5 (intermediate texture changes)
+150,R11_Central_Macula_Fovea__lbp_bin_6,4,R11_Central_Macula_Fovea,lbp_bin_6,LBP,Uniform LBP micro-texture histogram bin 6 (corner/lesion boundary patterns)
+151,R11_Central_Macula_Fovea__lbp_bin_7,4,R11_Central_Macula_Fovea,lbp_bin_7,LBP,Uniform LBP micro-texture histogram bin 7 (vascular curvature patterns)
+152,R11_Central_Macula_Fovea__lbp_bin_8,4,R11_Central_Macula_Fovea,lbp_bin_8,LBP,Uniform LBP micro-texture histogram bin 8 (dense texture transitions)
+153,R11_Central_Macula_Fovea__lbp_bin_9,4,R11_Central_Macula_Fovea,lbp_bin_9,LBP,Uniform LBP micro-texture histogram bin 9 (non-uniform texture artifacts)
+154,R11_Central_Macula_Fovea__morph_gradient_mean,4,R11_Central_Macula_Fovea,morph_gradient_mean,Morphology,Average Sobel gradient magnitude reflecting microvascular boundary sharpness
+155,R11_Central_Macula_Fovea__morph_gradient_variance,4,R11_Central_Macula_Fovea,morph_gradient_variance,Morphology,Variance of gradient magnitude reflecting vascular branching heterogeneity
+156,R11_Central_Macula_Fovea__morph_canny_edge_density,4,R11_Central_Macula_Fovea,morph_canny_edge_density,Morphology,Fraction of pixels identified as sharp anatomical or lesion edges
+157,R11_Central_Macula_Fovea__morph_exudate_bright_ratio,4,R11_Central_Macula_Fovea,morph_exudate_bright_ratio,Morphology,Fraction of bright pixels indicative of hard/soft exudates
+158,R11_Central_Macula_Fovea__morph_hemorrhage_dark_ratio,4,R11_Central_Macula_Fovea,morph_hemorrhage_dark_ratio,Morphology,Fraction of dark non-background pixels indicative of retinal hemorrhages
+159,R11_Central_Macula_Fovea__morph_michelson_contrast,4,R11_Central_Macula_Fovea,morph_michelson_contrast,Morphology,Michelson contrast ratio (Imax - Imin) / (Imax + Imin)
+160,R12_Nasal_Mid__first_order_mean,5,R12_Nasal_Mid,first_order_mean,First-Order,Arithmetic mean of gray-level pixel intensities within the sub-region
+161,R12_Nasal_Mid__first_order_variance,5,R12_Nasal_Mid,first_order_variance,First-Order,Spread of gray-level intensities around the mean
+162,R12_Nasal_Mid__first_order_skewness,5,R12_Nasal_Mid,first_order_skewness,First-Order,Asymmetry of intensity distribution (lesion asymmetry indicator)
+163,R12_Nasal_Mid__first_order_kurtosis,5,R12_Nasal_Mid,first_order_kurtosis,First-Order,Peakedness of intensity distribution (clustering of lesion intensities)
+164,R12_Nasal_Mid__first_order_p10,5,R12_Nasal_Mid,first_order_p10,First-Order,10th percentile intensity value (background and hemorrhage floor)
+165,R12_Nasal_Mid__first_order_p50,5,R12_Nasal_Mid,first_order_p50,First-Order,Median intensity value
+166,R12_Nasal_Mid__first_order_p90,5,R12_Nasal_Mid,first_order_p90,First-Order,90th percentile intensity value (bright exudate ceiling)
+167,R12_Nasal_Mid__first_order_energy,5,R12_Nasal_Mid,first_order_energy,First-Order,Sum of squared pixel intensities normalized by region area
+168,R12_Nasal_Mid__first_order_entropy,5,R12_Nasal_Mid,first_order_entropy,First-Order,Shannon entropy of intensity histogram (structural complexity)
+169,R12_Nasal_Mid__first_order_rms,5,R12_Nasal_Mid,first_order_rms,First-Order,Root mean square intensity
+170,R12_Nasal_Mid__glcm_contrast,5,R12_Nasal_Mid,glcm_contrast,GLCM,Local intensity variation and edge contrast in spatial co-occurrence
+171,R12_Nasal_Mid__glcm_dissimilarity,5,R12_Nasal_Mid,glcm_dissimilarity,GLCM,Mean difference in gray levels between neighboring pixel pairs
+172,R12_Nasal_Mid__glcm_homogeneity,5,R12_Nasal_Mid,glcm_homogeneity,GLCM,Inverse difference moment reflecting local structural uniformity
+173,R12_Nasal_Mid__glcm_energy,5,R12_Nasal_Mid,glcm_energy,GLCM,Uniformity of GLCM matrix elements (texture regularity)
+174,R12_Nasal_Mid__glcm_correlation,5,R12_Nasal_Mid,glcm_correlation,GLCM,Linear dependency of gray levels between neighboring pixels
+175,R12_Nasal_Mid__glcm_asm,5,R12_Nasal_Mid,glcm_asm,GLCM,Angular Second Moment measuring orderliness of texture
+176,R12_Nasal_Mid__lbp_bin_0,5,R12_Nasal_Mid,lbp_bin_0,LBP,Uniform local binary pattern micro-texture histogram bin 0 (flat/smooth regions)
+177,R12_Nasal_Mid__lbp_bin_1,5,R12_Nasal_Mid,lbp_bin_1,LBP,Uniform LBP micro-texture histogram bin 1 (fine edge transitions)
+178,R12_Nasal_Mid__lbp_bin_2,5,R12_Nasal_Mid,lbp_bin_2,LBP,Uniform LBP micro-texture histogram bin 2 (micro-vascular patterns)
+179,R12_Nasal_Mid__lbp_bin_3,5,R12_Nasal_Mid,lbp_bin_3,LBP,Uniform LBP micro-texture histogram bin 3 (texture irregularities)
+180,R12_Nasal_Mid__lbp_bin_4,5,R12_Nasal_Mid,lbp_bin_4,LBP,Uniform LBP micro-texture histogram bin 4 (spot/microaneurysm candidates)
+181,R12_Nasal_Mid__lbp_bin_5,5,R12_Nasal_Mid,lbp_bin_5,LBP,Uniform LBP micro-texture histogram bin 5 (intermediate texture changes)
+182,R12_Nasal_Mid__lbp_bin_6,5,R12_Nasal_Mid,lbp_bin_6,LBP,Uniform LBP micro-texture histogram bin 6 (corner/lesion boundary patterns)
+183,R12_Nasal_Mid__lbp_bin_7,5,R12_Nasal_Mid,lbp_bin_7,LBP,Uniform LBP micro-texture histogram bin 7 (vascular curvature patterns)
+184,R12_Nasal_Mid__lbp_bin_8,5,R12_Nasal_Mid,lbp_bin_8,LBP,Uniform LBP micro-texture histogram bin 8 (dense texture transitions)
+185,R12_Nasal_Mid__lbp_bin_9,5,R12_Nasal_Mid,lbp_bin_9,LBP,Uniform LBP micro-texture histogram bin 9 (non-uniform texture artifacts)
+186,R12_Nasal_Mid__morph_gradient_mean,5,R12_Nasal_Mid,morph_gradient_mean,Morphology,Average Sobel gradient magnitude reflecting microvascular boundary sharpness
+187,R12_Nasal_Mid__morph_gradient_variance,5,R12_Nasal_Mid,morph_gradient_variance,Morphology,Variance of gradient magnitude reflecting vascular branching heterogeneity
+188,R12_Nasal_Mid__morph_canny_edge_density,5,R12_Nasal_Mid,morph_canny_edge_density,Morphology,Fraction of pixels identified as sharp anatomical or lesion edges
+189,R12_Nasal_Mid__morph_exudate_bright_ratio,5,R12_Nasal_Mid,morph_exudate_bright_ratio,Morphology,Fraction of bright pixels indicative of hard/soft exudates
+190,R12_Nasal_Mid__morph_hemorrhage_dark_ratio,5,R12_Nasal_Mid,morph_hemorrhage_dark_ratio,Morphology,Fraction of dark non-background pixels indicative of retinal hemorrhages
+191,R12_Nasal_Mid__morph_michelson_contrast,5,R12_Nasal_Mid,morph_michelson_contrast,Morphology,Michelson contrast ratio (Imax - Imin) / (Imax + Imin)
+192,R20_Inferior_Temporal__first_order_mean,6,R20_Inferior_Temporal,first_order_mean,First-Order,Arithmetic mean of gray-level pixel intensities within the sub-region
+193,R20_Inferior_Temporal__first_order_variance,6,R20_Inferior_Temporal,first_order_variance,First-Order,Spread of gray-level intensities around the mean
+194,R20_Inferior_Temporal__first_order_skewness,6,R20_Inferior_Temporal,first_order_skewness,First-Order,Asymmetry of intensity distribution (lesion asymmetry indicator)
+195,R20_Inferior_Temporal__first_order_kurtosis,6,R20_Inferior_Temporal,first_order_kurtosis,First-Order,Peakedness of intensity distribution (clustering of lesion intensities)
+196,R20_Inferior_Temporal__first_order_p10,6,R20_Inferior_Temporal,first_order_p10,First-Order,10th percentile intensity value (background and hemorrhage floor)
+197,R20_Inferior_Temporal__first_order_p50,6,R20_Inferior_Temporal,first_order_p50,First-Order,Median intensity value
+198,R20_Inferior_Temporal__first_order_p90,6,R20_Inferior_Temporal,first_order_p90,First-Order,90th percentile intensity value (bright exudate ceiling)
+199,R20_Inferior_Temporal__first_order_energy,6,R20_Inferior_Temporal,first_order_energy,First-Order,Sum of squared pixel intensities normalized by region area
+200,R20_Inferior_Temporal__first_order_entropy,6,R20_Inferior_Temporal,first_order_entropy,First-Order,Shannon entropy of intensity histogram (structural complexity)
+201,R20_Inferior_Temporal__first_order_rms,6,R20_Inferior_Temporal,first_order_rms,First-Order,Root mean square intensity
+202,R20_Inferior_Temporal__glcm_contrast,6,R20_Inferior_Temporal,glcm_contrast,GLCM,Local intensity variation and edge contrast in spatial co-occurrence
+203,R20_Inferior_Temporal__glcm_dissimilarity,6,R20_Inferior_Temporal,glcm_dissimilarity,GLCM,Mean difference in gray levels between neighboring pixel pairs
+204,R20_Inferior_Temporal__glcm_homogeneity,6,R20_Inferior_Temporal,glcm_homogeneity,GLCM,Inverse difference moment reflecting local structural uniformity
+205,R20_Inferior_Temporal__glcm_energy,6,R20_Inferior_Temporal,glcm_energy,GLCM,Uniformity of GLCM matrix elements (texture regularity)
+206,R20_Inferior_Temporal__glcm_correlation,6,R20_Inferior_Temporal,glcm_correlation,GLCM,Linear dependency of gray levels between neighboring pixels
+207,R20_Inferior_Temporal__glcm_asm,6,R20_Inferior_Temporal,glcm_asm,GLCM,Angular Second Moment measuring orderliness of texture
+208,R20_Inferior_Temporal__lbp_bin_0,6,R20_Inferior_Temporal,lbp_bin_0,LBP,Uniform local binary pattern micro-texture histogram bin 0 (flat/smooth regions)
+209,R20_Inferior_Temporal__lbp_bin_1,6,R20_Inferior_Temporal,lbp_bin_1,LBP,Uniform LBP micro-texture histogram bin 1 (fine edge transitions)
+210,R20_Inferior_Temporal__lbp_bin_2,6,R20_Inferior_Temporal,lbp_bin_2,LBP,Uniform LBP micro-texture histogram bin 2 (micro-vascular patterns)
+211,R20_Inferior_Temporal__lbp_bin_3,6,R20_Inferior_Temporal,lbp_bin_3,LBP,Uniform LBP micro-texture histogram bin 3 (texture irregularities)
+212,R20_Inferior_Temporal__lbp_bin_4,6,R20_Inferior_Temporal,lbp_bin_4,LBP,Uniform LBP micro-texture histogram bin 4 (spot/microaneurysm candidates)
+213,R20_Inferior_Temporal__lbp_bin_5,6,R20_Inferior_Temporal,lbp_bin_5,LBP,Uniform LBP micro-texture histogram bin 5 (intermediate texture changes)
+214,R20_Inferior_Temporal__lbp_bin_6,6,R20_Inferior_Temporal,lbp_bin_6,LBP,Uniform LBP micro-texture histogram bin 6 (corner/lesion boundary patterns)
+215,R20_Inferior_Temporal__lbp_bin_7,6,R20_Inferior_Temporal,lbp_bin_7,LBP,Uniform LBP micro-texture histogram bin 7 (vascular curvature patterns)
+216,R20_Inferior_Temporal__lbp_bin_8,6,R20_Inferior_Temporal,lbp_bin_8,LBP,Uniform LBP micro-texture histogram bin 8 (dense texture transitions)
+217,R20_Inferior_Temporal__lbp_bin_9,6,R20_Inferior_Temporal,lbp_bin_9,LBP,Uniform LBP micro-texture histogram bin 9 (non-uniform texture artifacts)
+218,R20_Inferior_Temporal__morph_gradient_mean,6,R20_Inferior_Temporal,morph_gradient_mean,Morphology,Average Sobel gradient magnitude reflecting microvascular boundary sharpness
+219,R20_Inferior_Temporal__morph_gradient_variance,6,R20_Inferior_Temporal,morph_gradient_variance,Morphology,Variance of gradient magnitude reflecting vascular branching heterogeneity
+220,R20_Inferior_Temporal__morph_canny_edge_density,6,R20_Inferior_Temporal,morph_canny_edge_density,Morphology,Fraction of pixels identified as sharp anatomical or lesion edges
+221,R20_Inferior_Temporal__morph_exudate_bright_ratio,6,R20_Inferior_Temporal,morph_exudate_bright_ratio,Morphology,Fraction of bright pixels indicative of hard/soft exudates
+222,R20_Inferior_Temporal__morph_hemorrhage_dark_ratio,6,R20_Inferior_Temporal,morph_hemorrhage_dark_ratio,Morphology,Fraction of dark non-background pixels indicative of retinal hemorrhages
+223,R20_Inferior_Temporal__morph_michelson_contrast,6,R20_Inferior_Temporal,morph_michelson_contrast,Morphology,Michelson contrast ratio (Imax - Imin) / (Imax + Imin)
+224,R21_Inferior_Arcade__first_order_mean,7,R21_Inferior_Arcade,first_order_mean,First-Order,Arithmetic mean of gray-level pixel intensities within the sub-region
+225,R21_Inferior_Arcade__first_order_variance,7,R21_Inferior_Arcade,first_order_variance,First-Order,Spread of gray-level intensities around the mean
+226,R21_Inferior_Arcade__first_order_skewness,7,R21_Inferior_Arcade,first_order_skewness,First-Order,Asymmetry of intensity distribution (lesion asymmetry indicator)
+227,R21_Inferior_Arcade__first_order_kurtosis,7,R21_Inferior_Arcade,first_order_kurtosis,First-Order,Peakedness of intensity distribution (clustering of lesion intensities)
+228,R21_Inferior_Arcade__first_order_p10,7,R21_Inferior_Arcade,first_order_p10,First-Order,10th percentile intensity value (background and hemorrhage floor)
+229,R21_Inferior_Arcade__first_order_p50,7,R21_Inferior_Arcade,first_order_p50,First-Order,Median intensity value
+230,R21_Inferior_Arcade__first_order_p90,7,R21_Inferior_Arcade,first_order_p90,First-Order,90th percentile intensity value (bright exudate ceiling)
+231,R21_Inferior_Arcade__first_order_energy,7,R21_Inferior_Arcade,first_order_energy,First-Order,Sum of squared pixel intensities normalized by region area
+232,R21_Inferior_Arcade__first_order_entropy,7,R21_Inferior_Arcade,first_order_entropy,First-Order,Shannon entropy of intensity histogram (structural complexity)
+233,R21_Inferior_Arcade__first_order_rms,7,R21_Inferior_Arcade,first_order_rms,First-Order,Root mean square intensity
+234,R21_Inferior_Arcade__glcm_contrast,7,R21_Inferior_Arcade,glcm_contrast,GLCM,Local intensity variation and edge contrast in spatial co-occurrence
+235,R21_Inferior_Arcade__glcm_dissimilarity,7,R21_Inferior_Arcade,glcm_dissimilarity,GLCM,Mean difference in gray levels between neighboring pixel pairs
+236,R21_Inferior_Arcade__glcm_homogeneity,7,R21_Inferior_Arcade,glcm_homogeneity,GLCM,Inverse difference moment reflecting local structural uniformity
+237,R21_Inferior_Arcade__glcm_energy,7,R21_Inferior_Arcade,glcm_energy,GLCM,Uniformity of GLCM matrix elements (texture regularity)
+238,R21_Inferior_Arcade__glcm_correlation,7,R21_Inferior_Arcade,glcm_correlation,GLCM,Linear dependency of gray levels between neighboring pixels
+239,R21_Inferior_Arcade__glcm_asm,7,R21_Inferior_Arcade,glcm_asm,GLCM,Angular Second Moment measuring orderliness of texture
+240,R21_Inferior_Arcade__lbp_bin_0,7,R21_Inferior_Arcade,lbp_bin_0,LBP,Uniform local binary pattern micro-texture histogram bin 0 (flat/smooth regions)
+241,R21_Inferior_Arcade__lbp_bin_1,7,R21_Inferior_Arcade,lbp_bin_1,LBP,Uniform LBP micro-texture histogram bin 1 (fine edge transitions)
+242,R21_Inferior_Arcade__lbp_bin_2,7,R21_Inferior_Arcade,lbp_bin_2,LBP,Uniform LBP micro-texture histogram bin 2 (micro-vascular patterns)
+243,R21_Inferior_Arcade__lbp_bin_3,7,R21_Inferior_Arcade,lbp_bin_3,LBP,Uniform LBP micro-texture histogram bin 3 (texture irregularities)
+244,R21_Inferior_Arcade__lbp_bin_4,7,R21_Inferior_Arcade,lbp_bin_4,LBP,Uniform LBP micro-texture histogram bin 4 (spot/microaneurysm candidates)
+245,R21_Inferior_Arcade__lbp_bin_5,7,R21_Inferior_Arcade,lbp_bin_5,LBP,Uniform LBP micro-texture histogram bin 5 (intermediate texture changes)
+246,R21_Inferior_Arcade__lbp_bin_6,7,R21_Inferior_Arcade,lbp_bin_6,LBP,Uniform LBP micro-texture histogram bin 6 (corner/lesion boundary patterns)
+247,R21_Inferior_Arcade__lbp_bin_7,7,R21_Inferior_Arcade,lbp_bin_7,LBP,Uniform LBP micro-texture histogram bin 7 (vascular curvature patterns)
+248,R21_Inferior_Arcade__lbp_bin_8,7,R21_Inferior_Arcade,lbp_bin_8,LBP,Uniform LBP micro-texture histogram bin 8 (dense texture transitions)
+249,R21_Inferior_Arcade__lbp_bin_9,7,R21_Inferior_Arcade,lbp_bin_9,LBP,Uniform LBP micro-texture histogram bin 9 (non-uniform texture artifacts)
+250,R21_Inferior_Arcade__morph_gradient_mean,7,R21_Inferior_Arcade,morph_gradient_mean,Morphology,Average Sobel gradient magnitude reflecting microvascular boundary sharpness
+251,R21_Inferior_Arcade__morph_gradient_variance,7,R21_Inferior_Arcade,morph_gradient_variance,Morphology,Variance of gradient magnitude reflecting vascular branching heterogeneity
+252,R21_Inferior_Arcade__morph_canny_edge_density,7,R21_Inferior_Arcade,morph_canny_edge_density,Morphology,Fraction of pixels identified as sharp anatomical or lesion edges
+253,R21_Inferior_Arcade__morph_exudate_bright_ratio,7,R21_Inferior_Arcade,morph_exudate_bright_ratio,Morphology,Fraction of bright pixels indicative of hard/soft exudates
+254,R21_Inferior_Arcade__morph_hemorrhage_dark_ratio,7,R21_Inferior_Arcade,morph_hemorrhage_dark_ratio,Morphology,Fraction of dark non-background pixels indicative of retinal hemorrhages
+255,R21_Inferior_Arcade__morph_michelson_contrast,7,R21_Inferior_Arcade,morph_michelson_contrast,Morphology,Michelson contrast ratio (Imax - Imin) / (Imax + Imin)
+256,R22_Inferior_Nasal__first_order_mean,8,R22_Inferior_Nasal,first_order_mean,First-Order,Arithmetic mean of gray-level pixel intensities within the sub-region
+257,R22_Inferior_Nasal__first_order_variance,8,R22_Inferior_Nasal,first_order_variance,First-Order,Spread of gray-level intensities around the mean
+258,R22_Inferior_Nasal__first_order_skewness,8,R22_Inferior_Nasal,first_order_skewness,First-Order,Asymmetry of intensity distribution (lesion asymmetry indicator)
+259,R22_Inferior_Nasal__first_order_kurtosis,8,R22_Inferior_Nasal,first_order_kurtosis,First-Order,Peakedness of intensity distribution (clustering of lesion intensities)
+260,R22_Inferior_Nasal__first_order_p10,8,R22_Inferior_Nasal,first_order_p10,First-Order,10th percentile intensity value (background and hemorrhage floor)
+261,R22_Inferior_Nasal__first_order_p50,8,R22_Inferior_Nasal,first_order_p50,First-Order,Median intensity value
+262,R22_Inferior_Nasal__first_order_p90,8,R22_Inferior_Nasal,first_order_p90,First-Order,90th percentile intensity value (bright exudate ceiling)
+263,R22_Inferior_Nasal__first_order_energy,8,R22_Inferior_Nasal,first_order_energy,First-Order,Sum of squared pixel intensities normalized by region area
+264,R22_Inferior_Nasal__first_order_entropy,8,R22_Inferior_Nasal,first_order_entropy,First-Order,Shannon entropy of intensity histogram (structural complexity)
+265,R22_Inferior_Nasal__first_order_rms,8,R22_Inferior_Nasal,first_order_rms,First-Order,Root mean square intensity
+266,R22_Inferior_Nasal__glcm_contrast,8,R22_Inferior_Nasal,glcm_contrast,GLCM,Local intensity variation and edge contrast in spatial co-occurrence
+267,R22_Inferior_Nasal__glcm_dissimilarity,8,R22_Inferior_Nasal,glcm_dissimilarity,GLCM,Mean difference in gray levels between neighboring pixel pairs
+268,R22_Inferior_Nasal__glcm_homogeneity,8,R22_Inferior_Nasal,glcm_homogeneity,GLCM,Inverse difference moment reflecting local structural uniformity
+269,R22_Inferior_Nasal__glcm_energy,8,R22_Inferior_Nasal,glcm_energy,GLCM,Uniformity of GLCM matrix elements (texture regularity)
+270,R22_Inferior_Nasal__glcm_correlation,8,R22_Inferior_Nasal,glcm_correlation,GLCM,Linear dependency of gray levels between neighboring pixels
+271,R22_Inferior_Nasal__glcm_asm,8,R22_Inferior_Nasal,glcm_asm,GLCM,Angular Second Moment measuring orderliness of texture
+272,R22_Inferior_Nasal__lbp_bin_0,8,R22_Inferior_Nasal,lbp_bin_0,LBP,Uniform local binary pattern micro-texture histogram bin 0 (flat/smooth regions)
+273,R22_Inferior_Nasal__lbp_bin_1,8,R22_Inferior_Nasal,lbp_bin_1,LBP,Uniform LBP micro-texture histogram bin 1 (fine edge transitions)
+274,R22_Inferior_Nasal__lbp_bin_2,8,R22_Inferior_Nasal,lbp_bin_2,LBP,Uniform LBP micro-texture histogram bin 2 (micro-vascular patterns)
+275,R22_Inferior_Nasal__lbp_bin_3,8,R22_Inferior_Nasal,lbp_bin_3,LBP,Uniform LBP micro-texture histogram bin 3 (texture irregularities)
+276,R22_Inferior_Nasal__lbp_bin_4,8,R22_Inferior_Nasal,lbp_bin_4,LBP,Uniform LBP micro-texture histogram bin 4 (spot/microaneurysm candidates)
+277,R22_Inferior_Nasal__lbp_bin_5,8,R22_Inferior_Nasal,lbp_bin_5,LBP,Uniform LBP micro-texture histogram bin 5 (intermediate texture changes)
+278,R22_Inferior_Nasal__lbp_bin_6,8,R22_Inferior_Nasal,lbp_bin_6,LBP,Uniform LBP micro-texture histogram bin 6 (corner/lesion boundary patterns)
+279,R22_Inferior_Nasal__lbp_bin_7,8,R22_Inferior_Nasal,lbp_bin_7,LBP,Uniform LBP micro-texture histogram bin 7 (vascular curvature patterns)
+280,R22_Inferior_Nasal__lbp_bin_8,8,R22_Inferior_Nasal,lbp_bin_8,LBP,Uniform LBP micro-texture histogram bin 8 (dense texture transitions)
+281,R22_Inferior_Nasal__lbp_bin_9,8,R22_Inferior_Nasal,lbp_bin_9,LBP,Uniform LBP micro-texture histogram bin 9 (non-uniform texture artifacts)
+282,R22_Inferior_Nasal__morph_gradient_mean,8,R22_Inferior_Nasal,morph_gradient_mean,Morphology,Average Sobel gradient magnitude reflecting microvascular boundary sharpness
+283,R22_Inferior_Nasal__morph_gradient_variance,8,R22_Inferior_Nasal,morph_gradient_variance,Morphology,Variance of gradient magnitude reflecting vascular branching heterogeneity
+284,R22_Inferior_Nasal__morph_canny_edge_density,8,R22_Inferior_Nasal,morph_canny_edge_density,Morphology,Fraction of pixels identified as sharp anatomical or lesion edges
+285,R22_Inferior_Nasal__morph_exudate_bright_ratio,8,R22_Inferior_Nasal,morph_exudate_bright_ratio,Morphology,Fraction of bright pixels indicative of hard/soft exudates
+286,R22_Inferior_Nasal__morph_hemorrhage_dark_ratio,8,R22_Inferior_Nasal,morph_hemorrhage_dark_ratio,Morphology,Fraction of dark non-background pixels indicative of retinal hemorrhages
+287,R22_Inferior_Nasal__morph_michelson_contrast,8,R22_Inferior_Nasal,morph_michelson_contrast,Morphology,Michelson contrast ratio (Imax - Imin) / (Imax + Imin)
