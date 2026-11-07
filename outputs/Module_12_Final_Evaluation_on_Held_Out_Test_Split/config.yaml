@@ -1,0 +1,48 @@
+evaluation:
+  module: "Module 12: Final Evaluation on Held-Out Test Split"
+  description: "Comprehensive zero-leakage evaluation of all primary models and the final proposed architecture on the held-out test split."
+  test_manifest: "data_manifests/test_manifest.csv"
+  test_radiomics: "outputs/Module_06_Spatially_Localized_Radiomics/radiomic_features_test.npz"
+  device: "mps"
+  batch_size: 8
+  img_size: 224
+
+models:
+  convnext_small:
+    name: "ConvNeXt-Small Baseline"
+    type: "vision_cnn"
+    checkpoint: "outputs/Module_02_Baseline_ConvNeXt_Small/best_model.pth"
+    head: "nominal_softmax"
+    requires_radiomics: false
+
+  swin_tiny:
+    name: "Swin-Tiny Baseline"
+    type: "vision_transformer"
+    checkpoint: "outputs/Module_03_Baseline_Swin_Tiny/best_model.pth"
+    head: "nominal_softmax"
+    requires_radiomics: false
+
+  multimodal_fusion:
+    name: "Multimodal Cross-Attention Fusion"
+    type: "cross_attention_fusion"
+    checkpoint: "outputs/Module_07_Visual_Radiomic_Cross_Attention_Fusion/best_model.pth"
+    head: "nominal_softmax"
+    requires_radiomics: true
+
+  integrated_proposed:
+    name: "Full Integrated Proposed Model"
+    type: "cross_attention_coral"
+    checkpoint: "outputs/Module_10_Integrated_Proposed_Model/best_model.pth"
+    head: "coral_ordinal"
+    requires_radiomics: true
+
+metrics:
+  - "quadratic_weighted_kappa"
+  - "macro_f1"
+  - "accuracy"
+  - "balanced_accuracy"
+  - "mean_absolute_error"
+  - "exact_match_pct"
+  - "adjacent_error_pct"
+  - "catastrophic_error_pct"
+  - "latency_ms"

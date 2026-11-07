@@ -1,0 +1,5 @@
+model_key,name,architecture,head_type,qwk,macro_f1,accuracy,balanced_acc,mae,exact_match_pct,adjacent_error_pct,catastrophic_error_pct,latency_ms
+convnext,ConvNeXt-Small Baseline,ConvNeXt-Small (Torchvision),Nominal Softmax,0.814,0.1667,25.0,40.0,0.75,25.0,75.0,0.0,9.73
+swin,Swin-Tiny Baseline,Swin-Tiny Hierarchical ViT,Nominal Softmax,0.9623,0.76,87.5,80.0,0.125,87.5,12.5,0.0,6.74
+fusion,Multimodal Cross-Attention Fusion,Swin-Tiny + 3x3 Radiomics + Cross-Attention,Nominal Softmax,0.9623,0.76,87.5,80.0,0.125,87.5,12.5,0.0,7.52
+integrated,Full Integrated Proposed Model,Swin-Tiny + 3x3 Radiomics + Cross-Attention + CORAL,CORAL Ordinal,0.815,0.2333,37.5,40.0,0.75,37.5,50.0,12.5,7.51

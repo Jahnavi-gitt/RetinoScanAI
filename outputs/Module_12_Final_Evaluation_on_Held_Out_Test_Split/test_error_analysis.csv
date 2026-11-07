@@ -1,0 +1,9 @@
+image_id,ground_truth,ground_truth_label,convnext_pred,swin_pred,fusion_pred,integrated_pred,max_delta,error_category
+ddr_sample_grade0_003.jpg,0,No DR,1,0,0,0,1,Adjacent Boundary Ambiguity
+ddr_sample_grade0_006.jpg,0,No DR,1,0,0,0,1,Adjacent Boundary Ambiguity
+ddr_sample_grade1_009.jpg,1,Mild NPDR,1,1,1,0,1,Adjacent Boundary Ambiguity
+ddr_sample_grade2_004.jpg,2,Moderate NPDR,1,2,2,0,2,Catastrophic Distant Error
+ddr_sample_grade2_007.jpg,2,Moderate NPDR,1,2,2,1,1,Adjacent Boundary Ambiguity
+ddr_sample_grade3_004.jpg,3,Severe NPDR,4,3,3,4,1,Adjacent Boundary Ambiguity
+ddr_sample_grade3_005.jpg,3,Severe NPDR,4,3,3,4,1,Adjacent Boundary Ambiguity
+ddr_sample_grade4_003.jpg,4,Proliferative DR,4,3,3,4,1,Adjacent Boundary Ambiguity

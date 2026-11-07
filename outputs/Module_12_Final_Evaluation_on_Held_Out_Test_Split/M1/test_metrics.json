@@ -1,0 +1,84 @@
+{
+  "model_key": "M1",
+  "test_samples": 1251,
+  "test_accuracy": 0.6875,
+  "test_exact_matches": 860,
+  "test_qwk": 0.8599,
+  "test_macro_f1": 0.5635,
+  "test_weighted_f1": 0.7303,
+  "test_mae": 0.3597,
+  "test_adjacent_errors": 332,
+  "test_adjacent_error_rate": 0.2654,
+  "test_catastrophic_errors": 59,
+  "test_catastrophic_error_rate": 0.0472,
+  "eval_duration_sec": 19.76,
+  "confusion_matrix": [
+    [
+      533,
+      89,
+      6,
+      0,
+      0
+    ],
+    [
+      26,
+      28,
+      10,
+      2,
+      0
+    ],
+    [
+      43,
+      100,
+      200,
+      98,
+      3
+    ],
+    [
+      0,
+      1,
+      1,
+      17,
+      2
+    ],
+    [
+      0,
+      0,
+      4,
+      6,
+      82
+    ]
+  ],
+  "per_grade_metrics": {
+    "Grade_0": {
+      "precision": 0.8854,
+      "recall": 0.8487,
+      "f1_score": 0.8667,
+      "support": 628
+    },
+    "Grade_1": {
+      "precision": 0.1284,
+      "recall": 0.4242,
+      "f1_score": 0.1972,
+      "support": 66
+    },
+    "Grade_2": {
+      "precision": 0.905,
+      "recall": 0.4505,
+      "f1_score": 0.6015,
+      "support": 444
+    },
+    "Grade_3": {
+      "precision": 0.1382,
+      "recall": 0.8095,
+      "f1_score": 0.2361,
+      "support": 21
+    },
+    "Grade_4": {
+      "precision": 0.9425,
+      "recall": 0.8913,
+      "f1_score": 0.9162,
+      "support": 92
+    }
+  }
+}
