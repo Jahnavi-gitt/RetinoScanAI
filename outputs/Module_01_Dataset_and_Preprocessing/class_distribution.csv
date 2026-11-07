@@ -1,0 +1,6 @@
+grade,grade_name,total_count,total_percentage,train_count,val_count,test_count
+0,No DR,6266,50.04,4386,940,940
+1,Mild NPDR,630,5.03,441,94,95
+2,Moderate NPDR,4477,35.75,3134,671,672
+3,Severe NPDR,236,1.88,165,36,35
+4,Proliferative DR,913,7.29,639,137,137

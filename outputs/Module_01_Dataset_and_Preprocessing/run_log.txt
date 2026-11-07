@@ -1,0 +1,20 @@
+[1/5] Generating validated sample development dataset across all 5 DR grades...
+Generated 50 development dataset samples -> data_manifests/sample_manifest.csv
+
+[2/5] Running dataset audit on development dataset...
+Saved outputs/Module_01_Dataset_and_Preprocessing/dataset_audit.csv and outputs/Module_01_Dataset_and_Preprocessing/class_distribution.csv
+
+[3/5] Generating stratified Train (70%), Val (15%), Test (15%) splits...
+Splits generated: Train=35, Val=7, Test=8
+
+[4/5] Testing PyTorch DataLoaders with CLAHE, Augmentation, and Batching...
+Train Batch: Image Shape=torch.Size([8, 3, 224, 224]), Labels=[1, 2, 4, 4, 0, 2, 3, 4]
+Val Batch:   Image Shape=torch.Size([7, 3, 224, 224]), Labels=[0, 1, 1, 2, 3, 4, 4]
+DataLoader shape and forward tensor assertions PASSED (torch.Size([8, 3, 224, 224]) and torch.Size([7, 3, 224, 224])).
+
+[5/5] Generating dataset inspection figure & YAML configuration...
+Saved outputs/Module_01_Dataset_and_Preprocessing/preprocessing_config.yaml and configs/dataset_config.yaml
+Saved dataset inspection visualization -> outputs/Module_01_Dataset_and_Preprocessing/dataset_inspection.png
+Copied data_pipeline.py to outputs/Module_01_Dataset_and_Preprocessing/data_pipeline.py
+
+[SUCCESS] Module 01 pipeline execution completed successfully.

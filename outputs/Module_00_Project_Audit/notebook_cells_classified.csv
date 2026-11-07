@@ -1,0 +1,475 @@
+cell_idx,type,exec_count,group,mapped_module,status,first_line,line_count
+0,code,,Kaggle Setup & Dataset Upload,Module 00 / External,Unexecuted Code,import os,7
+1,code,,Kaggle Setup & Dataset Upload,Module 00 / External,Unexecuted Code,import shutil,21
+2,markdown,,Kaggle Setup & Dataset Upload,Module 00 / External,Markdown Documentation,# publishing as data set,1
+3,code,,Kaggle Setup & Dataset Upload,Module 00 / External,Unexecuted Code,<empty>,0
+4,code,,Kaggle Setup & Dataset Upload,Module 00 / External,Unexecuted Code,%%bash,4
+5,code,,Kaggle Setup & Dataset Upload,Module 00 / External,Unexecuted Code,%%bash,2
+6,code,,Kaggle Setup & Dataset Upload,Module 00 / External,Unexecuted Code,%%bash,2
+7,code,,Kaggle Setup & Dataset Upload,Module 00 / External,Unexecuted Code,%%bash,4
+8,code,,Kaggle Setup & Dataset Upload,Module 00 / External,Unexecuted Code,%%bash,2
+9,code,,Kaggle Setup & Dataset Upload,Module 00 / External,Unexecuted Code,%%bash,10
+10,code,,Kaggle Setup & Dataset Upload,Module 00 / External,Unexecuted Code,%%bash,2
+11,code,,Kaggle Setup & Dataset Upload,Module 00 / External,Unexecuted Code,<empty>,0
+12,markdown,,Kaggle Setup & Dataset Upload,Module 00 / External,Markdown Documentation,# cross checking upload,1
+13,markdown,,Kaggle Setup & Dataset Upload,Module 00 / External,Markdown Documentation,<empty>,0
+14,code,,Kaggle Setup & Dataset Upload,Module 00 / External,Unexecuted Code,import os,2
+15,code,,Kaggle Setup & Dataset Upload,Module 00 / External,Unexecuted Code,import os,4
+16,code,,EyePACS Exploration & Pretraining (Legacy),Module 01 (Pretraining / Legacy),Unexecuted Code,import os,3
+17,code,,EyePACS Exploration & Pretraining (Legacy),Module 01 (Pretraining / Legacy),Unexecuted Code,import os,4
+18,code,,EyePACS Exploration & Pretraining (Legacy),Module 01 (Pretraining / Legacy),Unexecuted Code,"import os, torch",20
+19,code,,EyePACS Exploration & Pretraining (Legacy),Module 01 (Pretraining / Legacy),Unexecuted Code,"import torch, numpy as np",22
+20,code,,EyePACS Exploration & Pretraining (Legacy),Module 01 (Pretraining / Legacy),Unexecuted Code,!pip install -q timm==0.9.16,1
+21,code,,EyePACS Exploration & Pretraining (Legacy),Module 01 (Pretraining / Legacy),Unexecuted Code,!ls /kaggle/working/checkpoints_effb3,1
+22,code,,EyePACS Exploration & Pretraining (Legacy),Module 01 (Pretraining / Legacy),Unexecuted Code,import os,34
+23,code,,EyePACS Exploration & Pretraining (Legacy),Module 01 (Pretraining / Legacy),Unexecuted Code,import os,27
+24,code,,EyePACS Exploration & Pretraining (Legacy),Module 01 (Pretraining / Legacy),Unexecuted Code,import os,22
+25,code,,EyePACS Exploration & Pretraining (Legacy),Module 01 (Pretraining / Legacy),Unexecuted Code,import os,25
+26,code,,EyePACS Exploration & Pretraining (Legacy),Module 01 (Pretraining / Legacy),Unexecuted Code,import shutil,8
+27,code,,EyePACS Exploration & Pretraining (Legacy),Module 01 (Pretraining / Legacy),Unexecuted Code,# =============================================================,85
+28,code,,EyePACS Exploration & Pretraining (Legacy),Module 01 (Pretraining / Legacy),Unexecuted Code,# ======================================================,107
+29,code,,EyePACS Exploration & Pretraining (Legacy),Module 01 (Pretraining / Legacy),Unexecuted Code,# ======================================================,70
+30,code,,EyePACS Exploration & Pretraining (Legacy),Module 01 (Pretraining / Legacy),Unexecuted Code,import numpy as np,13
+31,code,,EyePACS Exploration & Pretraining (Legacy),Module 01 (Pretraining / Legacy),Unexecuted Code,@torch.no_grad(),29
+32,code,,EyePACS Exploration & Pretraining (Legacy),Module 01 (Pretraining / Legacy),Unexecuted Code,# ======= FULLY FIXED TRAINING CELL (deterministic resume + atomic ckpt + scaler/RNG save/restore) =,313
+33,code,,EyePACS Exploration & Pretraining (Legacy),Module 01 (Pretraining / Legacy),Unexecuted Code,!pip install -U scikit-learn==1.4.2,1
+34,code,,EyePACS Exploration & Pretraining (Legacy),Module 01 (Pretraining / Legacy),Unexecuted Code,import pandas as pd,13
+35,code,,EyePACS Exploration & Pretraining (Legacy),Module 01 (Pretraining / Legacy),Unexecuted Code,!pip install -q git+https://github.com/jacobgil/pytorch-grad-cam.git@master,2
+36,code,,EyePACS Exploration & Pretraining (Legacy),Module 01 (Pretraining / Legacy),Unexecuted Code,!pip install -U scikit-learn==1.5.2 --quiet,1
+37,code,,EyePACS Exploration & Pretraining (Legacy),Module 01 (Pretraining / Legacy),Unexecuted Code,# !pip install -U numpy==1.26.4 opencv-python-headless==4.8.1.78 scikit-learn==1.3.2 matplotlib==3.8,1
+38,code,,EyePACS Exploration & Pretraining (Legacy),Module 01 (Pretraining / Legacy),Unexecuted Code,!pip install -U numpy==1.26.4 scikit-learn==1.4.2 pytorch-grad-cam==1.4.9 --quiet,1
+39,code,,EyePACS Exploration & Pretraining (Legacy),Module 01 (Pretraining / Legacy),Unexecuted Code,import pytorch_grad_cam,2
+40,code,,EyePACS Exploration & Pretraining (Legacy),Module 01 (Pretraining / Legacy),Unexecuted Code,import torch,15
+41,code,,EyePACS Exploration & Pretraining (Legacy),Module 01 (Pretraining / Legacy),Unexecuted Code,# Pick 1–2 random examples per DR grade,7
+42,code,,EyePACS Exploration & Pretraining (Legacy),Module 01 (Pretraining / Legacy),Unexecuted Code,import os,69
+43,code,,EyePACS Exploration & Pretraining (Legacy),Module 01 (Pretraining / Legacy),Unexecuted Code,# ======================================================,47
+44,code,,EyePACS Exploration & Pretraining (Legacy),Module 01 (Pretraining / Legacy),Unexecuted Code,# ======================================================,133
+45,markdown,,Attention Maps / ResNet50 CAMs (Legacy),Module 13 (Legacy CAM),Markdown Documentation,# attention maps,1
+46,code,,Attention Maps / ResNet50 CAMs (Legacy),Module 13 (Legacy CAM),Unexecuted Code,# Save this as make_mean_gradcams.py and run it (python make_mean_gradcams.py),188
+47,code,,Attention Maps / ResNet50 CAMs (Legacy),Module 13 (Legacy CAM),Unexecuted Code,# =====================================================,187
+48,code,,Attention Maps / ResNet50 CAMs (Legacy),Module 13 (Legacy CAM),Unexecuted Code,import os,25
+49,code,,Attention Maps / ResNet50 CAMs (Legacy),Module 13 (Legacy CAM),Unexecuted Code,# ======================================================,24
+50,code,,Attention Maps / ResNet50 CAMs (Legacy),Module 13 (Legacy CAM),Unexecuted Code,# ======================================================,27
+51,code,,Attention Maps / ResNet50 CAMs (Legacy),Module 13 (Legacy CAM),Unexecuted Code,# ======================================================,22
+52,code,,Attention Maps / ResNet50 CAMs (Legacy),Module 13 (Legacy CAM),Unexecuted Code,# ======================================================,7
+53,code,,Attention Maps / ResNet50 CAMs (Legacy),Module 13 (Legacy CAM),Unexecuted Code,# ======================================================,11
+54,code,,Attention Maps / ResNet50 CAMs (Legacy),Module 13 (Legacy CAM),Unexecuted Code,# ======================================================,119
+55,code,,Attention Maps / ResNet50 CAMs (Legacy),Module 13 (Legacy CAM),Unexecuted Code,"import cv2, numpy as np, glob, os",42
+56,code,,Attention Maps / ResNet50 CAMs (Legacy),Module 13 (Legacy CAM),Unexecuted Code,from glob import glob,9
+57,code,,Attention Maps / ResNet50 CAMs (Legacy),Module 13 (Legacy CAM),Unexecuted Code,import os,66
+58,code,,Attention Maps / ResNet50 CAMs (Legacy),Module 13 (Legacy CAM),Unexecuted Code,import os,56
+59,code,,Attention Maps / ResNet50 CAMs (Legacy),Module 13 (Legacy CAM),Unexecuted Code,import os,22
+60,code,,Attention Maps / ResNet50 CAMs (Legacy),Module 13 (Legacy CAM),Unexecuted Code,mean_cams = {},9
+61,code,,Attention Maps / ResNet50 CAMs (Legacy),Module 13 (Legacy CAM),Unexecuted Code,import matplotlib.pyplot as plt,11
+62,code,,Attention Maps / ResNet50 CAMs (Legacy),Module 13 (Legacy CAM),Unexecuted Code,# ======================================================,65
+63,code,,Attention Maps / ResNet50 CAMs (Legacy),Module 13 (Legacy CAM),Unexecuted Code,# ======================================================,57
+64,code,,Attention Maps / ResNet50 CAMs (Legacy),Module 13 (Legacy CAM),Unexecuted Code,# ======================================================,12
+65,code,,Attention Maps / ResNet50 CAMs (Legacy),Module 13 (Legacy CAM),Unexecuted Code,# ======================================================,11
+66,code,,Attention Maps / ResNet50 CAMs (Legacy),Module 13 (Legacy CAM),Unexecuted Code,# ======================================================,36
+67,code,,Attention Maps / ResNet50 CAMs (Legacy),Module 13 (Legacy CAM),Unexecuted Code,# ======================================================,33
+68,code,,Attention Maps / ResNet50 CAMs (Legacy),Module 13 (Legacy CAM),Unexecuted Code,# ======================================================,52
+69,code,,Attention Maps / ResNet50 CAMs (Legacy),Module 13 (Legacy CAM),Unexecuted Code,# ======================================================,38
+70,code,,Attention Maps / ResNet50 CAMs (Legacy),Module 13 (Legacy CAM),Unexecuted Code,# ======================================================,87
+71,code,,Attention Maps / ResNet50 CAMs (Legacy),Module 13 (Legacy CAM),Unexecuted Code,<empty>,0
+72,code,,Attention Maps / ResNet50 CAMs (Legacy),Module 13 (Legacy CAM),Unexecuted Code,# ======================================================,107
+73,code,,Attention Maps / ResNet50 CAMs (Legacy),Module 13 (Legacy CAM),Unexecuted Code,# ======================================================,114
+74,code,,Attention Maps / ResNet50 CAMs (Legacy),Module 13 (Legacy CAM),Unexecuted Code,# ======================================================,128
+75,code,,Attention Maps / ResNet50 CAMs (Legacy),Module 13 (Legacy CAM),Unexecuted Code,# ======================================================,46
+76,markdown,,Attention Maps / ResNet50 CAMs (Legacy),Module 13 (Legacy CAM),Markdown Documentation,# Loading the finetuned model,1
+77,code,,Attention Maps / ResNet50 CAMs (Legacy),Module 13 (Legacy CAM),Unexecuted Code,# ======================================================,58
+78,code,,Attention Maps / ResNet50 CAMs (Legacy),Module 13 (Legacy CAM),Unexecuted Code,!pip install -q scikit-learn==1.5.2,3
+79,code,,Attention Maps / ResNet50 CAMs (Legacy),Module 13 (Legacy CAM),Unexecuted Code,!pip uninstall -y scikit-learn,2
+80,code,,Attention Maps / ResNet50 CAMs (Legacy),Module 13 (Legacy CAM),Unexecuted Code,import sklearn,4
+81,code,,Attention Maps / ResNet50 CAMs (Legacy),Module 13 (Legacy CAM),Unexecuted Code,"for i, row in enumerate(samples.itertuples()):",5
+82,code,,Attention Maps / ResNet50 CAMs (Legacy),Module 13 (Legacy CAM),Unexecuted Code,"import torch, cv2, numpy as np, os",70
+83,code,,Attention Maps / ResNet50 CAMs (Legacy),Module 13 (Legacy CAM),Unexecuted Code,"import torch, cv2, numpy as np, os, random",108
+84,markdown,,Attention Maps / ResNet50 CAMs (Legacy),Module 13 (Legacy CAM),Markdown Documentation,balanced grad cam run,1
+85,code,,Attention Maps / ResNet50 CAMs (Legacy),Module 13 (Legacy CAM),Unexecuted Code,# ======================================================,72
+86,code,,Attention Maps / ResNet50 CAMs (Legacy),Module 13 (Legacy CAM),Unexecuted Code,# ======================================================,182
+87,code,,Attention Maps / ResNet50 CAMs (Legacy),Module 13 (Legacy CAM),Unexecuted Code,import pandas as pd,35
+88,code,,Attention Maps / ResNet50 CAMs (Legacy),Module 13 (Legacy CAM),Unexecuted Code,# ======================================================,74
+89,code,,Attention Maps / ResNet50 CAMs (Legacy),Module 13 (Legacy CAM),Unexecuted Code,import os,5
+90,code,,Attention Maps / ResNet50 CAMs (Legacy),Module 13 (Legacy CAM),Unexecuted Code,# ======================================================,146
+91,code,,Attention Maps / ResNet50 CAMs (Legacy),Module 13 (Legacy CAM),Unexecuted Code,# ======================================================,44
+92,code,,Attention Maps / ResNet50 CAMs (Legacy),Module 13 (Legacy CAM),Unexecuted Code,# Create a new alias folder in /kaggle/working (writable),6
+93,code,,Attention Maps / ResNet50 CAMs (Legacy),Module 13 (Legacy CAM),Unexecuted Code,"import os, cv2, random",27
+94,code,,"Radiomics, Vessel Extraction & CLAHE",Module 01 / Module 06 (Radiomics),Unexecuted Code,# ======================================================,78
+95,code,,"Radiomics, Vessel Extraction & CLAHE",Module 01 / Module 06 (Radiomics),Unexecuted Code,"import os, cv2, random",27
+96,code,,"Radiomics, Vessel Extraction & CLAHE",Module 01 / Module 06 (Radiomics),Unexecuted Code,# ======================================================,25
+97,code,,"Radiomics, Vessel Extraction & CLAHE",Module 01 / Module 06 (Radiomics),Unexecuted Code,# ======================================================,46
+98,code,,"Radiomics, Vessel Extraction & CLAHE",Module 01 / Module 06 (Radiomics),Unexecuted Code,import pandas as pd,30
+99,code,,"Radiomics, Vessel Extraction & CLAHE",Module 01 / Module 06 (Radiomics),Unexecuted Code,!pip install -q pyradiomics scikit-image opencv-python-headless SimpleITK tqdm,1
+100,code,,"Radiomics, Vessel Extraction & CLAHE",Module 01 / Module 06 (Radiomics),Unexecuted Code,# === radiomics_extract_demo.py ===,111
+101,code,,"Radiomics, Vessel Extraction & CLAHE",Module 01 / Module 06 (Radiomics),Unexecuted Code,import pandas as pd,9
+102,code,,"Radiomics, Vessel Extraction & CLAHE",Module 01 / Module 06 (Radiomics),Unexecuted Code,!pip install -q pyradiomics scikit-image opencv-python-headless scipy tqdm,111
+103,code,,"Radiomics, Vessel Extraction & CLAHE",Module 01 / Module 06 (Radiomics),Unexecuted Code,# --------------------------------------------------------------,26
+104,code,,"Radiomics, Vessel Extraction & CLAHE",Module 01 / Module 06 (Radiomics),Unexecuted Code,"!find /kaggle/input/ddr-final -type f -name ""*.jpg"" | head -n 20",1
+105,code,,"Radiomics, Vessel Extraction & CLAHE",Module 01 / Module 06 (Radiomics),Unexecuted Code,"IMG_DIR = ""/kaggle/input/ddr-final/final""",4
+106,code,,"Radiomics, Vessel Extraction & CLAHE",Module 01 / Module 06 (Radiomics),Unexecuted Code,"import os, cv2, pandas as pd",33
+107,code,,"Radiomics, Vessel Extraction & CLAHE",Module 01 / Module 06 (Radiomics),Unexecuted Code,# ==========================================================,75
+108,code,,"Radiomics, Vessel Extraction & CLAHE",Module 01 / Module 06 (Radiomics),Unexecuted Code,# ==========================================================,66
+109,code,,"Radiomics, Vessel Extraction & CLAHE",Module 01 / Module 06 (Radiomics),Unexecuted Code,# ==========================================================,53
+110,code,,"Radiomics, Vessel Extraction & CLAHE",Module 01 / Module 06 (Radiomics),Unexecuted Code,# ==========================================================,72
+111,code,,"Radiomics, Vessel Extraction & CLAHE",Module 01 / Module 06 (Radiomics),Unexecuted Code,"import os, json, joblib",72
+112,markdown,,"Radiomics, Vessel Extraction & CLAHE",Module 01 / Module 06 (Radiomics),Markdown Documentation,# now for train and test,1
+113,code,,"Radiomics, Vessel Extraction & CLAHE",Module 01 / Module 06 (Radiomics),Unexecuted Code,"import os, json, joblib",76
+114,code,,"Radiomics, Vessel Extraction & CLAHE",Module 01 / Module 06 (Radiomics),Unexecuted Code,"import seaborn as sns, matplotlib.pyplot as plt",17
+115,code,,"Radiomics, Vessel Extraction & CLAHE",Module 01 / Module 06 (Radiomics),Unexecuted Code,corr_pairs = (,12
+116,code,,"Radiomics, Vessel Extraction & CLAHE",Module 01 / Module 06 (Radiomics),Unexecuted Code,"import seaborn as sns, matplotlib.pyplot as plt",26
+117,code,,"Radiomics, Vessel Extraction & CLAHE",Module 01 / Module 06 (Radiomics),Unexecuted Code,import os,66
+118,code,,"Radiomics, Vessel Extraction & CLAHE",Module 01 / Module 06 (Radiomics),Unexecuted Code,"import seaborn as sns, matplotlib.pyplot as plt",22
+119,code,,"Radiomics, Vessel Extraction & CLAHE",Module 01 / Module 06 (Radiomics),Unexecuted Code,"import shap, joblib, json, matplotlib.pyplot as plt",30
+120,code,,"Radiomics, Vessel Extraction & CLAHE",Module 01 / Module 06 (Radiomics),Unexecuted Code,# # ==========================================================,137
+121,code,,"Radiomics, Vessel Extraction & CLAHE",Module 01 / Module 06 (Radiomics),Unexecuted Code,# !pip install -U scikit-learn==1.5.2 imbalanced-learn==0.12.3 lightgbm==4.3.0 xgboost==2.1.0 torch ,1
+122,code,,"Radiomics, Vessel Extraction & CLAHE",Module 01 / Module 06 (Radiomics),Unexecuted Code,!pip install torch==2.1.0 torchvision==0.16.0 torchaudio==2.1.0 --index-url https://download.pytorch,1
+123,code,,"Radiomics, Vessel Extraction & CLAHE",Module 01 / Module 06 (Radiomics),Unexecuted Code,!pip install -U scikit-learn==1.5.2 imbalanced-learn==0.12.0,1
+124,code,,"Radiomics, Vessel Extraction & CLAHE",Module 01 / Module 06 (Radiomics),Unexecuted Code,!pip install --force-reinstall --no-cache-dir \,6
+125,code,,"Radiomics, Vessel Extraction & CLAHE",Module 01 / Module 06 (Radiomics),Unexecuted Code,"!pip install --force-reinstall --no-cache-dir ""numpy<2.0"" ""scipy<1.12""",1
+126,code,,"Radiomics, Vessel Extraction & CLAHE",Module 01 / Module 06 (Radiomics),Unexecuted Code,"import numpy as np, torch",5
+127,code,,"Radiomics, Vessel Extraction & CLAHE",Module 01 / Module 06 (Radiomics),Unexecuted Code,"# import os, numpy as np, pandas as pd",133
+128,code,,"Radiomics, Vessel Extraction & CLAHE",Module 01 / Module 06 (Radiomics),Unexecuted Code,"import os, numpy as np, pandas as pd, json",159
+129,code,,"Radiomics, Vessel Extraction & CLAHE",Module 01 / Module 06 (Radiomics),Unexecuted Code,<empty>,0
+130,code,,"Radiomics, Vessel Extraction & CLAHE",Module 01 / Module 06 (Radiomics),Unexecuted Code,"import os, numpy as np, pandas as pd, json",133
+131,code,,"Radiomics, Vessel Extraction & CLAHE",Module 01 / Module 06 (Radiomics),Unexecuted Code,import numpy as np,68
+132,code,,"Radiomics, Vessel Extraction & CLAHE",Module 01 / Module 06 (Radiomics),Unexecuted Code,import os,59
+133,code,,"Radiomics, Vessel Extraction & CLAHE",Module 01 / Module 06 (Radiomics),Unexecuted Code,import os,59
+134,markdown,,Feature Fusion MLP & SMOTE Experiments,Module 08 (SMOTE) / Module 10 (MLP Fusion),Markdown Documentation,# fusion model,1
+135,code,,Feature Fusion MLP & SMOTE Experiments,Module 08 (SMOTE) / Module 10 (MLP Fusion),Unexecuted Code,import os,38
+136,code,,Feature Fusion MLP & SMOTE Experiments,Module 08 (SMOTE) / Module 10 (MLP Fusion),Unexecuted Code,# ======================================================,81
+137,code,,Feature Fusion MLP & SMOTE Experiments,Module 08 (SMOTE) / Module 10 (MLP Fusion),Unexecuted Code,import pandas as pd,4
+138,code,,Feature Fusion MLP & SMOTE Experiments,Module 08 (SMOTE) / Module 10 (MLP Fusion),Unexecuted Code,import pandas as pd,17
+139,code,,Feature Fusion MLP & SMOTE Experiments,Module 08 (SMOTE) / Module 10 (MLP Fusion),Unexecuted Code,# Check a few sample IDs from each file,5
+140,code,,Feature Fusion MLP & SMOTE Experiments,Module 08 (SMOTE) / Module 10 (MLP Fusion),Unexecuted Code,# Check how cleaned IDs look after normalization,5
+141,code,,Feature Fusion MLP & SMOTE Experiments,Module 08 (SMOTE) / Module 10 (MLP Fusion),Unexecuted Code,import pandas as pd,36
+142,code,,Feature Fusion MLP & SMOTE Experiments,Module 08 (SMOTE) / Module 10 (MLP Fusion),Unexecuted Code,# Merge again cleanly and save,9
+143,code,,Feature Fusion MLP & SMOTE Experiments,Module 08 (SMOTE) / Module 10 (MLP Fusion),Unexecuted Code,"import pandas as pd, numpy as np",21
+144,code,,Feature Fusion MLP & SMOTE Experiments,Module 08 (SMOTE) / Module 10 (MLP Fusion),Unexecuted Code,# ==========================================================,130
+145,markdown,,Feature Fusion MLP & SMOTE Experiments,Module 08 (SMOTE) / Module 10 (MLP Fusion),Markdown Documentation,# cross check,1
+146,code,,Feature Fusion MLP & SMOTE Experiments,Module 08 (SMOTE) / Module 10 (MLP Fusion),Unexecuted Code,# ==========================================================,138
+147,code,,Feature Fusion MLP & SMOTE Experiments,Module 08 (SMOTE) / Module 10 (MLP Fusion),Unexecuted Code,"import json, pandas as pd, joblib, numpy as np",19
+148,markdown,,Feature Fusion MLP & SMOTE Experiments,Module 08 (SMOTE) / Module 10 (MLP Fusion),Markdown Documentation,# 5 fold cv,1
+149,code,,Feature Fusion MLP & SMOTE Experiments,Module 08 (SMOTE) / Module 10 (MLP Fusion),Unexecuted Code,# ==========================================================,97
+150,code,,Feature Fusion MLP & SMOTE Experiments,Module 08 (SMOTE) / Module 10 (MLP Fusion),Unexecuted Code,print(df[label_col].unique()),2
+151,code,,Feature Fusion MLP & SMOTE Experiments,Module 08 (SMOTE) / Module 10 (MLP Fusion),Unexecuted Code,# ==========================================================,129
+152,code,,Feature Fusion MLP & SMOTE Experiments,Module 08 (SMOTE) / Module 10 (MLP Fusion),Unexecuted Code,# ==========================================================,111
+153,code,,Feature Fusion MLP & SMOTE Experiments,Module 08 (SMOTE) / Module 10 (MLP Fusion),Unexecuted Code,# ==========================================================,100
+154,code,,Feature Fusion MLP & SMOTE Experiments,Module 08 (SMOTE) / Module 10 (MLP Fusion),Unexecuted Code,# ==========================================================,113
+155,code,,Feature Fusion MLP & SMOTE Experiments,Module 08 (SMOTE) / Module 10 (MLP Fusion),Unexecuted Code,# # ==========================================================,103
+156,code,,Feature Fusion MLP & SMOTE Experiments,Module 08 (SMOTE) / Module 10 (MLP Fusion),Unexecuted Code,# ==========================================================,131
+157,code,,Feature Fusion MLP & SMOTE Experiments,Module 08 (SMOTE) / Module 10 (MLP Fusion),Unexecuted Code,from collections import Counter,4
+158,code,,Feature Fusion MLP & SMOTE Experiments,Module 08 (SMOTE) / Module 10 (MLP Fusion),Unexecuted Code,"import pandas as pd, re, os",34
+159,code,,Feature Fusion MLP & SMOTE Experiments,Module 08 (SMOTE) / Module 10 (MLP Fusion),Unexecuted Code,# ==========================================================,37
+160,code,,Feature Fusion MLP & SMOTE Experiments,Module 08 (SMOTE) / Module 10 (MLP Fusion),Unexecuted Code,# ==========================================================,28
+161,code,,Feature Fusion MLP & SMOTE Experiments,Module 08 (SMOTE) / Module 10 (MLP Fusion),Unexecuted Code,# ==========================================================,42
+162,code,,Feature Fusion MLP & SMOTE Experiments,Module 08 (SMOTE) / Module 10 (MLP Fusion),Unexecuted Code,# ==========================================================,112
+163,code,,Feature Fusion MLP & SMOTE Experiments,Module 08 (SMOTE) / Module 10 (MLP Fusion),Unexecuted Code,# ==========================================================,70
+164,markdown,,Multi-Backbone Exploration & Embedding Extraction,Module 02/03/04 (Embeddings),Markdown Documentation,# ensemble model,1
+165,code,,Multi-Backbone Exploration & Embedding Extraction,Module 02/03/04 (Embeddings),Unexecuted Code,import os,4
+166,code,,Multi-Backbone Exploration & Embedding Extraction,Module 02/03/04 (Embeddings),Unexecuted Code,import os,15
+167,code,,Multi-Backbone Exploration & Embedding Extraction,Module 02/03/04 (Embeddings),Unexecuted Code,import os,41
+168,code,,Multi-Backbone Exploration & Embedding Extraction,Module 02/03/04 (Embeddings),Unexecuted Code,import pandas as pd,21
+169,code,,Multi-Backbone Exploration & Embedding Extraction,Module 02/03/04 (Embeddings),Unexecuted Code,"clean_manifest = pd.read_csv(""/kaggle/working/manifest_eyepacs_cleaned.csv"")",15
+170,code,,Multi-Backbone Exploration & Embedding Extraction,Module 02/03/04 (Embeddings),Unexecuted Code,import pandas as pd,23
+171,code,,Multi-Backbone Exploration & Embedding Extraction,Module 02/03/04 (Embeddings),Unexecuted Code,# =============================================================,18
+172,code,,Multi-Backbone Exploration & Embedding Extraction,Module 02/03/04 (Embeddings),Unexecuted Code,# =============================================================,29
+173,markdown,,Multi-Backbone Exploration & Embedding Extraction,Module 02/03/04 (Embeddings),Markdown Documentation,# Ensemble model setup,1
+174,code,,Multi-Backbone Exploration & Embedding Extraction,Module 02/03/04 (Embeddings),Unexecuted Code,# =============================================================,64
+175,code,,Multi-Backbone Exploration & Embedding Extraction,Module 02/03/04 (Embeddings),Unexecuted Code,# =============================================================,123
+176,code,,Multi-Backbone Exploration & Embedding Extraction,Module 02/03/04 (Embeddings),Unexecuted Code,# =============================================================,18
+177,code,,Multi-Backbone Exploration & Embedding Extraction,Module 02/03/04 (Embeddings),Unexecuted Code,# =============================================================,48
+178,code,,Multi-Backbone Exploration & Embedding Extraction,Module 02/03/04 (Embeddings),Unexecuted Code,# =============================================================,21
+179,code,,Multi-Backbone Exploration & Embedding Extraction,Module 02/03/04 (Embeddings),Unexecuted Code,# =============================================================,45
+180,code,,Multi-Backbone Exploration & Embedding Extraction,Module 02/03/04 (Embeddings),Unexecuted Code,# =============================================================,146
+181,code,,Multi-Backbone Exploration & Embedding Extraction,Module 02/03/04 (Embeddings),Unexecuted Code,import torch,77
+182,code,,Multi-Backbone Exploration & Embedding Extraction,Module 02/03/04 (Embeddings),Unexecuted Code,# === tidy_week2_files.py ===,134
+183,code,,Multi-Backbone Exploration & Embedding Extraction,Module 02/03/04 (Embeddings),Unexecuted Code,import numpy as np,15
+184,code,,Multi-Backbone Exploration & Embedding Extraction,Module 02/03/04 (Embeddings),Unexecuted Code,import os,43
+185,code,,Multi-Backbone Exploration & Embedding Extraction,Module 02/03/04 (Embeddings),Unexecuted Code,"df = pd.read_csv(""/kaggle/working/manifest_fixed.csv"")",3
+186,code,,Multi-Backbone Exploration & Embedding Extraction,Module 02/03/04 (Embeddings),Unexecuted Code,import pandas as pd,3
+187,code,,Multi-Backbone Exploration & Embedding Extraction,Module 02/03/04 (Embeddings),Unexecuted Code,"missing = df[df[""filepath""].isna()]",2
+188,code,,Multi-Backbone Exploration & Embedding Extraction,Module 02/03/04 (Embeddings),Unexecuted Code,"df2 = df[df[""image_id""] != ""eyepacs_06934.png""].reset_index(drop=True)",3
+189,code,,Multi-Backbone Exploration & Embedding Extraction,Module 02/03/04 (Embeddings),Unexecuted Code,import torch,70
+190,code,,Multi-Backbone Exploration & Embedding Extraction,Module 02/03/04 (Embeddings),Unexecuted Code,import os,41
+191,code,,Multi-Backbone Exploration & Embedding Extraction,Module 02/03/04 (Embeddings),Unexecuted Code,import numpy as np,16
+192,code,,Multi-Backbone Exploration & Embedding Extraction,Module 02/03/04 (Embeddings),Unexecuted Code,import numpy as np,16
+193,code,,Multi-Backbone Exploration & Embedding Extraction,Module 02/03/04 (Embeddings),Unexecuted Code,import os,11
+194,code,,Multi-Backbone Exploration & Embedding Extraction,Module 02/03/04 (Embeddings),Unexecuted Code,import os,13
+195,code,,Multi-Backbone Exploration & Embedding Extraction,Module 02/03/04 (Embeddings),Unexecuted Code,import os,39
+196,code,,Multi-Backbone Exploration & Embedding Extraction,Module 02/03/04 (Embeddings),Unexecuted Code,import shutil,3
+197,code,,Multi-Backbone Exploration & Embedding Extraction,Module 02/03/04 (Embeddings),Unexecuted Code,import os,3
+198,code,,Multi-Backbone Exploration & Embedding Extraction,Module 02/03/04 (Embeddings),Unexecuted Code,import os,14
+199,code,,Multi-Backbone Exploration & Embedding Extraction,Module 02/03/04 (Embeddings),Unexecuted Code,import os,19
+200,code,,Multi-Backbone Exploration & Embedding Extraction,Module 02/03/04 (Embeddings),Unexecuted Code,import pandas as pd,8
+201,code,,Multi-Backbone Exploration & Embedding Extraction,Module 02/03/04 (Embeddings),Unexecuted Code,df.head(5),1
+202,code,,Multi-Backbone Exploration & Embedding Extraction,Module 02/03/04 (Embeddings),Unexecuted Code,import os,26
+203,code,,Multi-Backbone Exploration & Embedding Extraction,Module 02/03/04 (Embeddings),Unexecuted Code,import pandas as pd,25
+204,markdown,,Multi-Backbone Exploration & Embedding Extraction,Module 02/03/04 (Embeddings),Markdown Documentation,# multi backbone fusion deep learning model,1
+205,code,,Multi-Backbone Exploration & Embedding Extraction,Module 02/03/04 (Embeddings),Unexecuted Code,# =========================,19
+206,markdown,,Dataset Realignment Notice (EyePACS -> DDR),Module 01 (Dataset Validation),Markdown Documentation,### misaligned as the models(eyepac) and radiomics(DDR),1
+207,code,,Dataset Realignment Notice (EyePACS -> DDR),Module 01 (Dataset Validation),Unexecuted Code,# =========================,22
+208,code,,Dataset Realignment Notice (EyePACS -> DDR),Module 01 (Dataset Validation),Unexecuted Code,"print(""EffB3:"", eff_df[""image_id""].head())",4
+209,code,,Dataset Realignment Notice (EyePACS -> DDR),Module 01 (Dataset Validation),Unexecuted Code,def clean_id(x):,11
+210,code,,Dataset Realignment Notice (EyePACS -> DDR),Module 01 (Dataset Validation),Unexecuted Code,merged = (eff_df,5
+211,markdown,,Dataset Realignment Notice (EyePACS -> DDR),Module 01 (Dataset Validation),Markdown Documentation,# finetuning using muti fusion of deep learning followed by mlp and concat with radiomics later#,1
+212,code,,Dataset Realignment Notice (EyePACS -> DDR),Module 01 (Dataset Validation),Unexecuted Code,"# BLOCK A - utilities: QWK, seed, focal loss, small helpers",38
+213,code,,Dataset Realignment Notice (EyePACS -> DDR),Module 01 (Dataset Validation),Unexecuted Code,import pandas as pd,17
+214,code,,Dataset Realignment Notice (EyePACS -> DDR),Module 01 (Dataset Validation),Unexecuted Code,"data = pd.read_csv(""/kaggle/working/manifest_ddr_aligned.csv"")",1
+215,code,,Dataset Realignment Notice (EyePACS -> DDR),Module 01 (Dataset Validation),Unexecuted Code,data.head(5),1
+216,raw,,Dataset Realignment Notice (EyePACS -> DDR),Module 01 (Dataset Validation),Unexecuted Code,<empty>,0
+217,code,,Dataset Realignment Notice (EyePACS -> DDR),Module 01 (Dataset Validation),Unexecuted Code,print(len(data)),1
+218,code,,Dataset Realignment Notice (EyePACS -> DDR),Module 01 (Dataset Validation),Unexecuted Code,<empty>,0
+219,code,,Dataset Realignment Notice (EyePACS -> DDR),Module 01 (Dataset Validation),Unexecuted Code,import os,4
+220,code,,Baseline: EfficientNet-B3 Fine-Tuning on DDR,Module 04 (EfficientNet-B3),Unexecuted Code,"# BLOCK B — DDR Dataset + Transforms (Robust, ready-to-run)",162
+221,code,,Baseline: EfficientNet-B3 Fine-Tuning on DDR,Module 04 (EfficientNet-B3),Unexecuted Code,"print(manifest_df[""numeric_label""].value_counts())",1
+222,markdown,,Baseline: EfficientNet-B3 Fine-Tuning on DDR,Module 04 (EfficientNet-B3),Markdown Documentation,#### effb3,1
+223,code,,Baseline: EfficientNet-B3 Fine-Tuning on DDR,Module 04 (EfficientNet-B3),Unexecuted Code,# BLOCK 0 - CONFIG,30
+224,code,,Baseline: EfficientNet-B3 Fine-Tuning on DDR,Module 04 (EfficientNet-B3),Unexecuted Code,# BLOCK 1 - DATASET & DATALOADERS,55
+225,code,,Baseline: EfficientNet-B3 Fine-Tuning on DDR,Module 04 (EfficientNet-B3),Unexecuted Code,# BLOCK 2 - MODEL INIT and weight loading,28
+226,code,,Baseline: EfficientNet-B3 Fine-Tuning on DDR,Module 04 (EfficientNet-B3),Unexecuted Code,"# BLOCK 3 - LOSS, OPTIMIZER, SCHEDULER & METRIC (QWK)",33
+227,code,,Baseline: EfficientNet-B3 Fine-Tuning on DDR,Module 04 (EfficientNet-B3),Unexecuted Code,# BLOCK 4 - VALIDATION FUNCTION,28
+228,code,,Baseline: EfficientNet-B3 Fine-Tuning on DDR,Module 04 (EfficientNet-B3),Unexecuted Code,<empty>,0
+229,code,,Baseline: EfficientNet-B3 Fine-Tuning on DDR,Module 04 (EfficientNet-B3),Unexecuted Code,# ================================================================,104
+230,code,,Baseline: ConvNeXt-Small Fine-Tuning on DDR,Module 02 (ConvNeXt-Small),Unexecuted Code,# ============================================================,46
+231,code,,Baseline: ConvNeXt-Small Fine-Tuning on DDR,Module 02 (ConvNeXt-Small),Unexecuted Code,# ================================================================,95
+232,code,,Baseline: ConvNeXt-Small Fine-Tuning on DDR,Module 02 (ConvNeXt-Small),Unexecuted Code,# ============================================================,43
+233,code,,Baseline: ConvNeXt-Small Fine-Tuning on DDR,Module 02 (ConvNeXt-Small),Unexecuted Code,# ================================================================,53
+234,code,,Baseline: ConvNeXt-Small Fine-Tuning on DDR,Module 02 (ConvNeXt-Small),Unexecuted Code,# BLOCK 4 - VALIDATION FUNCTION,29
+235,code,,Baseline: ConvNeXt-Small Fine-Tuning on DDR,Module 02 (ConvNeXt-Small),Unexecuted Code,# ================================================================,109
+236,markdown,,Baseline: Swin-Tiny Fine-Tuning on DDR,Module 03 (Swin-Tiny),Markdown Documentation,### SWIN TINY,1
+237,code,,Baseline: Swin-Tiny Fine-Tuning on DDR,Module 03 (Swin-Tiny),Unexecuted Code,# ============================================================,46
+238,code,,Baseline: Swin-Tiny Fine-Tuning on DDR,Module 03 (Swin-Tiny),Unexecuted Code,# ================================================================,100
+239,code,,Baseline: Swin-Tiny Fine-Tuning on DDR,Module 03 (Swin-Tiny),Unexecuted Code,# ============================================================,42
+240,code,,Baseline: Swin-Tiny Fine-Tuning on DDR,Module 03 (Swin-Tiny),Unexecuted Code,# ================================================================,57
+241,code,,Baseline: Swin-Tiny Fine-Tuning on DDR,Module 03 (Swin-Tiny),Unexecuted Code,# ================================================================,35
+242,code,,Baseline: Swin-Tiny Fine-Tuning on DDR,Module 03 (Swin-Tiny),Unexecuted Code,from tqdm import tqdm,108
+243,code,,Baseline: Swin-Tiny Fine-Tuning on DDR,Module 03 (Swin-Tiny),Unexecuted Code,# Load manifest for embedding extraction,6
+244,code,,Multi-Backbone + Global Radiomics + CORAL,Module 09 (CORAL) / Module 10 (Fusion),Unexecuted Code,import os,74
+245,code,,Multi-Backbone + Global Radiomics + CORAL,Module 09 (CORAL) / Module 10 (Fusion),Unexecuted Code,shape_eff = extract_embeddings(,7
+246,code,,Multi-Backbone + Global Radiomics + CORAL,Module 09 (CORAL) / Module 10 (Fusion),Unexecuted Code,shape_conv = extract_embeddings(,7
+247,code,,Multi-Backbone + Global Radiomics + CORAL,Module 09 (CORAL) / Module 10 (Fusion),Unexecuted Code,import torch,96
+248,markdown,,Multi-Backbone + Global Radiomics + CORAL,Module 09 (CORAL) / Module 10 (Fusion),Markdown Documentation,<empty>,0
+249,markdown,,Multi-Backbone + Global Radiomics + CORAL,Module 09 (CORAL) / Module 10 (Fusion),Markdown Documentation,## Fusion of,13
+250,code,,Multi-Backbone + Global Radiomics + CORAL,Module 09 (CORAL) / Module 10 (Fusion),Unexecuted Code,rad_df.head(),1
+251,code,,Multi-Backbone + Global Radiomics + CORAL,Module 09 (CORAL) / Module 10 (Fusion),Unexecuted Code,import os,51
+252,code,,Multi-Backbone + Global Radiomics + CORAL,Module 09 (CORAL) / Module 10 (Fusion),Unexecuted Code,from sklearn.model_selection import train_test_split,24
+253,code,,Multi-Backbone + Global Radiomics + CORAL,Module 09 (CORAL) / Module 10 (Fusion),Unexecuted Code,"print(""\nClass distribution:"")",4
+254,code,,Multi-Backbone + Global Radiomics + CORAL,Module 09 (CORAL) / Module 10 (Fusion),Unexecuted Code,import numpy as np,73
+255,code,,Multi-Backbone + Global Radiomics + CORAL,Module 09 (CORAL) / Module 10 (Fusion),Unexecuted Code,"train_ds = FusionDataset(train_df, eff_emb, conv_emb, swin_emb, rad_df)",7
+256,code,,Multi-Backbone + Global Radiomics + CORAL,Module 09 (CORAL) / Module 10 (Fusion),Unexecuted Code,import torch,94
+257,code,,Multi-Backbone + Global Radiomics + CORAL,Module 09 (CORAL) / Module 10 (Fusion),Unexecuted Code,# ==============================,30
+258,code,,Multi-Backbone + Global Radiomics + CORAL,Module 09 (CORAL) / Module 10 (Fusion),Unexecuted Code,import os,164
+259,code,,Multi-Backbone + Global Radiomics + CORAL,Module 09 (CORAL) / Module 10 (Fusion),Unexecuted Code,"val_missing = (val_df[""image_id""].isin(rad_df[""image_id""]) == False).mean()",3
+260,markdown,,Grad-CAM++ & Lesion Patch Extraction,Module 06 (Local Patches) / Module 13 (GradCAM),Markdown Documentation,# grad cam group 4,1
+261,code,,Grad-CAM++ & Lesion Patch Extraction,Module 06 (Local Patches) / Module 13 (GradCAM),Unexecuted Code,!pip install -q scikit-learn==1.5.2,3
+262,code,,Grad-CAM++ & Lesion Patch Extraction,Module 06 (Local Patches) / Module 13 (GradCAM),Unexecuted Code,"import numpy, sklearn, pytorch_grad_cam",4
+263,code,,Grad-CAM++ & Lesion Patch Extraction,Module 06 (Local Patches) / Module 13 (GradCAM),Unexecuted Code,<empty>,0
+264,code,,Grad-CAM++ & Lesion Patch Extraction,Module 06 (Local Patches) / Module 13 (GradCAM),Unexecuted Code,import os,5
+265,code,,Grad-CAM++ & Lesion Patch Extraction,Module 06 (Local Patches) / Module 13 (GradCAM),Unexecuted Code,# ---------------- CONFIG ----------------,8
+266,code,,Grad-CAM++ & Lesion Patch Extraction,Module 06 (Local Patches) / Module 13 (GradCAM),Unexecuted Code,import torch,4
+267,code,,Grad-CAM++ & Lesion Patch Extraction,Module 06 (Local Patches) / Module 13 (GradCAM),Unexecuted Code,# import os,8
+268,code,,Grad-CAM++ & Lesion Patch Extraction,Module 06 (Local Patches) / Module 13 (GradCAM),Unexecuted Code,# rm -rf /kaggle/working/gradcam_ddr_fixed,1
+269,code,,Grad-CAM++ & Lesion Patch Extraction,Module 06 (Local Patches) / Module 13 (GradCAM),Unexecuted Code,import os,7
+270,code,,Grad-CAM++ & Lesion Patch Extraction,Module 06 (Local Patches) / Module 13 (GradCAM),Unexecuted Code,# ================== FULL ENSEMBLE GRAD-CAM++ FOR DDR ==================,113
+271,code,,Grad-CAM++ & Lesion Patch Extraction,Module 06 (Local Patches) / Module 13 (GradCAM),Unexecuted Code,import os,18
+272,code,,Grad-CAM++ & Lesion Patch Extraction,Module 06 (Local Patches) / Module 13 (GradCAM),Unexecuted Code,import os,25
+273,code,,Grad-CAM++ & Lesion Patch Extraction,Module 06 (Local Patches) / Module 13 (GradCAM),Unexecuted Code,# # ================== ENSEMBLE GRAD-CAM++ FOR DDR ==================,139
+274,code,,Grad-CAM++ & Lesion Patch Extraction,Module 06 (Local Patches) / Module 13 (GradCAM),Unexecuted Code,# import shutil,8
+275,code,,Grad-CAM++ & Lesion Patch Extraction,Module 06 (Local Patches) / Module 13 (GradCAM),Unexecuted Code,<empty>,0
+276,code,,Grad-CAM++ & Lesion Patch Extraction,Module 06 (Local Patches) / Module 13 (GradCAM),Unexecuted Code,<empty>,0
+277,code,,Grad-CAM++ & Lesion Patch Extraction,Module 06 (Local Patches) / Module 13 (GradCAM),Unexecuted Code,import os,19
+278,code,,Grad-CAM++ & Lesion Patch Extraction,Module 06 (Local Patches) / Module 13 (GradCAM),Unexecuted Code,<empty>,0
+279,code,,Grad-CAM++ & Lesion Patch Extraction,Module 06 (Local Patches) / Module 13 (GradCAM),Unexecuted Code,<empty>,0
+280,code,,Grad-CAM++ & Lesion Patch Extraction,Module 06 (Local Patches) / Module 13 (GradCAM),Unexecuted Code,# import torch,5
+281,code,,Grad-CAM++ & Lesion Patch Extraction,Module 06 (Local Patches) / Module 13 (GradCAM),Unexecuted Code,# import os,11
+282,code,,Grad-CAM++ & Lesion Patch Extraction,Module 06 (Local Patches) / Module 13 (GradCAM),Unexecuted Code,# import os,32
+283,code,,Grad-CAM++ & Lesion Patch Extraction,Module 06 (Local Patches) / Module 13 (GradCAM),Unexecuted Code,"BASE_DIR = ""/kaggle/working/gradcam_ensemble""   # change if needed",4
+284,code,,Grad-CAM++ & Lesion Patch Extraction,Module 06 (Local Patches) / Module 13 (GradCAM),Unexecuted Code,cls = 0,13
+285,code,,Grad-CAM++ & Lesion Patch Extraction,Module 06 (Local Patches) / Module 13 (GradCAM),Unexecuted Code,cls = 1,13
+286,code,,Grad-CAM++ & Lesion Patch Extraction,Module 06 (Local Patches) / Module 13 (GradCAM),Unexecuted Code,cls = 2,13
+287,code,,Grad-CAM++ & Lesion Patch Extraction,Module 06 (Local Patches) / Module 13 (GradCAM),Unexecuted Code,cls = 3,13
+288,code,,Grad-CAM++ & Lesion Patch Extraction,Module 06 (Local Patches) / Module 13 (GradCAM),Unexecuted Code,cls = 4,13
+289,code,,Grad-CAM++ & Lesion Patch Extraction,Module 06 (Local Patches) / Module 13 (GradCAM),Unexecuted Code,import os,4
+290,markdown,,Grad-CAM++ & Lesion Patch Extraction,Module 06 (Local Patches) / Module 13 (GradCAM),Markdown Documentation,# patch extraction,1
+291,code,,Grad-CAM++ & Lesion Patch Extraction,Module 06 (Local Patches) / Module 13 (GradCAM),Unexecuted Code,"# import shutil, os",7
+292,code,,Grad-CAM++ & Lesion Patch Extraction,Module 06 (Local Patches) / Module 13 (GradCAM),Unexecuted Code,import os,4
+293,code,,Grad-CAM++ & Lesion Patch Extraction,Module 06 (Local Patches) / Module 13 (GradCAM),Unexecuted Code,<empty>,0
+294,code,,Grad-CAM++ & Lesion Patch Extraction,Module 06 (Local Patches) / Module 13 (GradCAM),Unexecuted Code,# import shutil,17
+295,code,,Grad-CAM++ & Lesion Patch Extraction,Module 06 (Local Patches) / Module 13 (GradCAM),Unexecuted Code,# import shutil,13
+296,code,,Grad-CAM++ & Lesion Patch Extraction,Module 06 (Local Patches) / Module 13 (GradCAM),Unexecuted Code,"import os, cv2, numpy as np",96
+297,code,,Grad-CAM++ & Lesion Patch Extraction,Module 06 (Local Patches) / Module 13 (GradCAM),Unexecuted Code,<empty>,0
+298,code,,Grad-CAM++ & Lesion Patch Extraction,Module 06 (Local Patches) / Module 13 (GradCAM),Unexecuted Code,"import os, cv2, numpy as np",96
+299,code,,Grad-CAM++ & Lesion Patch Extraction,Module 06 (Local Patches) / Module 13 (GradCAM),Unexecuted Code,"import os, cv2, numpy as np",96
+300,code,,Grad-CAM++ & Lesion Patch Extraction,Module 06 (Local Patches) / Module 13 (GradCAM),Unexecuted Code,"import os, cv2, numpy as np",96
+301,code,,Grad-CAM++ & Lesion Patch Extraction,Module 06 (Local Patches) / Module 13 (GradCAM),Unexecuted Code,"import os, cv2, numpy as np",96
+302,code,,Grad-CAM++ & Lesion Patch Extraction,Module 06 (Local Patches) / Module 13 (GradCAM),Unexecuted Code,import os,18
+303,code,,Grad-CAM++ & Lesion Patch Extraction,Module 06 (Local Patches) / Module 13 (GradCAM),Unexecuted Code,<empty>,0
+304,code,,Grad-CAM++ & Lesion Patch Extraction,Module 06 (Local Patches) / Module 13 (GradCAM),Unexecuted Code,<empty>,0
+305,code,,Grad-CAM++ & Lesion Patch Extraction,Module 06 (Local Patches) / Module 13 (GradCAM),Unexecuted Code,<empty>,0
+306,code,,Grad-CAM++ & Lesion Patch Extraction,Module 06 (Local Patches) / Module 13 (GradCAM),Unexecuted Code,# import shutil,7
+307,code,,Grad-CAM++ & Lesion Patch Extraction,Module 06 (Local Patches) / Module 13 (GradCAM),Unexecuted Code,# !rm -rf /kaggle/working/lesion_patches/,13
+308,code,,Grad-CAM++ & Lesion Patch Extraction,Module 06 (Local Patches) / Module 13 (GradCAM),Unexecuted Code,!du -h /kaggle/working/week2 --max-depth=2 | sort -h,1
+309,code,,Grad-CAM++ & Lesion Patch Extraction,Module 06 (Local Patches) / Module 13 (GradCAM),Unexecuted Code,<empty>,0
+310,code,,Grad-CAM++ & Lesion Patch Extraction,Module 06 (Local Patches) / Module 13 (GradCAM),Unexecuted Code,import os,16
+311,markdown,,Fusion Ablations & Imbalance Weighted Loss,Module 08 (Class Imbalance) / Module 11 (Ablations),Markdown Documentation,# without mean,1
+312,code,51,Fusion Ablations & Imbalance Weighted Loss,Module 08 (Class Imbalance) / Module 11 (Ablations),Executed (Run #51),from sklearn.model_selection import train_test_split,24
+313,code,48,Fusion Ablations & Imbalance Weighted Loss,Module 08 (Class Imbalance) / Module 11 (Ablations),Executed (Run #48),import os,51
+314,code,49,Fusion Ablations & Imbalance Weighted Loss,Module 08 (Class Imbalance) / Module 11 (Ablations),Executed (Run #49),import numpy as np,65
+315,code,52,Fusion Ablations & Imbalance Weighted Loss,Module 08 (Class Imbalance) / Module 11 (Ablations),Executed (Run #52),"train_ds = FusionDataset(train_df, eff_emb, conv_emb, swin_emb, rad_df)",7
+316,code,,Fusion Ablations & Imbalance Weighted Loss,Module 08 (Class Imbalance) / Module 11 (Ablations),Unexecuted Code,"for name, df in [(""Train"", train_df), (""Val"", val_df), (""Test"", test_df)]:",5
+317,code,43,Fusion Ablations & Imbalance Weighted Loss,Module 08 (Class Imbalance) / Module 11 (Ablations),Executed (Run #43),import torch,106
+318,code,,Fusion Ablations & Imbalance Weighted Loss,Module 08 (Class Imbalance) / Module 11 (Ablations),Unexecuted Code,import os,164
+319,code,,Fusion Ablations & Imbalance Weighted Loss,Module 08 (Class Imbalance) / Module 11 (Ablations),Unexecuted Code,<empty>,0
+320,code,,Fusion Ablations & Imbalance Weighted Loss,Module 08 (Class Imbalance) / Module 11 (Ablations),Unexecuted Code,"from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay",27
+321,code,,Fusion Ablations & Imbalance Weighted Loss,Module 08 (Class Imbalance) / Module 11 (Ablations),Unexecuted Code,from collections import Counter,22
+322,code,,Fusion Ablations & Imbalance Weighted Loss,Module 08 (Class Imbalance) / Module 11 (Ablations),Unexecuted Code,import torch,38
+323,code,,Fusion Ablations & Imbalance Weighted Loss,Module 08 (Class Imbalance) / Module 11 (Ablations),Unexecuted Code,# BLOCK 1 — t-SNE of Radiomics features (before fusion),28
+324,code,,Fusion Ablations & Imbalance Weighted Loss,Module 08 (Class Imbalance) / Module 11 (Ablations),Unexecuted Code,<empty>,0
+325,code,,Fusion Ablations & Imbalance Weighted Loss,Module 08 (Class Imbalance) / Module 11 (Ablations),Unexecuted Code,# BLOCK 2 — t-SNE of Fused Latent Features (after fusion),44
+326,code,,Fusion Ablations & Imbalance Weighted Loss,Module 08 (Class Imbalance) / Module 11 (Ablations),Unexecuted Code,from sklearn.metrics import cohen_kappa_score,18
+327,code,,Fusion Ablations & Imbalance Weighted Loss,Module 08 (Class Imbalance) / Module 11 (Ablations),Unexecuted Code,from sklearn.metrics import confusion_matrix,24
+328,code,,Fusion Ablations & Imbalance Weighted Loss,Module 08 (Class Imbalance) / Module 11 (Ablations),Unexecuted Code,import seaborn as sns,10
+329,markdown,,Fusion Ablations & Imbalance Weighted Loss,Module 08 (Class Imbalance) / Module 11 (Ablations),Markdown Documentation,# imbalance weighted loss,1
+330,code,,Fusion Ablations & Imbalance Weighted Loss,Module 08 (Class Imbalance) / Module 11 (Ablations),Unexecuted Code,import os,51
+331,code,,Fusion Ablations & Imbalance Weighted Loss,Module 08 (Class Imbalance) / Module 11 (Ablations),Unexecuted Code,import numpy as np,65
+332,code,,Fusion Ablations & Imbalance Weighted Loss,Module 08 (Class Imbalance) / Module 11 (Ablations),Unexecuted Code,import torch,106
+333,code,,Fusion Ablations & Imbalance Weighted Loss,Module 08 (Class Imbalance) / Module 11 (Ablations),Unexecuted Code,import os,148
+334,code,,Fusion Ablations & Imbalance Weighted Loss,Module 08 (Class Imbalance) / Module 11 (Ablations),Unexecuted Code,"from sklearn.metrics import confusion_matrix, classification_report",21
+335,code,,Fusion Ablations & Imbalance Weighted Loss,Module 08 (Class Imbalance) / Module 11 (Ablations),Unexecuted Code,<empty>,0
+336,code,,Fusion Ablations & Imbalance Weighted Loss,Module 08 (Class Imbalance) / Module 11 (Ablations),Unexecuted Code,# import os,26
+337,markdown,,Patch-Level Radiomics (pyradiomics),Module 06 (Local Radiomics),Markdown Documentation,# patch encoding group 4 continuation,1
+338,code,,Patch-Level Radiomics (pyradiomics),Module 06 (Local Radiomics),Unexecuted Code,import os,10
+339,code,,Patch-Level Radiomics (pyradiomics),Module 06 (Local Radiomics),Unexecuted Code,# =============================,16
+340,code,,Patch-Level Radiomics (pyradiomics),Module 06 (Local Radiomics),Unexecuted Code,import pandas as pd,35
+341,code,,Patch-Level Radiomics (pyradiomics),Module 06 (Local Radiomics),Unexecuted Code,import os,30
+342,code,,Patch-Level Radiomics (pyradiomics),Module 06 (Local Radiomics),Unexecuted Code,IMAGE_SIZE = 320  # not 224,14
+343,code,,Patch-Level Radiomics (pyradiomics),Module 06 (Local Radiomics),Unexecuted Code,"def load_convnext_backbone(ckpt, num_classes=5):",24
+344,code,,Patch-Level Radiomics (pyradiomics),Module 06 (Local Radiomics),Unexecuted Code,from torch.utils.data import DataLoader,17
+345,code,,Patch-Level Radiomics (pyradiomics),Module 06 (Local Radiomics),Unexecuted Code,all_emb = [],20
+346,code,,Patch-Level Radiomics (pyradiomics),Module 06 (Local Radiomics),Unexecuted Code,import pandas as pd,21
+347,code,,Patch-Level Radiomics (pyradiomics),Module 06 (Local Radiomics),Unexecuted Code,import numpy as np,38
+348,markdown,,Patch-Level Radiomics (pyradiomics),Module 06 (Local Radiomics),Markdown Documentation,## patch level radiomics,1
+349,code,,Patch-Level Radiomics (pyradiomics),Module 06 (Local Radiomics),Unexecuted Code,!pip install pyradiomics -q,1
+350,code,,Patch-Level Radiomics (pyradiomics),Module 06 (Local Radiomics),Unexecuted Code,import logging,5
+351,code,,Patch-Level Radiomics (pyradiomics),Module 06 (Local Radiomics),Unexecuted Code,"import os, time, warnings, logging",112
+352,code,,Patch-Level Radiomics (pyradiomics),Module 06 (Local Radiomics),Unexecuted Code,"import os, time",150
+353,code,,Patch-Level Radiomics (pyradiomics),Module 06 (Local Radiomics),Unexecuted Code,import numpy as np,6
+354,markdown,,Patch-Level Radiomics (pyradiomics),Module 06 (Local Radiomics),Markdown Documentation,### how many patches per image,1
+355,code,,Patch-Level Radiomics (pyradiomics),Module 06 (Local Radiomics),Unexecuted Code,import pandas as pd,6
+356,code,,Patch-Level Radiomics (pyradiomics),Module 06 (Local Radiomics),Unexecuted Code,# Count number of patches (lesions) per image,7
+357,code,,Patch-Level Radiomics (pyradiomics),Module 06 (Local Radiomics),Unexecuted Code,import matplotlib.pyplot as plt,26
+358,code,,Patch-Level Radiomics (pyradiomics),Module 06 (Local Radiomics),Unexecuted Code,"summary = df.groupby(""class_id"")[""lesion_count""].agg([""mean"",""median"",""max"",""min"",""std""])",2
+359,markdown,,Lesion Graph Construction & GATv2 Training,Module 07 (Alternative Graph Fusion),Markdown Documentation,# Global Lession Graph,1
+360,code,,Lesion Graph Construction & GATv2 Training,Module 07 (Alternative Graph Fusion),Unexecuted Code,import numpy as np,16
+361,code,,Lesion Graph Construction & GATv2 Training,Module 07 (Alternative Graph Fusion),Unexecuted Code,import numpy as np,5
+362,code,,Lesion Graph Construction & GATv2 Training,Module 07 (Alternative Graph Fusion),Unexecuted Code,"SAVE_PATH = ""/kaggle/working/week2/node_features_full.npz""",7
+363,code,,Lesion Graph Construction & GATv2 Training,Module 07 (Alternative Graph Fusion),Unexecuted Code,from collections import defaultdict,6
+364,code,,Lesion Graph Construction & GATv2 Training,Module 07 (Alternative Graph Fusion),Unexecuted Code,# !pip install torch-geometric torch-scatter torch-sparse torch-cluster torch-spline-conv \,2
+365,code,,Lesion Graph Construction & GATv2 Training,Module 07 (Alternative Graph Fusion),Unexecuted Code,import torch,29
+366,code,,Lesion Graph Construction & GATv2 Training,Module 07 (Alternative Graph Fusion),Unexecuted Code,import torch,7
+367,code,,Lesion Graph Construction & GATv2 Training,Module 07 (Alternative Graph Fusion),Unexecuted Code,import random,26
+368,code,,Lesion Graph Construction & GATv2 Training,Module 07 (Alternative Graph Fusion),Unexecuted Code,import random,31
+369,code,,Lesion Graph Construction & GATv2 Training,Module 07 (Alternative Graph Fusion),Unexecuted Code,import numpy as np,35
+370,code,,Lesion Graph Construction & GATv2 Training,Module 07 (Alternative Graph Fusion),Unexecuted Code,import numpy as np,13
+371,code,,Lesion Graph Construction & GATv2 Training,Module 07 (Alternative Graph Fusion),Unexecuted Code,"coords = np.stack([emb_data[""x1""], emb_data[""y1""], emb_data[""x2""], emb_data[""y2""]],1)",6
+372,code,,Lesion Graph Construction & GATv2 Training,Module 07 (Alternative Graph Fusion),Unexecuted Code,import matplotlib.pyplot as plt,25
+373,code,,Lesion Graph Construction & GATv2 Training,Module 07 (Alternative Graph Fusion),Unexecuted Code,import numpy as np,20
+374,code,,Lesion Graph Construction & GATv2 Training,Module 07 (Alternative Graph Fusion),Unexecuted Code,# import numpy as np,55
+375,code,,Lesion Graph Construction & GATv2 Training,Module 07 (Alternative Graph Fusion),Unexecuted Code,# import numpy as np,34
+376,code,,Lesion Graph Construction & GATv2 Training,Module 07 (Alternative Graph Fusion),Unexecuted Code,import numpy as np,61
+377,code,,Lesion Graph Construction & GATv2 Training,Module 07 (Alternative Graph Fusion),Unexecuted Code,"npz = np.load(""/kaggle/working/week2/patch_embeddings_full.npz"")",2
+378,markdown,,Lesion Graph Construction & GATv2 Training,Module 07 (Alternative Graph Fusion),Markdown Documentation,# Group 5,1
+379,code,,Lesion Graph Construction & GATv2 Training,Module 07 (Alternative Graph Fusion),Unexecuted Code,# prepare_node_vectors.py,67
+380,code,,Lesion Graph Construction & GATv2 Training,Module 07 (Alternative Graph Fusion),Unexecuted Code,!pip uninstall -y torch torchvision torchaudio torch-geometric torch-scatter torch-sparse torch-clus,4
+381,code,,Lesion Graph Construction & GATv2 Training,Module 07 (Alternative Graph Fusion),Unexecuted Code,"import torch, torch_geometric",4
+382,code,,Lesion Graph Construction & GATv2 Training,Module 07 (Alternative Graph Fusion),Unexecuted Code,import torch,19
+383,code,,Lesion Graph Construction & GATv2 Training,Module 07 (Alternative Graph Fusion),Unexecuted Code,import torch,12
+384,code,,Lesion Graph Construction & GATv2 Training,Module 07 (Alternative Graph Fusion),Unexecuted Code,nan_mask = np.isnan(rad),3
+385,code,,Lesion Graph Construction & GATv2 Training,Module 07 (Alternative Graph Fusion),Unexecuted Code,import numpy as np,24
+386,code,,Lesion Graph Construction & GATv2 Training,Module 07 (Alternative Graph Fusion),Unexecuted Code,import numpy as np,14
+387,code,,Lesion Graph Construction & GATv2 Training,Module 07 (Alternative Graph Fusion),Unexecuted Code,import torch,22
+388,code,,Lesion Graph Construction & GATv2 Training,Module 07 (Alternative Graph Fusion),Unexecuted Code,import torch,210
+389,code,,Lesion Graph Construction & GATv2 Training,Module 07 (Alternative Graph Fusion),Unexecuted Code,# DIAGNOSTIC CELL — run just this first,63
+390,code,,Lesion Graph Construction & GATv2 Training,Module 07 (Alternative Graph Fusion),Unexecuted Code,"# Robust GNN training (GATv2 but stable): LayerNorm, balanced sampler, LR scheduler, gradient clippi",163
+391,markdown,,"Exploratory Data Analysis, UMAP & Embeddings",Module 01 / Module 12 (EDA),Markdown Documentation,# EDA,1
+392,markdown,,"Exploratory Data Analysis, UMAP & Embeddings",Module 01 / Module 12 (EDA),Markdown Documentation,!mkdir EDA,1
+393,code,,"Exploratory Data Analysis, UMAP & Embeddings",Module 01 / Module 12 (EDA),Unexecuted Code,!pip uninstall -y protobuf,2
+394,code,,"Exploratory Data Analysis, UMAP & Embeddings",Module 01 / Module 12 (EDA),Unexecuted Code,import numpy as np,8
+395,code,,"Exploratory Data Analysis, UMAP & Embeddings",Module 01 / Module 12 (EDA),Unexecuted Code,import google.protobuf,2
+396,code,,"Exploratory Data Analysis, UMAP & Embeddings",Module 01 / Module 12 (EDA),Unexecuted Code,import numpy as np,4
+397,code,8,"Exploratory Data Analysis, UMAP & Embeddings",Module 01 / Module 12 (EDA),Executed (Run #8),EMB_PATHS = {,6
+398,code,2,"Exploratory Data Analysis, UMAP & Embeddings",Module 01 / Module 12 (EDA),Executed (Run #2),import numpy as np,6
+399,code,5,"Exploratory Data Analysis, UMAP & Embeddings",Module 01 / Module 12 (EDA),Executed (Run #5),import numpy as np,9
+400,code,,"Exploratory Data Analysis, UMAP & Embeddings",Module 01 / Module 12 (EDA),Unexecuted Code,"for name, path in EMB_PATHS.items():",3
+401,code,,"Exploratory Data Analysis, UMAP & Embeddings",Module 01 / Module 12 (EDA),Unexecuted Code,!pip install -U scikit-learn umap-learn,1
+402,code,,"Exploratory Data Analysis, UMAP & Embeddings",Module 01 / Module 12 (EDA),Unexecuted Code,import sklearn,4
+403,code,,"Exploratory Data Analysis, UMAP & Embeddings",Module 01 / Module 12 (EDA),Unexecuted Code,import numpy as np,14
+404,code,,"Exploratory Data Analysis, UMAP & Embeddings",Module 01 / Module 12 (EDA),Unexecuted Code,import os,2
+405,code,,"Exploratory Data Analysis, UMAP & Embeddings",Module 01 / Module 12 (EDA),Unexecuted Code,import pandas as pd,36
+406,code,,"Exploratory Data Analysis, UMAP & Embeddings",Module 01 / Module 12 (EDA),Unexecuted Code,import pandas as pd,42
+407,code,,"Exploratory Data Analysis, UMAP & Embeddings",Module 01 / Module 12 (EDA),Unexecuted Code,from sklearn.decomposition import PCA,48
+408,code,,"Exploratory Data Analysis, UMAP & Embeddings",Module 01 / Module 12 (EDA),Unexecuted Code,import numpy as np,51
+409,code,,"Exploratory Data Analysis, UMAP & Embeddings",Module 01 / Module 12 (EDA),Unexecuted Code,import numpy as np,33
+410,code,3,"Exploratory Data Analysis, UMAP & Embeddings",Module 01 / Module 12 (EDA),Executed (Run #3),import pandas as pd,6
+411,code,,"Exploratory Data Analysis, UMAP & Embeddings",Module 01 / Module 12 (EDA),Unexecuted Code,print(rad_df.columns.tolist()),1
+412,code,9,"Exploratory Data Analysis, UMAP & Embeddings",Module 01 / Module 12 (EDA),Executed (Run #9),# Radiomics,16
+413,code,,"Exploratory Data Analysis, UMAP & Embeddings",Module 01 / Module 12 (EDA),Unexecuted Code,<empty>,0
+414,code,,"Exploratory Data Analysis, UMAP & Embeddings",Module 01 / Module 12 (EDA),Unexecuted Code,from sklearn.preprocessing import StandardScaler,20
+415,code,,"Exploratory Data Analysis, UMAP & Embeddings",Module 01 / Module 12 (EDA),Unexecuted Code,# --- Radiomics plot ---,22
+416,code,,"Exploratory Data Analysis, UMAP & Embeddings",Module 01 / Module 12 (EDA),Unexecuted Code,import torch,2
+417,code,,"Exploratory Data Analysis, UMAP & Embeddings",Module 01 / Module 12 (EDA),Unexecuted Code,<empty>,0
+418,code,,"Exploratory Data Analysis, UMAP & Embeddings",Module 01 / Module 12 (EDA),Unexecuted Code,<empty>,0
+419,code,39,Backbone Comparisons & CORAL Evaluation,Module 05 (Selection) / Module 09 (CORAL),Failed (NameError: name 'train_loader' is not defined),import torch,61
+420,code,,Backbone Comparisons & CORAL Evaluation,Module 05 (Selection) / Module 09 (CORAL),Unexecuted Code,from sklearn.linear_model import LogisticRegression,28
+421,code,,Backbone Comparisons & CORAL Evaluation,Module 05 (Selection) / Module 09 (CORAL),Unexecuted Code,# Categorize outcomes,49
+422,code,23,Backbone Comparisons & CORAL Evaluation,Module 05 (Selection) / Module 09 (CORAL),Failed (NameError: name 'train_df' is not defined),from sklearn.linear_model import LogisticRegression,20
+423,code,,Backbone Comparisons & CORAL Evaluation,Module 05 (Selection) / Module 09 (CORAL),Unexecuted Code,"def outcome_map(cnn_pred, fusion_pred, y_true):",16
+424,code,,Backbone Comparisons & CORAL Evaluation,Module 05 (Selection) / Module 09 (CORAL),Unexecuted Code,from umap import UMAP,10
+425,code,,Backbone Comparisons & CORAL Evaluation,Module 05 (Selection) / Module 09 (CORAL),Unexecuted Code,"for name, outcome in zip(",28
+426,code,,Backbone Comparisons & CORAL Evaluation,Module 05 (Selection) / Module 09 (CORAL),Unexecuted Code,conf_df = pd.DataFrame({,12
+427,code,,Backbone Comparisons & CORAL Evaluation,Module 05 (Selection) / Module 09 (CORAL),Unexecuted Code,from sklearn.metrics import confusion_matrix,16
+428,code,,Backbone Comparisons & CORAL Evaluation,Module 05 (Selection) / Module 09 (CORAL),Unexecuted Code,import pandas as pd,26
+429,code,,Backbone Comparisons & CORAL Evaluation,Module 05 (Selection) / Module 09 (CORAL),Unexecuted Code,import networkx as nx,43
+430,markdown,,Backbone Comparisons & CORAL Evaluation,Module 05 (Selection) / Module 09 (CORAL),Markdown Documentation,<empty>,0
+431,code,13,Backbone Comparisons & CORAL Evaluation,Module 05 (Selection) / Module 09 (CORAL),Executed (Run #13),import numpy as np,8
+432,code,,Backbone Comparisons & CORAL Evaluation,Module 05 (Selection) / Module 09 (CORAL),Unexecuted Code,# Absolute correlation matrix,28
+433,code,,Backbone Comparisons & CORAL Evaluation,Module 05 (Selection) / Module 09 (CORAL),Unexecuted Code,# import shutil,14
+434,code,,Backbone Comparisons & CORAL Evaluation,Module 05 (Selection) / Module 09 (CORAL),Unexecuted Code,import numpy as np,4
+435,code,,Backbone Comparisons & CORAL Evaluation,Module 05 (Selection) / Module 09 (CORAL),Unexecuted Code,<empty>,0
+436,code,10,Backbone Comparisons & CORAL Evaluation,Module 05 (Selection) / Module 09 (CORAL),Executed (Run #10),from sklearn.preprocessing import StandardScaler,3
+437,code,17,Backbone Comparisons & CORAL Evaluation,Module 05 (Selection) / Module 09 (CORAL),Executed (Run #17),# Merge labels from manifest,9
+438,code,18,Backbone Comparisons & CORAL Evaluation,Module 05 (Selection) / Module 09 (CORAL),Executed (Run #18),X_rad = rad_df_labeled[feature_cols].values,8
+439,code,19,Backbone Comparisons & CORAL Evaluation,Module 05 (Selection) / Module 09 (CORAL),Executed (Run #19),order = np.argsort(severity_score),6
+440,code,20,Backbone Comparisons & CORAL Evaluation,Module 05 (Selection) / Module 09 (CORAL),Executed (Run #20),import pandas as pd,30
+441,code,24,Backbone Comparisons & CORAL Evaluation,Module 05 (Selection) / Module 09 (CORAL),Executed (Run #24),from sklearn.metrics import cohen_kappa_score,16
+442,code,35,Backbone Comparisons & CORAL Evaluation,Module 05 (Selection) / Module 09 (CORAL),Executed (Run #35),# Paths,12
+443,code,36,Backbone Comparisons & CORAL Evaluation,Module 05 (Selection) / Module 09 (CORAL),Executed (Run #36),# Load embeddings (already in manifest order),8
+444,code,28,Backbone Comparisons & CORAL Evaluation,Module 05 (Selection) / Module 09 (CORAL),Executed (Run #28),from sklearn.model_selection import train_test_split,9
+445,code,32,Backbone Comparisons & CORAL Evaluation,Module 05 (Selection) / Module 09 (CORAL),Failed (NameError: name 'test_df' is not defined),test_idx = test_df.index.values,2
+446,code,33,Backbone Comparisons & CORAL Evaluation,Module 05 (Selection) / Module 09 (CORAL),Executed (Run #33),"def backbone_qwk(X, train_idx, test_idx, y):",8
+447,code,38,Backbone Comparisons & CORAL Evaluation,Module 05 (Selection) / Module 09 (CORAL),Executed (Run #38),"qwk_eff,  pred_eff  = backbone_qwk(X_eff,  train_idx, test_idx, y)",6
+448,code,44,Backbone Comparisons & CORAL Evaluation,Module 05 (Selection) / Module 09 (CORAL),Executed (Run #44),import torch,106
+449,code,55,Backbone Comparisons & CORAL Evaluation,Module 05 (Selection) / Module 09 (CORAL),Executed (Run #55),# from torch.utils.data import DataLoader,19
+450,code,53,Backbone Comparisons & CORAL Evaluation,Module 05 (Selection) / Module 09 (CORAL),Executed (Run #53),import torch,65
+451,code,56,Backbone Comparisons & CORAL Evaluation,Module 05 (Selection) / Module 09 (CORAL),Executed (Run #56),qwk_fusion = test_qwk,1
+452,code,57,Backbone Comparisons & CORAL Evaluation,Module 05 (Selection) / Module 09 (CORAL),Executed (Run #57),import plotly.express as px,37
+453,code,58,Backbone Comparisons & CORAL Evaluation,Module 05 (Selection) / Module 09 (CORAL),Executed (Run #58),abs_err = np.abs(y_pred - y_true),9
+454,code,59,Backbone Comparisons & CORAL Evaluation,Module 05 (Selection) / Module 09 (CORAL),Executed (Run #59),from sklearn.calibration import calibration_curve,38
+455,code,62,Backbone Comparisons & CORAL Evaluation,Module 05 (Selection) / Module 09 (CORAL),Executed (Run #62),# abs_err = np.abs(y_pred - y_true),9
+456,markdown,,"Clinical Decision Rules, Error Analysis & Visuals",Module 12 (Evaluation) / Module 14 (Demo Logic),Markdown Documentation,# Test,1
+457,code,,"Clinical Decision Rules, Error Analysis & Visuals",Module 12 (Evaluation) / Module 14 (Demo Logic),Unexecuted Code,import os,51
+458,code,,"Clinical Decision Rules, Error Analysis & Visuals",Module 12 (Evaluation) / Module 14 (Demo Logic),Unexecuted Code,import torch,106
+459,code,,"Clinical Decision Rules, Error Analysis & Visuals",Module 12 (Evaluation) / Module 14 (Demo Logic),Unexecuted Code,# # Load checkpoint first,11
+460,code,64,"Clinical Decision Rules, Error Analysis & Visuals",Module 12 (Evaluation) / Module 14 (Demo Logic),Executed (Run #64),# Load checkpoint first,11
+461,code,,"Clinical Decision Rules, Error Analysis & Visuals",Module 12 (Evaluation) / Module 14 (Demo Logic),Unexecuted Code,import numpy as np,65
+462,code,,"Clinical Decision Rules, Error Analysis & Visuals",Module 12 (Evaluation) / Module 14 (Demo Logic),Unexecuted Code,"train_ds = FusionDataset(train_df, eff_emb, conv_emb, swin_emb, rad_df)",7
+463,code,65,"Clinical Decision Rules, Error Analysis & Visuals",Module 12 (Evaluation) / Module 14 (Demo Logic),Executed (Run #65),"test_acc, test_qwk, y_pred, y_true, conf = evaluate(fusion_model, test_loader)",4
+464,code,,"Clinical Decision Rules, Error Analysis & Visuals",Module 12 (Evaluation) / Module 14 (Demo Logic),Unexecuted Code,<empty>,0
+465,code,66,"Clinical Decision Rules, Error Analysis & Visuals",Module 12 (Evaluation) / Module 14 (Demo Logic),Executed (Run #66),def clinical_decision(conf):,7
+466,code,68,"Clinical Decision Rules, Error Analysis & Visuals",Module 12 (Evaluation) / Module 14 (Demo Logic),Executed (Run #68),import torch,35
+467,code,86,"Clinical Decision Rules, Error Analysis & Visuals",Module 12 (Evaluation) / Module 14 (Demo Logic),Executed (Run #86),import pandas as pd,30
+468,code,87,"Clinical Decision Rules, Error Analysis & Visuals",Module 12 (Evaluation) / Module 14 (Demo Logic),Executed (Run #87),import numpy as np,4
+469,code,88,"Clinical Decision Rules, Error Analysis & Visuals",Module 12 (Evaluation) / Module 14 (Demo Logic),Executed (Run #88),def visual_category(row):,5
+470,code,89,"Clinical Decision Rules, Error Analysis & Visuals",Module 12 (Evaluation) / Module 14 (Demo Logic),Executed (Run #89),import plotly.express as px,35
+471,code,90,"Clinical Decision Rules, Error Analysis & Visuals",Module 12 (Evaluation) / Module 14 (Demo Logic),Executed (Run #90),"from sklearn.metrics import accuracy_score, cohen_kappa_score",13
+472,code,91,"Clinical Decision Rules, Error Analysis & Visuals",Module 12 (Evaluation) / Module 14 (Demo Logic),Executed (Run #91),import numpy as np,6
+473,code,92,"Clinical Decision Rules, Error Analysis & Visuals",Module 12 (Evaluation) / Module 14 (Demo Logic),Executed (Run #92),import plotly.graph_objects as go,50
