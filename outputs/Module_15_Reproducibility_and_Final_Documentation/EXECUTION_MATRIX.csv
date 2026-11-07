@@ -1,0 +1,17 @@
+module_id,module_title,primary_script,key_deliverables,device_used,execution_status,primary_metric_name,primary_metric_value
+00,Project & Notebook Audit,generate_cell_audit.py,"NOTEBOOK_CELL_AUDIT.md, audit_summary.json",CPU,SUCCESS,Total Cells Audited,474
+01,Dataset Validation & Reproducible Preprocessing,verify_preprocessing.py,"train_manifest.csv, val_manifest.csv, test_manifest.csv, dataset_stats.json",CPU,SUCCESS,Stratified Real DDR Samples,12522
+02,Baseline ConvNeXt-Small (Full DDR),train_full_ddr_convnext.py,"best_model.pth, metrics.json, confusion_matrix.csv",MPS,SUCCESS,Validation QWK,0.8890
+03,Baseline Swin-Tiny Clean Run (Full DDR),train_clean_baseline.py,"best_model_clean.pth, metrics.json, val_predictions.csv",MPS,SUCCESS,Validation QWK,0.8643
+04,Baseline EfficientNet-B3 (Full DDR),train_full_ddr_efficientnet.py,"best_model.pth, metrics.json, confusion_matrix.csv",MPS,SUCCESS,Validation QWK,0.8261
+05,Baseline Comparison & Model Selection,generate_comparison.py,"consolidated_baseline_comparison.csv, consolidated_baseline_comparison.json",CPU,SUCCESS,Nominal Accuracy Leader,ConvNeXt-S (84.44%)
+06,Spatially Localized Radiomics (3x3 Grid),extract_spatial_radiomics.py,"radiomic_features_train.csv, val.csv, test.csv, feature_dictionary.csv",CPU,SUCCESS,IBSI Descriptors Extracted,288
+07,Spatial Visual-Radiomic Cross-Attention,train_spatial_cross_attn.py,"best_model.pth, training_history.csv, metrics.json",MPS,SUCCESS,Validation QWK,0.8375
+08,Class Imbalance Strategies & Weighted Sampling,train_weighted_sampling.py,"class_weights.json, balanced_sampler_results.csv",CPU,SUCCESS,Training Sampling Strategy,WeightedRandomSampler
+09,CORAL Ordinal Classification Head,train_coral_loss.py,"best_coral_model.pth, coral_thresholds.json, metrics.json",MPS,SUCCESS,Validation Catastrophic Error,5.45%
+10,Integrated Proposed Multimodal Architecture (M0),train_gap3_production.py,"best_spatial_radiomics_coral_model.pth, predictions.csv, metrics.json",MPS,SUCCESS,Validation QWK,0.8375
+11,Systematic Ablation Studies (M0 to M5),train_ablation_m*.py,"consolidated_ablation_report.csv, consolidated_ablation_report.json",MPS,SUCCESS,Validation QWK Leader,M3 Nominal Softmax (0.8760)
+12,Final Held-Out Test Evaluation (N=1251),evaluate_held_out_test_set.py,"consolidated_test_evaluation_report.csv, test_predictions.csv",MPS,SUCCESS,Test QWK Leader,M3 Nominal Softmax (0.8697)
+13,Multimodal Explainability & Interpretability,generate_full_explainability_suite.py,"gradcam_overlays.png, cross_attention_alignment_maps.png, feature_importance.csv",MPS,SUCCESS,Top Radiomic Family,GLCM Textures (37.1%)
+14,Clinical Triage Support & Web Application,server.py,"index.html, style.css, app.js, test_server.py",MPS,SUCCESS,Inference Latency,78.4ms
+15,Reproducibility & Final Documentation,run_all_modules.py,"README.md, FINAL_COLLEGE_PROJECT_REPORT.md, REPRODUCIBILITY_CHECKLIST.md",CPU,SUCCESS,Pipeline Verification Rate,100%

@@ -1,0 +1,107 @@
+{
+  "model_name": "SpatialRadiomicsSwinCoralModel (Gap 3 Proposed)",
+  "test_samples": 1251,
+  "exact_accuracy": 0.6515,
+  "within_one_grade_accuracy": 0.9392,
+  "quadratic_weighted_kappa": 0.8366,
+  "macro_f1": 0.5145,
+  "weighted_f1": 0.6959,
+  "error_distance_counts": {
+    "0": 815,
+    "1": 360,
+    "2": 75,
+    "3": 0,
+    "4": 1
+  },
+  "error_distance_percentages": {
+    "0": 65.15,
+    "1": 28.78,
+    "2": 6.0,
+    "3": 0.0,
+    "4": 0.08
+  },
+  "confusion_matrix": [
+    [
+      514,
+      106,
+      7,
+      0,
+      1
+    ],
+    [
+      26,
+      24,
+      15,
+      1,
+      0
+    ],
+    [
+      48,
+      105,
+      183,
+      92,
+      16
+    ],
+    [
+      0,
+      1,
+      4,
+      11,
+      5
+    ],
+    [
+      0,
+      0,
+      2,
+      7,
+      83
+    ]
+  ],
+  "per_grade_metrics": [
+    {
+      "Grade": 0,
+      "Grade Name": "Grade 0: No DR",
+      "Support": 628,
+      "Precision": 0.8741,
+      "Recall (Sensitivity)": 0.8185,
+      "Specificity": 0.8812,
+      "F1-Score": 0.8454
+    },
+    {
+      "Grade": 1,
+      "Grade Name": "Grade 1: Mild NPDR",
+      "Support": 66,
+      "Precision": 0.1017,
+      "Recall (Sensitivity)": 0.3636,
+      "Specificity": 0.8211,
+      "F1-Score": 0.1589
+    },
+    {
+      "Grade": 2,
+      "Grade Name": "Grade 2: Moderate NPDR",
+      "Support": 444,
+      "Precision": 0.8673,
+      "Recall (Sensitivity)": 0.4122,
+      "Specificity": 0.9653,
+      "F1-Score": 0.5588
+    },
+    {
+      "Grade": 3,
+      "Grade Name": "Grade 3: Severe NPDR",
+      "Support": 21,
+      "Precision": 0.0991,
+      "Recall (Sensitivity)": 0.5238,
+      "Specificity": 0.9187,
+      "F1-Score": 0.1667
+    },
+    {
+      "Grade": 4,
+      "Grade Name": "Grade 4: Proliferative DR",
+      "Support": 92,
+      "Precision": 0.7905,
+      "Recall (Sensitivity)": 0.9022,
+      "Specificity": 0.981,
+      "F1-Score": 0.8426
+    }
+  ]
+}

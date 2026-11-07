@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RetinoScan AI - Spatial Multimodal Diabetic Retinopathy Diagnostic Platform</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    
+    <header class="app-header">
+      <div class="header-left">
+        <div class="brand-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <circle cx="12" cy="12" r="4"/>
+            <path d="M12 2v2m0 16v2M2 12h2m16 0h2"/>
+          </svg>
+        </div>
+        <div class="brand-info">
+          <h1>RetinoScan <span class="gradient-text">AI</span></h1>
+          <p class="subtitle">Spatial Visual–Radiomic Cross-Attention & CORAL Ordinal Grading</p>
+        </div>
+      </div>
+      <div class="header-right">
+        <div class="badge mps-badge" id="deviceBadge">
+          <span class="status-dot"></span>
+          Apple Silicon MPS Accelerated
+        </div>
+        <div class="badge model-badge">
+          CORAL + Swin-Tiny + 3x3 Radiomics
+        </div>
+      </div>
+    </header>
+
+    <main class="dashboard-grid">
+      
+      <section class="panel viewer-panel">
+        <div class="panel-header">
+          <div class="header-title">
+            <span class="icon">👁️</span>
+            <h2>Fundus Imaging & Multimodal Grounding</h2>
+          </div>
+          <div class="view-controls">
+            <button class="view-btn active" id="btnViewOrig" data-view="original">Original</button>
+            <button class="view-btn" id="btnViewGrid" data-view="grid">3x3 Grid</button>
+            <button class="view-btn" id="btnViewGradcam" data-view="gradcam">Grad-CAM</button>
+          </div>
+        </div>
+
+        <div class="canvas-wrapper" id="canvasWrapper">
+          <img id="fundusImage" src="/samples/grade_0_007-0007-000.jpg" alt="Retinal Fundus Image">
+          <div class="grid-overlay" id="gridOverlay">
+            <div class="grid-cell" data-zone="0"><span>R0: Superotemporal</span></div>
+            <div class="grid-cell" data-zone="1"><span>R1: Sup. Arcade</span></div>
+            <div class="grid-cell" data-zone="2"><span>R2: Superonasal</span></div>
+            <div class="grid-cell" data-zone="3"><span>R3: Nasal / Disc</span></div>
+            <div class="grid-cell macula-cell" data-zone="4"><span>R4: Central Macula</span></div>
+            <div class="grid-cell" data-zone="5"><span>R5: Temporal</span></div>
+            <div class="grid-cell" data-zone="6"><span>R6: Inferotemporal</span></div>
+            <div class="grid-cell" data-zone="7"><span>R7: Inf. Arcade</span></div>
+            <div class="grid-cell" data-zone="8"><span>R8: Inferonasal</span></div>
+          </div>
+          <img id="gradcamOverlay" class="gradcam-overlay" alt="Grad-CAM Overlay">
+          <div class="loading-overlay" id="loadingOverlay">
+            <div class="spinner"></div>
+            <p>Extracting 3x3 Localized Radiomics & Running Cross-Attention...</p>
+          </div>
+        </div>
+
+        <div class="control-bar" id="opacityControlBar">
+          <label for="opacitySlider">Grad-CAM Saliency Opacity: <span id="opacityVal">75%</span></label>
+          <input type="range" id="opacitySlider" min="0" max="100" value="75">
+        </div>
+
+        <div class="sample-picker-box" style="margin-bottom: 12px; background: rgba(15, 23, 42, 0.6); padding: 12px 16px; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.08);">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+            <h3 style="font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--accent-cyan);">⚡ Select Model Architecture</h3>
+            <span style="font-size: 0.75rem; color: var(--text-muted);">Real-Time Switch</span>
+          </div>
+          <div class="sample-buttons-row">
+            <button class="model-pill active" id="btnModelBaseline" data-model="baseline" style="flex: 1;">
+              <span class="pill-dot g0"></span> Swin-Tiny + CORAL (Baseline)
+            </button>
+            <button class="model-pill" id="btnModelGap3" data-model="gap3" style="flex: 1;">
+              <span class="pill-dot g1"></span> Gap 3: Spatial Radiomics + Cross-Attention
+            </button>
+          </div>
+        </div>
+
+        <div class="sample-picker-box">
+          <h3>One-Click DDR Benchmark Test Cases</h3>
+          <div class="sample-buttons-row">
+            <button class="sample-pill active" data-sample="grade_0">
+              <span class="pill-dot g0"></span> Grade 0: Normal
+            </button>
+            <button class="sample-pill" data-sample="grade_1">
+              <span class="pill-dot g1"></span> Grade 1: Mild
+            </button>
+            <button class="sample-pill" data-sample="grade_2">
+              <span class="pill-dot g2"></span> Grade 2: Moderate
+            </button>
+            <button class="sample-pill" data-sample="grade_3">
+              <span class="pill-dot g3"></span> Grade 3: Severe
+            </button>
+            <button class="sample-pill" data-sample="grade_4">
+              <span class="pill-dot g4"></span> Grade 4: PDR
+            </button>
+          </div>
+        </div>
+
+        <div class="drop-zone" id="dropZone">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <polyline points="17 8 12 3 7 8"/>
+            <line x1="12" y1="3" x2="12" y2="15"/>
+          </svg>
+          <p>Drag & Drop custom retinal fundus image here, or <span>Browse Files</span></p>
+          <input type="file" id="fileInput" accept="image/*">
+        </div>
+      </section>
+
+      <section class="panel diagnostics-panel">
+        
+        <div class="diagnosis-card" id="diagnosisCard">
+          <div class="card-top">
+            <span class="diag-label">AI Diagnostic Classification</span>
+            <div style="display: flex; gap: 8px; align-items: center;">
+              <span id="activeModelTag" style="font-size: 0.72rem; padding: 3px 8px; border-radius: 6px; background: rgba(0, 229, 255, 0.15); border: 1px solid rgba(0, 229, 255, 0.4); color: #00e5ff; font-weight: 500;">Baseline Model</span>
+              <span class="latency-badge" id="latencyBadge">⚡ 7.5 ms</span>
+            </div>
+          </div>
+          <div class="grade-display">
+            <h3 id="predictedGradeTitle">Grade 0: No DR</h3>
+            <span class="urgency-badge" id="urgencyBadge">Routine / Low Risk</span>
+          </div>
+          <div class="referral-box" id="referralBox">
+            <div class="ref-row">
+              <span class="ref-title">Clinical Follow-up:</span>
+              <strong id="followUpText">12 to 24 Months</strong>
+            </div>
+            <p id="recommendationText" class="ref-desc">
+              Normal retinal examination. Maintain strict glycemic and blood pressure control. Schedule annual screening.
+            </p>
+            <div class="icd-code" id="icdCode">ICD-10: E11.9 / E10.9</div>
+          </div>
+        </div>
+
+        <div class="card prob-card">
+          <h4>CORAL Monotonic Probability Distribution</h4>
+          <div class="prob-bars-list" id="probBarsList">
+            
+          </div>
+        </div>
+
+        <div class="card attention-card">
+          <div class="card-header-flex">
+            <h4>Spatial Cross-Attention Allocation (3x3 Grid)</h4>
+            <span class="sub-badge" id="peakZoneBadge">Peak: Central Macula</span>
+          </div>
+          <p class="card-desc">Visual tokens attending to localized IBSI radiomic zones:</p>
+          <div class="attention-mini-grid" id="attnMiniGrid">
+            
+          </div>
+        </div>
+
+        <div class="card radiomics-card">
+          <h4>Real-Time Central Macula Radiomics (Zone 4)</h4>
+          <div class="metrics-table-grid" id="radiomicsTable">
+            <div class="metric-item">
+              <span class="m-label">First-Order Mean:</span>
+              <span class="m-val" id="radMean">--</span>
+            </div>
+            <div class="metric-item">
+              <span class="m-label">Intensity Entropy:</span>
+              <span class="m-val" id="radEntropy">--</span>
+            </div>
+            <div class="metric-item">
+              <span class="m-label">GLCM Contrast:</span>
+              <span class="m-val" id="radContrast">--</span>
+            </div>
+            <div class="metric-item">
+              <span class="m-label">GLCM Homogeneity:</span>
+              <span class="m-val" id="radHomogeneity">--</span>
+            </div>
+            <div class="metric-item">
+              <span class="m-label">Edge Density:</span>
+              <span class="m-val" id="radEdge">--</span>
+            </div>
+            <div class="metric-item">
+              <span class="m-label">Michelson Contrast:</span>
+              <span class="m-val" id="radMichelson">--</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="app-footer">
+      <p>RetinoScan AI &copy; 2026 Deep Learning Project &bull; Spatial Visual-Radiomic Cross-Attention &amp; CORAL Monotonic Ordinal Classification</p>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
