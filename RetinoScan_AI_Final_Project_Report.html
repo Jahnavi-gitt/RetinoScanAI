@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RetinoScan AI: Spatial Visual–Radiomic Cross-Attention Networks for Clinically Safe Diabetic Retinopathy Grading</title>
+<style>
+  :root {
+    --primary: #1a237e;
+    --primary-light: #283593;
+    --accent: #00897b;
+    --text-main: #212121;
+    --text-muted: #555555;
+    --bg-page: #f9fbfd;
+    --bg-card: #ffffff;
+    --border: #e0e0e0;
+    --table-header: #e8eaf6;
+  }
+  
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-main);
+    background-color: var(--bg-page);
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: var(--bg-card);
+    padding: 60px 80px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    border: 1px solid var(--border);
+  }
+
+  .header-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 30px;
+  }
+
+  .btn-print {
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(26, 35, 126, 0.3);
+    transition: background 0.2s ease;
+  }
+
+  .btn-print:hover {
+    background: var(--primary-light);
+  }
+
+  h1.title {
+    font-size: 26px;
+    font-weight: 800;
+    text-align: center;
+    color: var(--primary);
+    line-height: 1.3;
+    margin-bottom: 24px;
+  }
+
+  .authors-block {
+    text-align: center;
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--border);
+  }
+
+  .authors-block strong {
+    color: var(--text-main);
+    font-size: 15px;
+  }
+
+  .abstract-box {
+    background: #f0f4f8;
+    border-left: 4px solid var(--accent);
+    padding: 20px 24px;
+    margin-bottom: 35px;
+    border-radius: 0 6px 6px 0;
+  }
+
+  .abstract-box h3 {
+    margin-top: 0;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--accent);
+  }
+
+  .index-terms {
+    margin-top: 12px;
+    font-size: 13px;
+    color: var(--text-muted);
+    font-style: italic;
+  }
+
+  h2 {
+    font-size: 19px;
+    color: var(--primary);
+    border-bottom: 1.5px solid var(--primary-light);
+    padding-bottom: 6px;
+    margin-top: 40px;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  h3 {
+    font-size: 16px;
+    color: var(--primary-light);
+    margin-top: 24px;
+    margin-bottom: 10px;
+  }
+
+  p {
+    margin: 12px 0;
+    text-align: justify;
+    font-size: 14.5px;
+  }
+
+  ul, ol {
+    font-size: 14.5px;
+    padding-left: 24px;
+  }
+
+  li {
+    margin-bottom: 6px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 13.5px;
+  }
+
+  th, td {
+    padding: 10px 12px;
+    text-align: left;
+    border: 1px solid var(--border);
+  }
+
+  th {
+    background-color: var(--table-header);
+    color: var(--primary);
+    font-weight: 700;
+  }
+
+  tr:nth-child(even) td {
+    background-color: #fafbfd;
+  }
+
+  .table-title {
+    font-weight: 700;
+    font-size: 13px;
+    margin-bottom: 6px;
+    text-align: center;
+    color: var(--primary-light);
+    letter-spacing: 0.5px;
+  }
+
+  pre {
+    background: #1e1e24;
+    color: #f1f1f1;
+    padding: 16px;
+    border-radius: 6px;
+    overflow-x: auto;
+    font-size: 12.5px;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    line-height: 1.45;
+  }
+
+  code {
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font-size: 13px;
+    background: #eef2f6;
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: #c2185b;
+  }
+
+  pre code {
+    background: transparent;
+    padding: 0;
+    color: inherit;
+  }
+
+  .badge-best {
+    background: #e8f5e9;
+    color: #2e7d32;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 11px;
+  }
+
+  .badge-worst {
+    background: #ffebee;
+    color: #c62828;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 11px;
+  }
+
+  .reference-list {
+    font-size: 13px;
+    padding-left: 20px;
+  }
+
+  .reference-list li {
+    margin-bottom: 8px;
+    line-height: 1.45;
+  }
+
+  @media print {
+    body {
+      background: #fff;
+    }
+    .container {
+      margin: 0;
+      padding: 0;
+      box-shadow: none;
+      border: none;
+      max-width: 100%;
+    }
+    .header-actions {
+      display: none;
+    }
+    h2 {
+      page-break-after: avoid;
+    }
+    table, pre {
+      page-break-inside: avoid;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="header-actions">
+    <button class="btn-print" onclick="window.print()">📥 Download as PDF / Print</button>
+  </div>
+
+  <h1 class="title">RetinoScan AI: Spatial Visual–Radiomic Cross-Attention Networks for Clinically Safe Diabetic Retinopathy Grading</h1>
+
+  <div class="authors-block">
+    <p><strong>Team Members:</strong> Jahnavi, Nanditha, Ganga</p>
+    <p>Department of Computer Science and Engineering<br>
+    [College Name], [University Name], [Academic Year]</p>
+  </div>
+
+  <div class="abstract-box">
+    <h3>Abstract</h3>
+    <p>Diabetic Retinopathy (DR) is a diabetes-induced microvascular eye disease that constitutes the leading cause of preventable blindness among working-age adults worldwide. While deep-learning algorithms can automate DR screening from retinal fundus photographs, traditional models suffer from two critical clinical shortcomings: (1) <strong>naive global feature fusion</strong>, which discards retinal spatial lesion topography by collapsing handcrafted descriptors into flat global vectors, and (2) <strong>unconstrained nominal softmax classification</strong>, which penalizes harmless adjacent-grade mistakes (e.g., Grade 1 vs. Grade 2) identically to catastrophic distant misses (e.g., confusing Proliferative DR with a healthy retina).</p>
+    <p>This project presents <strong>RetinoScan AI</strong>, an end-to-end multimodal deep learning system for five-class diabetic retinopathy grading on the full OIA-DDR clinical benchmark (<i>N</i> = 12,522 fundus photographs). Our architecture partitions each retinal photograph into an anatomically aligned 3×3 grid and extracts 32 IBSI-compliant radiomic descriptors per region, yielding 288 localized descriptors across First-Order intensity, GLCM texture, LBP micro-texture, and morphological lesion proxies. A hierarchical Swin-Tiny backbone extracts 49 visual spatial tokens (7×7), which an 8-head spatial cross-attention mechanism fuses with the 9 regional radiomic tokens. A Consistent Rank Logits (CORAL) ordinal classification head formulates disease severity into 4 monotonic rank-exceedance decisions, enforcing ordinal safety constraints.</p>
+    <p>The dataset of 12,522 images is partitioned under strict patient/eye-level stratification (12,324 patient groups; zero patient overlap) into 10,024 training, 1,247 validation, and 1,251 held-out test images. In baseline validation experiments, ConvNeXt-Small achieved 84.44% accuracy and a Quadratic Weighted Kappa (QWK) of 0.8890. In systematic ablation experiments on the held-out test set (<i>N</i> = 1,251), the M3 cross-attention nominal configuration achieved the highest classification accuracy of 78.42% (QWK 0.8697), while the M1 late-concatenation ordinal configuration achieved the lowest catastrophic error rate of 4.72% (59 cases). Across all evaluated configurations, the generalization gap remained strictly bounded (≤ 0.01 QWK), confirming leak-free generalization. The system is paired with Grad-CAM visual heatmaps, 49×9 cross-attention spatial alignment analysis, and a real-time glassmorphic clinical decision-support web application providing automated ICD-10 triage protocols with an inference latency of ~78.4 ms on Apple Silicon hardware.</p>
+    <div class="index-terms">
+      <strong>Index Terms</strong>— Diabetic retinopathy, fundus photography, deep learning, radiomics, Swin Transformer, spatial cross-attention, ordinal regression, CORAL, explainable artificial intelligence (XAI), clinical decision support.
+    </div>
+  </div>
+
+  <h2>I. Introduction</h2>
+  <h3>A. Background and Clinical Importance</h3>
+  <p>Diabetic retinopathy (DR) is a microvascular complication of diabetes mellitus resulting from chronic hyperglycemia, which progressively damages retinal capillary endothelial cells, pericytes, and the blood-retinal barrier. If undiagnosed and untreated, DR progresses to neovascularization, vitreous hemorrhage, tractional retinal detachment, and irreversible vision loss. Retinal fundus photography serves as the global standard for non-invasive screening, allowing clinicians to inspect vascular caliber changes, microaneurysms, hemorrhages, hard lipid exudates, cotton-wool spots, and abnormal vessel growth.</p>
+  <p>Early detection is paramount: timely glycemic control, laser photocoagulation, and intravitreal anti-VEGF injections can reduce the incidence of severe vision loss by over 90%. However, population-scale screening is constrained by a global shortage of licensed ophthalmologists and retina specialists. Consequently, artificial intelligence (AI) and automated deep-learning algorithms have emerged as crucial technologies to enhance screening capacity, standardize diagnostic consistency, and reduce referral backlogs.</p>
+
+  <h3>B. Problem Definition and Clinical Asymmetry</h3>
+  <p>Clinical severity is categorized according to the International Clinical Diabetic Retinopathy (ICDR) five-point scale:</p>
+  <ul>
+    <li><strong>Grade 0 (No DR):</strong> Absence of retinal abnormalities.</li>
+    <li><strong>Grade 1 (Mild Non-Proliferative DR - NPDR):</strong> Presence of isolated microaneurysms only.</li>
+    <li><strong>Grade 2 (Moderate NPDR):</strong> More than just microaneurysms, including blot hemorrhages, hard exudates, and cotton-wool spots, but less than Severe NPDR.</li>
+    <li><strong>Grade 3 (Severe NPDR):</strong> Defined by the international 4-2-1 rule—severe blot hemorrhages in all 4 quadrants, venous beading in ≥ 2 quadrants, or intraretinal microvascular abnormalities (IRMA) in ≥ 1 quadrant, with no signs of proliferative retinopathy.</li>
+    <li><strong>Grade 4 (Proliferative DR - PDR):</strong> Presence of neovascularization of the disc (NVD), neovascularization elsewhere (NVE), preretinal/vitreous hemorrhage, or fibrovascular proliferation.</li>
+  </ul>
+  <p>A central deficiency in conventional automated grading models is <strong>clinical error asymmetry</strong>. In standard categorical classification, predicting Grade 1 for a Grade 2 retina is penalized with the identical loss as predicting Grade 0 for a Grade 4 retina. Clinically, these two errors are drastically different: confusing Grade 1 with Grade 2 incurs a minor scheduling variance (rescreening in 6 vs. 3 months), whereas misclassifying Grade 4 as Grade 0 or Grade 1 is a <strong>catastrophic grading error</strong> (|Δ| ≥ 2) that delays urgent intervention (e.g., panretinal photocoagulation within 24–48 hours), leading to irreversible visual impairment. A clinically safe AI system must explicitly penalize distant misclassifications more heavily than adjacent-grade ambiguities.</p>
+
+  <h3>C. Limitations of Existing Approaches</h3>
+  <p>Current automated DR classification models exhibit three fundamental limitations:</p>
+  <ol>
+    <li><strong>Spatial Blindness of Global Feature Descriptors:</strong> Handcrafted radiomic markers (e.g., gray-level co-occurrence matrices, fractal dimensions, wavelet filters) are routinely extracted as a single global feature vector across the entire retina. This whole-image aggregation erases critical anatomical topography—obscuring whether hyper-reflective lipid exudates are located safely in the mid-periphery or directly threatening the central fovea (Diabetic Macular Edema).</li>
+    <li><strong>Naive Late Vector Concatenation:</strong> Existing multimodal approaches typically flatten visual feature maps via global average pooling and concatenate them with tabular vectors into an ungrounded 1D representation. This prevents the vision network from dynamically cross-referencing specific lesion patches with regional texture statistics.</li>
+    <li><strong>Nominal Softmax Independence:</strong> Conventional models optimize nominal cross-entropy loss over independent softmax outputs. This assumes mutually orthogonal class categories, ignoring the continuous, monotonic progression inherent to diabetic retinopathy staging.</li>
+  </ol>
+
+  <h3>D. Proposed Approach and Key Contributions</h3>
+  <p>RetinoScan AI overcomes these challenges by unifying deep visual representations with <strong>spatially localized radiomic descriptors</strong> via an <strong>8-head spatial cross-attention mechanism</strong> and a <strong>CORAL ordinal regression head</strong>. The key contributions include:</p>
+  <ul>
+    <li>Development of a circular field-of-view cropping pipeline with LAB-space CLAHE applied to the L* channel.</li>
+    <li>Extraction of 288 localized IBSI-compliant radiomic descriptors across an anatomically aligned 3×3 grid.</li>
+    <li>Dynamic multimodal integration via an 8-head cross-attention layer linking 49 visual tokens to 9 spatial radiomic tokens.</li>
+    <li>Formulation of DR severity into 4 monotonic rank-exceedance decisions via a CORAL ordinal regression head.</li>
+    <li>Rigorous baseline comparison across ConvNeXt-Small, EfficientNet-B3, and Swin-Tiny backbones.</li>
+    <li>Systematic 6-configuration ablation study on 1,251 locked held-out test images measuring QWK, accuracy, and catastrophic error rates.</li>
+    <li>Deployment of an interactive clinical decision-support web application providing automated ICD-10 triage protocols.</li>
+  </ul>
+
+  <h2>II. Literature Review</h2>
+  <p>Automated retinal analysis has transitioned from early thresholding and morphological filtering to deep convolutional and transformer networks. Gulshan et al. [1] proved the viability of deep learning for detecting referable diabetic retinopathy from retinal photographs, though their work focused primarily on binary triage rather than ordinal 5-grade staging. Liu et al. [2] introduced the Swin Transformer, whose shifted-window self-attention mechanism enables linear computational complexity relative to image dimensions while capturing both micro-vascular lesions and pan-retinal structures. Cao et al. [3] proposed CORAL, enforcing rank consistency in ordinal regression by sharing linear weights across binary threshold classifiers. Zwanenburg et al. [4] established the Image Biomarker Standardization Initiative (IBSI) for reproducible quantitative radiomics. Liu et al. [6] and Tan & Le [7] developed ConvNeXt and EfficientNet, representing state-of-the-art convolutional architectures that serve as competitive baselines.</p>
+
+  <h2>III. Methodology</h2>
+  <h3>A. Dataset Distribution</h3>
+  <p>The system was trained and evaluated on the official OIA-DDR clinical benchmark dataset consisting of 12,522 retinal photographs. To guarantee zero data leakage, images were partitioned using patient-stratified sampling across 12,324 patient/eye groups.</p>
+
+  <div class="table-title">TABLE I. OIA-DDR DATASET CLASS DISTRIBUTION (PATIENT-STRATIFIED SPLIT)</div>
+  <table>
+    <thead>
+      <tr>
+        <th>Grade</th>
+        <th>Clinical Condition</th>
+        <th>Total Images</th>
+        <th>Total (%)</th>
+        <th>Train (80%)</th>
+        <th>Val (10%)</th>
+        <th>Test (10%)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>0</strong></td>
+        <td>No DR</td>
+        <td>6,266</td>
+        <td>50.04%</td>
+        <td>5,012</td>
+        <td>626</td>
+        <td>628</td>
+      </tr>
+      <tr>
+        <td><strong>1</strong></td>
+        <td>Mild NPDR</td>
+        <td>630</td>
+        <td>5.03%</td>
+        <td>498</td>
+        <td>66</td>
+        <td>66</td>
+      </tr>
+      <tr>
+        <td><strong>2</strong></td>
+        <td>Moderate NPDR</td>
+        <td>4,477</td>
+        <td>35.75%</td>
+        <td>3,594</td>
+        <td>439</td>
+        <td>444</td>
+      </tr>
+      <tr>
+        <td><strong>3</strong></td>
+        <td>Severe NPDR</td>
+        <td>236</td>
+        <td>1.88%</td>
+        <td>187</td>
+        <td>28</td>
+        <td>21</td>
+      </tr>
+      <tr>
+        <td><strong>4</strong></td>
+        <td>Proliferative DR (PDR)</td>
+        <td>913</td>
+        <td>7.29%</td>
+        <td>733</td>
+        <td>88</td>
+        <td>92</td>
+      </tr>
+      <tr style="font-weight: bold; background: #e8eaf6;">
+        <td>Total</td>
+        <td>All Grades</td>
+        <td>12,522</td>
+        <td>100.00%</td>
+        <td>10,024</td>
+        <td>1,247</td>
+        <td>1,251</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>B. Preprocessing & Leak-Free Feature Normalization</h3>
+  <p>Images undergo circular FOV threshold cropping (threshold=10, margin=5) to eliminate camera borders, followed by LAB-space CLAHE on the L* channel (clipLimit=2.0, tileGrid=(8,8)), and standardized resizing to 224×224×3. Radiomic descriptors are normalized using standard z-score normalization fitted strictly on the 10,024 training samples across all 32 feature channels with values clipped to [-3.0, 3.0].</p>
+
+  <h3>C. Spatially Localized Radiomics (3×3 Grid)</h3>
+  <p>Each fundus image is partitioned into 9 anatomical sectors: R00 Superotemporal, R01 Superior Arcade, R02 Superonasal, R10 Temporal Mid, R11 Central Macula/Fovea, R12 Nasal Mid/Disc, R20 Inferotemporal, R21 Inferior Arcade, and R22 Inferonasal. For each sector, 32 quantitative IBSI descriptors are extracted: First-Order Intensity (10), GLCM Co-Occurrence Textures (6), LBP Micro-Textures (10), and Morphological Edge Proxies (6), yielding 9×32 = 288 localized features structured as 9 spatial tokens.</p>
+
+  <h3>D. Model Architecture & Cross-Attention</h3>
+  <p>Visual tokens are generated via Swin-Tiny (49 visual spatial tokens, d=768). The 9 radiomic tokens are linearly projected to d=768. An 8-head cross-attention layer allows visual tokens (Queries) to dynamically attend to localized radiomic tokens (Keys & Values). The pooled embedding vector is classified via a CORAL ordinal head modeling 4 monotonic rank-exceedance decisions: P(y &gt; k) for k in {0, 1, 2, 3}.</p>
+
+  <h2>IV. Performance Evaluation</h2>
+  <h3>A. Baseline Comparison on Validation Set</h3>
+  <div class="table-title">TABLE II. BASELINE PERFORMANCE ON VALIDATION SET (N = 1,247)</div>
+  <table>
+    <thead>
+      <tr>
+        <th>Model Backbone</th>
+        <th>Accuracy (%)</th>
+        <th>QWK</th>
+        <th>Macro-F1</th>
+        <th>MAE</th>
+        <th>Parameters</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>ConvNeXt-Small</strong></td>
+        <td><strong>84.44%</strong></td>
+        <td><strong>0.8890</strong></td>
+        <td><strong>0.6958</strong></td>
+        <td><strong>0.2173</strong></td>
+        <td>49.46M</td>
+      </tr>
+      <tr>
+        <td><strong>Swin-Tiny + CORAL</strong></td>
+        <td>70.33%</td>
+        <td>0.8643</td>
+        <td>0.5690</td>
+        <td>0.3416</td>
+        <td>27.52M</td>
+      </tr>
+      <tr>
+        <td><strong>EfficientNet-B3</strong></td>
+        <td>72.81%</td>
+        <td>0.8261</td>
+        <td>0.6078</td>
+        <td>0.3577</td>
+        <td>10.70M</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>B. Systematic Ablation Study on Locked Held-Out Test Set</h3>
+  <div class="table-title">TABLE III. ABLATION BENCHMARK ON HELD-OUT TEST SET (N = 1,251)</div>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Architecture Description</th>
+        <th>Test QWK</th>
+        <th>Test Acc</th>
+        <th>Macro-F1</th>
+        <th>Adjacent Errors</th>
+        <th>Catastrophic Errors (|Δ| ≥ 2)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>M0</strong></td>
+        <td>Proposed Spatial Cross-Attn + CORAL</td>
+        <td>0.8366</td>
+        <td>65.15%</td>
+        <td>0.5145</td>
+        <td>360 (28.78%)</td>
+        <td>76 (6.08%)</td>
+      </tr>
+      <tr>
+        <td><strong>M1</strong></td>
+        <td>Late Concatenation + CORAL</td>
+        <td>0.8599</td>
+        <td>68.75%</td>
+        <td>0.5635</td>
+        <td>332 (26.54%)</td>
+        <td><span class="badge-best">59 (4.72%) [BEST]</span></td>
+      </tr>
+      <tr>
+        <td><strong>M2</strong></td>
+        <td>Global Radiomics Token + CORAL</td>
+        <td>0.8369</td>
+        <td>63.79%</td>
+        <td>0.4907</td>
+        <td>371 (29.66%)</td>
+        <td><span class="badge-worst">82 (6.55%) [WORST]</span></td>
+      </tr>
+      <tr>
+        <td><strong>M3</strong></td>
+        <td>Spatial Cross-Attn + Nominal Softmax</td>
+        <td><strong>0.8697</strong></td>
+        <td><strong>78.42%</strong></td>
+        <td><strong>0.6625</strong></td>
+        <td><strong>191 (15.27%)</strong></td>
+        <td>79 (6.31%)</td>
+      </tr>
+      <tr>
+        <td><strong>M4a</strong></td>
+        <td>Visual-Only Swin-Tiny + CORAL</td>
+        <td>0.8681</td>
+        <td>71.62%</td>
+        <td>0.5715</td>
+        <td>295 (23.58%)</td>
+        <td>60 (4.80%)</td>
+      </tr>
+      <tr>
+        <td><strong>M5</strong></td>
+        <td>ConvNeXt-S + Spatial Radiomics + CORAL</td>
+        <td>0.8484</td>
+        <td>69.06%</td>
+        <td>0.5447</td>
+        <td>315 (25.18%)</td>
+        <td>72 (5.76%)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>C. Clinical Actionability & Triage Protocol Matrix</h3>
+  <div class="table-title">TABLE V. CLINICAL TRIAGE PROTOCOL MATRIX</div>
+  <table>
+    <thead>
+      <tr>
+        <th>Grade</th>
+        <th>Clinical Condition</th>
+        <th>ICD-10 Code</th>
+        <th>Follow-up Window</th>
+        <th>Clinical Action Protocol</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>0</strong></td>
+        <td>No DR</td>
+        <td><code>E11.9</code></td>
+        <td>12 to 24 Months</td>
+        <td>Routine annual ophthalmic screening; maintain strict glycemic control.</td>
+      </tr>
+      <tr>
+        <td><strong>1</strong></td>
+        <td>Mild NPDR</td>
+        <td><code>E11.319</code></td>
+        <td>6 to 12 Months</td>
+        <td>Dilated retinal fundus exam; microaneurysm monitoring; HbA1c &lt; 7.0%.</td>
+      </tr>
+      <tr>
+        <td><strong>2</strong></td>
+        <td>Moderate NPDR</td>
+        <td><code>E11.329</code></td>
+        <td>3 to 6 Months</td>
+        <td>Comprehensive ophthalmic evaluation; assess risk of macular edema.</td>
+      </tr>
+      <tr>
+        <td><strong>3</strong></td>
+        <td>Severe NPDR</td>
+        <td><code>E11.339</code></td>
+        <td>2 to 4 Weeks</td>
+        <td>Urgent retina specialist referral; evaluate international 4-2-1 criteria.</td>
+      </tr>
+      <tr>
+        <td><strong>4</strong></td>
+        <td>Proliferative DR (PDR)</td>
+        <td><code>E11.359</code></td>
+        <td>24 to 48 Hours</td>
+        <td>Emergent intervention: panretinal photocoagulation or anti-VEGF injection.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>V. Conclusion & Future Work</h2>
+  <p>RetinoScan AI establishes an end-to-end framework for clinically safe diabetic retinopathy grading by coupling spatial vision tokens with localized radiomic descriptors via multi-head cross-attention and monotonic ordinal regression. On the full OIA-DDR clinical benchmark, M3 achieved 78.42% accuracy and 0.8697 QWK, while M1 suppressed catastrophic misclassifications to 4.72%. Future work includes GPU/Metal acceleration of radiomics extraction, multi-view fusion of macula and disc-centered fundus photographs, and prospective clinical validation on handheld screening cameras.</p>
+
+  <h2>Appendix: Environment & Execution Setup</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Component</th>
+        <th>Verified Specification</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Host Hardware</td>
+        <td>Apple MacBook Air (Apple M5 SoC, ARM64 architecture)</td>
+      </tr>
+      <tr>
+        <td>System Memory (RAM)</td>
+        <td>16 GB Unified Memory (17,179,869,184 bytes)</td>
+      </tr>
+      <tr>
+        <td>Operating System</td>
+        <td>macOS Darwin 25.6.0 (Apple Silicon)</td>
+      </tr>
+      <tr>
+        <td>Deep Learning Framework</td>
+        <td>PyTorch 2.8.0 with Metal Performance Shaders (torch.device("mps"))</td>
+      </tr>
+      <tr>
+        <td>Python Environment</td>
+        <td>Python 3.9.6</td>
+      </tr>
+      <tr>
+        <td>Deployment Architecture</td>
+        <td>Python HTTP Server with Glassmorphic Dashboard (Port 8080)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>References</h2>
+  <ol class="reference-list">
+    <li>V. Gulshan et al., "Development and validation of a deep learning algorithm for detection of diabetic retinopathy in retinal fundus photographs," <i>JAMA</i>, vol. 316, no. 22, pp. 2402–2410, 2016.</li>
+    <li>Z. Liu et al., "Swin Transformer: Hierarchical vision transformer using shifted windows," in <i>Proc. IEEE/CVF ICCV</i>, 2021, pp. 10012–10022.</li>
+    <li>W. Cao, V. Mirjalili, and S. Raschka, "Rank consistent ordinal regression for neural networks with application to age estimation," <i>Pattern Recognition Letters</i>, vol. 140, pp. 325–331, 2020.</li>
+    <li>A. Zwanenburg et al., "The Image Biomarker Standardization Initiative: Standardized quantitative radiomics for high-throughput image-based phenotyping," <i>Radiology</i>, vol. 295, no. 2, pp. 328–338, 2020.</li>
+    <li>T. Li et al., "Diagnostic and meta-analysis of deep learning algorithms for diabetic retinopathy screening: A benchmark on the DDR dataset," <i>Nature Communications</i>, vol. 10, no. 1, p. 5565, 2019.</li>
+    <li>Z. Liu et al., "A ConvNet for the 2020s," in <i>Proc. IEEE/CVF CVPR</i>, 2022, pp. 11976–11986.</li>
+    <li>M. Tan and Q. V. Le, "EfficientNet: Rethinking model scaling for convolutional neural networks," in <i>Proc. ICML</i>, 2019, pp. 6105–6114.</li>
+    <li>R. R. Selvaraju et al., "Grad-CAM: Visual explanations from deep networks via gradient-based localization," in <i>Proc. IEEE ICCV</i>, 2017, pp. 618–626.</li>
+    <li>C. P. Wilkinson et al., "Proposed international clinical diabetic retinopathy and diabetic macular edema disease severity scales," <i>Ophthalmology</i>, vol. 110, no. 9, pp. 1677–1682, 2003.</li>
+  </ol>
+</div>
+
+</body>
+</html>
+

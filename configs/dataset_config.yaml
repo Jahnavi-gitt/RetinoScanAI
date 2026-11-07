@@ -1,0 +1,57 @@
+dataset_name: DDR (Dataset for Diabetic Retinopathy)
+source_kaggle: https://www.kaggle.com/datasets/mariaherrerot/ddrdataset
+num_classes: 5
+classes:
+  0: No DR
+  1: Mild NPDR
+  2: Moderate NPDR
+  3: Severe NPDR
+  4: Proliferative DR
+total_samples: 12522
+split_ratios:
+  train: 0.70
+  val: 0.15
+  test: 0.15
+split_counts:
+  train: 8765
+  val: 1878
+  test: 1879
+random_seed: 42
+image_size: 224
+preprocessing:
+  retina_crop: true
+  crop_threshold: 10
+  crop_margin: 5
+  clahe_enabled: true
+  clahe_clip_limit: 2.0
+  clahe_tile_grid:
+  - 8
+  - 8
+  normalization_mean:
+  - 0.485
+  - 0.456
+  - 0.406
+  normalization_std:
+  - 0.229
+  - 0.224
+  - 0.225
+augmentation_train_only:
+  resize_margin: 32
+  random_crop_scale:
+  - 0.85
+  - 1.0
+  horizontal_flip_p: 0.5
+  vertical_flip_p: 0.2
+  rotation_degrees: 15
+  color_jitter:
+    brightness: 0.15
+    contrast: 0.15
+    saturation: 0.15
+    hue: 0.02
+paths:
+  raw_annotation_csv: data/ddr/DR_grading.csv
+  images_dir: data/ddr/DR_grading/DR_grading
+  master_manifest: data_manifests/ddr_master_manifest.csv
+  train_manifest: data_manifests/train_manifest.csv
+  val_manifest: data_manifests/val_manifest.csv
+  test_manifest: data_manifests/test_manifest.csv

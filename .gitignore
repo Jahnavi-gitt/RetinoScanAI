@@ -1,0 +1,29 @@
+# Dataset directory (3.1GB raw images; download instructions in README)
+data/
+
+# PyTorch Model Checkpoints (>100MB exceeds GitHub hard limit)
+*.pth
+*.pt
+*.bin
+
+# Large cached radiomic feature arrays (can be re-extracted on the fly)
+**/cache/radiomics_*.npz
+
+# Python compiled bytecode & environments
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+
+# System & IDE junk
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+.idea/
+.vscode/
+*.swp
+*~
