@@ -1,0 +1,75 @@
+ablation_study:
+  name: "Diabetic Retinopathy Architectural & Multimodal Ablation Study"
+  description: "Systematic comparison of 6 ablation variants (A0 to A5) to isolate the contribution of deep vision representations, localized radiomics, cross-attention fusion, and ordinal ranking."
+  device: "mps"
+  batch_size: 8
+  epochs_per_variant: 5
+  learning_rate: 0.0001
+  weight_decay: 0.01
+  num_classes: 5
+  seed: 42
+
+models:
+  A0:
+    id: "A0_VisionOnly"
+    name: "Vision-Only Baseline"
+    description: "Swin-Tiny Hierarchical ViT with nominal linear classifier (no radiomics)"
+    loss: "cross_entropy"
+    requires_images: true
+    requires_radiomics: false
+    head_type: "nominal_softmax"
+  A1:
+    id: "A1_RadiomicsOnly"
+    name: "Radiomics-Only Baseline"
+    description: "3-layer MLP on 288 handcrafted IBSI radiomic features (no deep vision backbone)"
+    loss: "cross_entropy"
+    requires_images: false
+    requires_radiomics: true
+    head_type: "nominal_softmax"
+  A2:
+    id: "A2_NaiveConcatenation"
+    name: "Global Radiomics + Naive Concatenation"
+    description: "Late concatenation of pooled Swin-Tiny (768-d) and radiomics (288-d) into MLP classifier (replicates notebook Cells 244-259)"
+    loss: "cross_entropy"
+    requires_images: true
+    requires_radiomics: true
+    head_type: "nominal_softmax"
+  A3:
+    id: "A3_CrossAttentionNoRadiomics"
+    name: "Spatial Cross-Attention w/o Radiomics"
+    description: "Swin-Tiny visual tokens cross-attending to 9 learnable spatial positional anchors (no radiomics)"
+    loss: "cross_entropy"
+    requires_images: true
+    requires_radiomics: false
+    head_type: "nominal_softmax"
+  A4:
+    id: "A4_MultimodalNoCORAL"
+    name: "Spatial Cross-Attention + Radiomics (No CORAL)"
+    description: "Swin-Tiny + 3x3 Radiomics + 8-head Spatial Cross-Attention + Nominal Softmax Head"
+    loss: "cross_entropy"
+    requires_images: true
+    requires_radiomics: true
+    head_type: "nominal_softmax"
+  A5:
+    id: "A5_FullProposed"
+    name: "Full Integrated Proposed Model"
+    description: "Swin-Tiny + 3x3 Radiomics + Spatial Cross-Attention + CORAL Head + Auxiliary Head"
+    loss: "coral_hybrid"
+    lambda_aux: 0.3
+    requires_images: true
+    requires_radiomics: true
+    head_type: "coral_ordinal"
+
+benchmarking:
+  num_latency_runs: 50
+  batch_size_latency: 1
+  metrics:
+    - "quadratic_weighted_kappa"
+    - "macro_f1"
+    - "accuracy"
+    - "mean_absolute_error"
+    - "catastrophic_error_rate"
+    - "adjacent_error_rate"
+    - "exact_accuracy"
+    - "total_parameters_m"
+    - "inference_latency_ms"

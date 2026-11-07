@@ -1,0 +1,12 @@
+{
+  "model_name": "M0_Full_Proposed (Gap 3 Reused)",
+  "val_samples": 1247,
+  "accuracy": 0.6407,
+  "qwk": 0.8375,
+  "macro_f1": 0.5212,
+  "weighted_f1": 0.6872,
+  "mae": 0.4146,
+  "adjacent_error_rate": 0.3047,
+  "catastrophic_error_rate": 0.0545,
+  "best_epoch": 2
+}

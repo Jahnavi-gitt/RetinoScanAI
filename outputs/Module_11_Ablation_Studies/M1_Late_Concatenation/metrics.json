@@ -1,0 +1,16 @@
+{
+  "model_name": "M1_Late_Concatenation",
+  "ablation_description": "Late concatenation of Swin-Tiny pooled visual (768) and flattened radiomics (288) -> MLP -> CORAL",
+  "dataset": "Real DDR (split_80_10_10)",
+  "val_samples": 1247,
+  "best_epoch": 5,
+  "best_val_qwk": 0.8524,
+  "val_accuracy": 0.6969,
+  "val_macro_f1": 0.5576,
+  "val_weighted_f1": 0.7355,
+  "val_mae": 0.3585,
+  "adjacent_error_rate": 0.251,
+  "catastrophic_error_rate": 0.0521,
+  "total_parameters": 28333438,
+  "trainable_parameters": 28333438
+}

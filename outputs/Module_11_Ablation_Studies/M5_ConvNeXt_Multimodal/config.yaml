@@ -1,0 +1,27 @@
+{
+  "model": {
+    "name": "M5_ConvNeXt_Multimodal",
+    "backbone": "ConvNeXt-Small (features)",
+    "fusion": "Spatial Cross-Attention (49x9, d=768)",
+    "head": "CORAL"
+  },
+  "training": {
+    "dataset": "Real DDR (split_80_10_10)",
+    "train_samples": 10024,
+    "val_samples": 1247,
+    "epochs": 5,
+    "batch_size": 32,
+    "lr": 0.0001,
+    "seed": 42,
+    "optimizer": "AdamW",
+    "weight_decay": 0.01,
+    "scheduler": "CosineAnnealingLR",
+    "device": "mps",
+    "imbalance_handling": "WeightedRandomSampler (inverse class frequencies)"
+  },
+  "results": {
+    "best_epoch": 5,
+    "best_val_qwk": 0.8493,
+    "training_duration_sec": 3583.0
+  }
+}

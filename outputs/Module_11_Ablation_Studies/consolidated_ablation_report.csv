@@ -1,0 +1,7 @@
+ablation_id,model_name,description,params_m,val_samples,val_accuracy,val_qwk,val_macro_f1,val_weighted_f1,val_mae,exact_matches,exact_match_rate,adjacent_errors,adjacent_error_rate,catastrophic_errors,catastrophic_error_rate
+M0,M0_Full_Proposed,M0: Full Proposed Reference (Swin-T + Spatial Radiomics + CORAL),33.28,1247,0.6407,0.8375,0.5212,0.6872,0.4146,799,0.6407,380,0.3047,68,0.0545
+M1,M1_Late_Concatenation,M1: Late Concatenation (Swin-T 768d + Flat Rad 288d MLP + CORAL),28.53,1247,0.6969,0.8524,0.5576,0.7355,0.3585,869,0.6969,313,0.251,65,0.0521
+M2,M2_Global_Radiomics,M2: Spatial Localization (Swin-T + Global Rad Token + CORAL),33.28,1247,0.6439,0.8249,0.4942,0.6773,0.4346,803,0.6439,350,0.2807,94,0.0754
+M3,M3_Nominal_Softmax,M3: Ordinal Learning (Swin-T + Spatial Radiomics + Nominal Softmax),32.89,1247,0.7875,0.876,0.6675,0.8132,0.2678,982,0.7875,198,0.1588,67,0.0537
+M4a,M4a_Visual_Only,M4a: Visual-Only Baseline (Swin-T Clean Baseline + CORAL),27.52,1247,0.7033,0.8643,0.569,0.7376,0.3416,877,0.7033,315,0.2526,55,0.0441
+M5,M5_ConvNeXt_Multimodal,M5: Backbone Adaptation (ConvNeXt-S + Spatial Radiomics + CORAL),54.82,1247,0.668,0.8493,0.5234,0.7025,0.3841,833,0.668,350,0.2807,64,0.0513
