@@ -1,0 +1,8 @@
+grade,grade_name,precision,recall,f1_score,support
+0,No DR,1.0,1.0,1.0,1.0
+1,Mild NPDR,1.0,1.0,1.0,2.0
+2,Moderate NPDR,1.0,1.0,1.0,1.0
+3,Severe NPDR,0.5,1.0,0.6667,1.0
+4,Proliferative DR,1.0,0.5,0.6667,2.0
+-1,macro avg,0.9,0.9,0.8667,7.0
+-1,weighted avg,0.9286,0.8571,0.8571,7.0

@@ -1,0 +1,79 @@
+==================================================================
+  MODULE 04: EFFICIENTNET-B3 BASELINE MODEL EXECUTION
+  Device: mps (Apple Silicon MPS / CPU)
+==================================================================
+
+--- [Phase 2/4] Initializing EfficientNet-B3 Baseline ---
+[EfficientNet-B3] Loading cached torchvision weights: /Users/jahnavi/.cache/torch/hub/checkpoints/efficientnet_b3_rwightman-b3899882.pth
+EfficientNet-B3: Total Parameters = 10,703,917 | Trainable = 10,703,917
+
+--- [Phase 1/4] Running Forward & Backward Verification Test ---
+  Forward Pass: Input torch.Size([2, 3, 224, 224]) -> Logits torch.Size([2, 5])
+  Spatial Features: Input torch.Size([2, 3, 224, 224]) -> Feature Map torch.Size([2, 1536, 7, 7])
+  Backward Pass: Loss = 1.6283
+  [SUCCESS] Verification test passed: All tensor shapes and gradients verified.
+
+--- [Phase 3/4] Preparing DataLoaders ---
+[Dataset] Real 3.2GB image download is still in progress; using verified DDR development dataset (data_manifests/sample_dataset/images).
+[Dataset] Loaded 35 train samples, 7 val samples.
+--- [Phase 4/4] Executing Model Training & Validation ---
+
+[Trainer] Starting training on device: mps for 5 epochs...
+
+Training:   0%|          | 0/4 [00:00<?, ?it/s]
+Training:  25%|██▌       | 1/4 [00:01<00:04,  1.59s/it]
+Training:  50%|█████     | 2/4 [00:01<00:01,  1.27it/s]
+Training:  75%|███████▌  | 3/4 [00:02<00:00,  1.91it/s]
+Training: 100%|██████████| 4/4 [00:02<00:00,  2.49it/s]
+                                                       
+Epoch 01/05 [2.5s] | Train Loss: 1.6011 Acc: 0.219 | Val Loss: 1.5709 Acc: 0.286 QWK: 0.0000 F1: 0.0889 MAE: 1.429
+  --> Saved new best checkpoint to outputs/Module_04_Baseline_EfficientNet_B3/best_model.pth (QWK: 0.0000)
+
+Training:   0%|          | 0/4 [00:00<?, ?it/s]
+Training:  25%|██▌       | 1/4 [00:00<00:00,  4.25it/s]
+Training:  50%|█████     | 2/4 [00:00<00:00,  4.56it/s]
+Training:  75%|███████▌  | 3/4 [00:00<00:00,  4.65it/s]
+Training: 100%|██████████| 4/4 [00:00<00:00,  4.71it/s]
+                                                       
+Epoch 02/05 [0.9s] | Train Loss: 1.5794 Acc: 0.250 | Val Loss: 1.5261 Acc: 0.286 QWK: 0.0000 F1: 0.0889 MAE: 1.429
+
+Training:   0%|          | 0/4 [00:00<?, ?it/s]
+Training:  25%|██▌       | 1/4 [00:00<00:00,  4.90it/s]
+Training:  50%|█████     | 2/4 [00:00<00:00,  4.80it/s]
+Training:  75%|███████▌  | 3/4 [00:00<00:00,  4.79it/s]
+Training: 100%|██████████| 4/4 [00:00<00:00,  4.78it/s]
+                                                       
+Epoch 03/05 [0.9s] | Train Loss: 1.5435 Acc: 0.312 | Val Loss: 1.5118 Acc: 0.286 QWK: 0.0000 F1: 0.0889 MAE: 1.429
+
+Training:   0%|          | 0/4 [00:00<?, ?it/s]
+Training:  25%|██▌       | 1/4 [00:00<00:00,  4.87it/s]
+Training:  50%|█████     | 2/4 [00:00<00:00,  4.82it/s]
+Training:  75%|███████▌  | 3/4 [00:00<00:00,  4.82it/s]
+Training: 100%|██████████| 4/4 [00:00<00:00,  4.82it/s]
+                                                       
+Epoch 04/05 [0.9s] | Train Loss: 1.5768 Acc: 0.219 | Val Loss: 1.4800 Acc: 0.571 QWK: 0.4368 F1: 0.4476 MAE: 0.857
+  --> Saved new best checkpoint to outputs/Module_04_Baseline_EfficientNet_B3/best_model.pth (QWK: 0.4368)
+
+Training:   0%|          | 0/4 [00:00<?, ?it/s]
+Training:  25%|██▌       | 1/4 [00:00<00:00,  4.97it/s]
+Training:  50%|█████     | 2/4 [00:00<00:00,  4.87it/s]
+Training:  75%|███████▌  | 3/4 [00:00<00:00,  4.85it/s]
+Training: 100%|██████████| 4/4 [00:00<00:00,  4.84it/s]
+                                                       
+Epoch 05/05 [0.9s] | Train Loss: 1.5143 Acc: 0.344 | Val Loss: 1.4700 Acc: 0.429 QWK: 0.4670 F1: 0.4000 MAE: 1.000
+  --> Saved new best checkpoint to outputs/Module_04_Baseline_EfficientNet_B3/best_model.pth (QWK: 0.4670)
+[Trainer] Saved training history -> outputs/Module_04_Baseline_EfficientNet_B3/training_history.csv
+[Trainer] Reloaded best checkpoint from epoch 5 (QWK: 0.4670)
+Saved evaluation artifacts to outputs/Module_04_Baseline_EfficientNet_B3
+Saved per-sample predictions (7 rows) -> outputs/Module_04_Baseline_EfficientNet_B3/predictions.csv
+
+==================================================================
+  EFFICIENTNET-B3 TRAINING COMPLETED IN 14.9s
+  Final Validation QWK:              0.4670
+  Final Validation Macro-F1:         0.4000
+  Final Validation Accuracy:         0.4286
+  Final Validation Balanced Acc:     0.4000
+  Final Validation MAE:              1.0000
+==================================================================
+
+[SUCCESS] Module 04 deliverables successfully saved to outputs/Module_04_Baseline_EfficientNet_B3

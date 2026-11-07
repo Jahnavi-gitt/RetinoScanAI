@@ -1,0 +1,8 @@
+image_id,true_grade,predicted_grade,error,is_correct,prob_grade_0,prob_grade_1,prob_grade_2,prob_grade_3,prob_grade_4
+ddr_sample_grade0_004.jpg,0,0,0,True,0.5253,0.3203,0.1122,0.0231,0.0191
+ddr_sample_grade1_002.jpg,1,1,0,True,0.3196,0.4032,0.1943,0.0545,0.0284
+ddr_sample_grade1_006.jpg,1,1,0,True,0.3804,0.3895,0.1665,0.0374,0.0262
+ddr_sample_grade2_001.jpg,2,2,0,True,0.0372,0.049,0.6267,0.164,0.1231
+ddr_sample_grade3_009.jpg,3,3,0,True,0.0171,0.0477,0.2836,0.4319,0.2197
+ddr_sample_grade4_002.jpg,4,4,0,True,0.0154,0.029,0.2252,0.3379,0.3925
+ddr_sample_grade4_009.jpg,4,3,1,False,0.0109,0.0299,0.1027,0.4697,0.3867

@@ -1,0 +1,4 @@
+Rank,Model,Validation QWK,Validation Macro-F1,Validation Accuracy,Validation Balanced Acc,Validation MAE,Validation Loss,Parameters (M),Training Time (s),Feature Dim,Spatial Token Grid
+1,Swin-Tiny,0.963,0.8667,0.8571,0.9,0.1429,0.8124,27.52,6.39,768,7x7
+2,ConvNeXt-Small,0.9014,0.2933,0.5714,0.4,0.4286,1.3674,49.46,9.76,768,7x7
+3,EfficientNet-B3,0.467,0.4,0.4286,0.4,1.0,1.47,10.7,7.17,1536,7x7

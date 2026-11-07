@@ -1,0 +1,19 @@
+=== CONVNEXT-SMALL FULL DDR TRAINING LOG ===
+Device: mps (Apple Silicon MPS / CPU)
+Batch Size: 16 | Epochs: 5 | LR: 0.0001
+Manifest Verified: Train=10024 samples (10024 unique IDs)
+Manifest Verified: Val=1247 samples (1247 unique IDs)
+Train Class Counts: [5012, 498, 3594, 187, 733]
+Initializing ConvNeXt-Small Baseline with ImageNet-1K pretrained weights...
+ConvNeXt-Small: Total Parameters = 49,458,533
+Resuming training from Epoch 2 (Checkpoint from Epoch 1, Val QWK: 0.8318)
+Epoch 02/05 [1540.5s] | Train Loss: 0.5784 Acc: 0.766 | Val Loss: 0.8230 Acc: 0.687 QWK: 0.8392 F1: 0.5703 MAE: 0.374
+  --> Saved new best checkpoint to outputs/Module_02_Baseline_ConvNeXt_Small/full_ddr/best_model.pth (Val QWK: 0.8392)
+Epoch 03/05 [1017.9s] | Train Loss: 0.4686 Acc: 0.818 | Val Loss: 0.8878 Acc: 0.661 QWK: 0.7859 F1: 0.5715 MAE: 0.443
+Epoch 04/05 [718.2s] | Train Loss: 0.3516 Acc: 0.866 | Val Loss: 0.5585 Acc: 0.831 QWK: 0.8730 F1: 0.6867 MAE: 0.242
+  --> Saved new best checkpoint to outputs/Module_02_Baseline_ConvNeXt_Small/full_ddr/best_model.pth (Val QWK: 0.8730)
+Epoch 05/05 [857.1s] | Train Loss: 0.2502 Acc: 0.908 | Val Loss: 0.5533 Acc: 0.844 QWK: 0.8890 F1: 0.6958 MAE: 0.217
+  --> Saved new best checkpoint to outputs/Module_02_Baseline_ConvNeXt_Small/full_ddr/best_model.pth (Val QWK: 0.8890)
+
+Training completed in 4136.1s (68.9 min)
+Best Checkpoint: Epoch 5 with Val QWK: 0.8890

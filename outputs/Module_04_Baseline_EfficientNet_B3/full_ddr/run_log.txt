@@ -1,0 +1,20 @@
+=== EFFICIENTNET-B3 FULL DDR TRAINING LOG ===
+Device: mps (Apple Silicon MPS / CPU)
+Batch Size: 32 | Epochs: 5 | LR: 0.0001
+Manifest Verified: Train=10024 samples (10024 unique IDs)
+Manifest Verified: Val=1247 samples (1247 unique IDs)
+Train Class Counts: [5012, 498, 3594, 187, 733]
+Initializing EfficientNet-B3 Baseline with ImageNet-1K pretrained weights...
+EfficientNet-B3: Total Parameters = 10,703,917
+Epoch 01/05 [356.3s] | Train Loss: 1.0558 Acc: 0.566 | Val Loss: 0.9217 Acc: 0.588 QWK: 0.7538 F1: 0.4923 MAE: 0.524
+  --> Saved new best checkpoint to outputs/Module_04_Baseline_EfficientNet_B3/full_ddr/best_model.pth (Val QWK: 0.7538)
+Epoch 02/05 [376.1s] | Train Loss: 0.7313 Acc: 0.698 | Val Loss: 0.7558 Acc: 0.703 QWK: 0.8025 F1: 0.5787 MAE: 0.399
+  --> Saved new best checkpoint to outputs/Module_04_Baseline_EfficientNet_B3/full_ddr/best_model.pth (Val QWK: 0.8025)
+Epoch 03/05 [376.3s] | Train Loss: 0.6144 Acc: 0.751 | Val Loss: 0.7304 Acc: 0.713 QWK: 0.7994 F1: 0.5918 MAE: 0.395
+Epoch 04/05 [378.4s] | Train Loss: 0.5430 Acc: 0.784 | Val Loss: 0.7564 Acc: 0.697 QWK: 0.8122 F1: 0.5861 MAE: 0.391
+  --> Saved new best checkpoint to outputs/Module_04_Baseline_EfficientNet_B3/full_ddr/best_model.pth (Val QWK: 0.8122)
+Epoch 05/05 [382.1s] | Train Loss: 0.4972 Acc: 0.805 | Val Loss: 0.7266 Acc: 0.728 QWK: 0.8261 F1: 0.6078 MAE: 0.358
+  --> Saved new best checkpoint to outputs/Module_04_Baseline_EfficientNet_B3/full_ddr/best_model.pth (Val QWK: 0.8261)
+
+Training completed in 1871.0s (31.2 min)
+Best Checkpoint: Epoch 5 with Val QWK: 0.8261

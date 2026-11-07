@@ -1,0 +1,13 @@
+{
+  "model_name": "ConvNeXt-Small Baseline (Full DDR)",
+  "dataset": "OIA-DDR Clean Split (80/10/10)",
+  "train_samples": 10024,
+  "val_samples": 1247,
+  "best_epoch": 5,
+  "best_val_qwk": 0.889,
+  "val_accuracy": 0.8444,
+  "val_macro_f1": 0.6958,
+  "val_weighted_f1": 0.8468,
+  "val_mae": 0.2173,
+  "val_loss": 0.5533
+}

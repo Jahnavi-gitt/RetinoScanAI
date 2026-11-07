@@ -1,0 +1,52 @@
+model:
+  name: ConvNeXt-Small
+  backbone: convnext_small
+  source: timm / torchvision
+  pretrained: true
+  num_classes: 5
+  drop_rate: 0.2
+  input_size:
+  - 3
+  - 224
+  - 224
+  feature_dim: 768
+  spatial_feature_shape:
+  - 768
+  - 7
+  - 7
+
+training:
+  batch_size: 8
+  epochs: 5
+  optimizer:
+    name: AdamW
+    lr: 0.0001
+    weight_decay: 0.01
+  scheduler:
+    name: CosineAnnealingLR
+    eta_min: 1.0e-06
+  loss_function: CrossEntropyLoss
+  gradient_clip_norm: 2.0
+  early_stopping_patience: 3
+  device: mps
+
+evaluation:
+  primary_metric: quadratic_weighted_kappa
+  secondary_metrics:
+  - macro_f1
+  - balanced_accuracy
+  - accuracy
+  - mean_absolute_error
+  labels:
+    0: No DR
+    1: Mild NPDR
+    2: Moderate NPDR
+    3: Severe NPDR
+    4: Proliferative DR
+
+paths:
+  train_manifest: data_manifests/train_manifest.csv
+  val_manifest: data_manifests/val_manifest.csv
+  test_manifest: data_manifests/test_manifest.csv
+  output_dir: outputs/Module_02_Baseline_ConvNeXt_Small
+  checkpoint: outputs/Module_02_Baseline_ConvNeXt_Small/best_model.pth

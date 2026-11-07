@@ -1,0 +1,13 @@
+{
+  "model_name": "EfficientNet-B3 Baseline (Full DDR)",
+  "dataset": "OIA-DDR Clean Split (80/10/10)",
+  "train_samples": 10024,
+  "val_samples": 1247,
+  "best_epoch": 5,
+  "best_val_qwk": 0.8261,
+  "val_accuracy": 0.7281,
+  "val_macro_f1": 0.6078,
+  "val_weighted_f1": 0.7542,
+  "val_mae": 0.3577,
+  "val_loss": 0.7266
+}

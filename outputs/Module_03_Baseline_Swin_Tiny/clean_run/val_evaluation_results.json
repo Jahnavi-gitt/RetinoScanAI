@@ -1,0 +1,88 @@
+{
+  "model_name": "Swin-Tiny + CORAL (Full DDR)",
+  "val_samples": 1247,
+  "accuracy": 0.7033,
+  "quadratic_weighted_kappa": 0.8643,
+  "macro_f1": 0.569,
+  "weighted_f1": 0.7376,
+  "mae": 0.3416,
+  "confusion_matrix": [
+    [
+      559,
+      63,
+      3,
+      1,
+      0
+    ],
+    [
+      29,
+      21,
+      15,
+      1,
+      0
+    ],
+    [
+      39,
+      113,
+      201,
+      82,
+      4
+    ],
+    [
+      0,
+      1,
+      5,
+      21,
+      1
+    ],
+    [
+      0,
+      0,
+      6,
+      7,
+      75
+    ]
+  ],
+  "per_grade_metrics": [
+    {
+      "Grade": 0,
+      "Grade Name": "Grade 0: No DR",
+      "Support": 626,
+      "Precision": 0.8915,
+      "Recall": 0.893,
+      "F1-Score": 0.8923
+    },
+    {
+      "Grade": 1,
+      "Grade Name": "Grade 1: Mild NPDR",
+      "Support": 66,
+      "Precision": 0.1061,
+      "Recall": 0.3182,
+      "F1-Score": 0.1591
+    },
+    {
+      "Grade": 2,
+      "Grade Name": "Grade 2: Moderate NPDR",
+      "Support": 439,
+      "Precision": 0.8739,
+      "Recall": 0.4579,
+      "F1-Score": 0.6009
+    },
+    {
+      "Grade": 3,
+      "Grade Name": "Grade 3: Severe NPDR",
+      "Support": 28,
+      "Precision": 0.1875,
+      "Recall": 0.75,
+      "F1-Score": 0.3
+    },
+    {
+      "Grade": 4,
+      "Grade Name": "Grade 4: Proliferative DR",
+      "Support": 88,
+      "Precision": 0.9375,
+      "Recall": 0.8523,
+      "F1-Score": 0.8929
+    }
+  ]
+}

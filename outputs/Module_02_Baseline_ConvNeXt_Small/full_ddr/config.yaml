@@ -1,0 +1,25 @@
+{
+  "model": {
+    "name": "ConvNeXt-Small",
+    "num_classes": 5,
+    "pretrained": true
+  },
+  "training": {
+    "dataset": "Real DDR (split_80_10_10)",
+    "train_samples": 10024,
+    "val_samples": 1247,
+    "epochs": 5,
+    "batch_size": 16,
+    "lr": 0.0001,
+    "optimizer": "AdamW",
+    "weight_decay": 0.01,
+    "scheduler": "CosineAnnealingLR",
+    "device": "mps",
+    "imbalance_handling": "WeightedRandomSampler (inverse class frequencies)"
+  },
+  "results": {
+    "best_epoch": 5,
+    "best_val_qwk": 0.889,
+    "training_duration_sec": 4136.1
+  }
+}

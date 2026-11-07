@@ -1,0 +1,79 @@
+==================================================================
+  MODULE 02: CONVNEXT-SMALL BASELINE MODEL EXECUTION
+  Device: mps (Apple Silicon MPS / CPU)
+==================================================================
+
+--- [Phase 2/4] Initializing ConvNeXt-Small Baseline with Pretrained Weights ---
+[ConvNeXt] Loading cached torchvision weights: /Users/jahnavi/.cache/torch/hub/checkpoints/convnext_small-0c510722.pth
+ConvNeXt-Small: Total Parameters = 49,458,533 | Trainable = 49,458,533
+
+--- [Phase 1/4] Running Forward & Backward Verification Test ---
+  Forward Pass: Input torch.Size([2, 3, 224, 224]) -> Logits torch.Size([2, 5])
+  Spatial Features: Input torch.Size([2, 3, 224, 224]) -> Feature Map torch.Size([2, 768, 7, 7])
+  Backward Pass: Loss = 1.9515
+  [SUCCESS] Verification test passed: All tensor shapes and gradients verified.
+
+--- [Phase 3/4] Preparing DataLoaders ---
+[Dataset] Real 3.2GB image download is still in progress; using verified DDR development dataset (data_manifests/sample_dataset/images).
+[Dataset] Loaded 35 train samples, 7 val samples.
+--- [Phase 4/4] Executing Model Training & Validation ---
+
+[Trainer] Starting training on device: mps for 5 epochs...
+
+Training:   0%|          | 0/4 [00:00<?, ?it/s]
+Training:  25%|██▌       | 1/4 [00:00<00:01,  1.62it/s]
+Training:  50%|█████     | 2/4 [00:00<00:00,  2.17it/s]
+Training:  75%|███████▌  | 3/4 [00:01<00:00,  2.40it/s]
+Training: 100%|██████████| 4/4 [00:01<00:00,  2.54it/s]
+                                                       
+Epoch 01/05 [1.8s] | Train Loss: 1.9602 Acc: 0.062 | Val Loss: 1.5540 Acc: 0.286 QWK: 0.0000 F1: 0.0889 MAE: 1.857
+  --> Saved new best checkpoint to outputs/Module_02_Baseline_ConvNeXt_Small/best_model.pth (QWK: 0.0000)
+
+Training:   0%|          | 0/4 [00:00<?, ?it/s]
+Training:  25%|██▌       | 1/4 [00:00<00:01,  2.87it/s]
+Training:  50%|█████     | 2/4 [00:00<00:00,  2.82it/s]
+Training:  75%|███████▌  | 3/4 [00:01<00:00,  2.80it/s]
+Training: 100%|██████████| 4/4 [00:01<00:00,  2.78it/s]
+                                                       
+Epoch 02/05 [1.5s] | Train Loss: 1.6375 Acc: 0.250 | Val Loss: 1.5403 Acc: 0.286 QWK: -0.1361 F1: 0.1000 MAE: 1.571
+
+Training:   0%|          | 0/4 [00:00<?, ?it/s]
+Training:  25%|██▌       | 1/4 [00:00<00:01,  2.85it/s]
+Training:  50%|█████     | 2/4 [00:00<00:00,  2.81it/s]
+Training:  75%|███████▌  | 3/4 [00:01<00:00,  2.80it/s]
+Training: 100%|██████████| 4/4 [00:01<00:00,  2.79it/s]
+                                                       
+Epoch 03/05 [1.5s] | Train Loss: 1.5701 Acc: 0.375 | Val Loss: 1.5189 Acc: 0.429 QWK: 0.8205 F1: 0.2333 MAE: 0.571
+  --> Saved new best checkpoint to outputs/Module_02_Baseline_ConvNeXt_Small/best_model.pth (QWK: 0.8205)
+
+Training:   0%|          | 0/4 [00:00<?, ?it/s]
+Training:  25%|██▌       | 1/4 [00:00<00:01,  2.91it/s]
+Training:  50%|█████     | 2/4 [00:00<00:00,  2.83it/s]
+Training:  75%|███████▌  | 3/4 [00:01<00:00,  2.84it/s]
+Training: 100%|██████████| 4/4 [00:01<00:00,  2.83it/s]
+                                                       
+Epoch 04/05 [1.5s] | Train Loss: 1.4656 Acc: 0.344 | Val Loss: 1.4135 Acc: 0.429 QWK: 0.8205 F1: 0.2333 MAE: 0.571
+
+Training:   0%|          | 0/4 [00:00<?, ?it/s]
+Training:  25%|██▌       | 1/4 [00:00<00:01,  2.87it/s]
+Training:  50%|█████     | 2/4 [00:00<00:00,  2.82it/s]
+Training:  75%|███████▌  | 3/4 [00:01<00:00,  2.81it/s]
+Training: 100%|██████████| 4/4 [00:01<00:00,  2.80it/s]
+                                                       
+Epoch 05/05 [1.5s] | Train Loss: 1.4592 Acc: 0.406 | Val Loss: 1.3674 Acc: 0.571 QWK: 0.9014 F1: 0.2933 MAE: 0.429
+  --> Saved new best checkpoint to outputs/Module_02_Baseline_ConvNeXt_Small/best_model.pth (QWK: 0.9014)
+[Trainer] Saved training history -> outputs/Module_02_Baseline_ConvNeXt_Small/training_history.csv
+[Trainer] Reloaded best checkpoint from epoch 5 (QWK: 0.9014)
+Saved evaluation artifacts to outputs/Module_02_Baseline_ConvNeXt_Small
+Saved per-sample predictions (7 rows) -> outputs/Module_02_Baseline_ConvNeXt_Small/predictions.csv
+
+==================================================================
+  CONVNEXT-SMALL TRAINING COMPLETED IN 11.5s
+  Final Validation QWK:              0.9014
+  Final Validation Macro-F1:         0.2933
+  Final Validation Accuracy:         0.5714
+  Final Validation Balanced Acc:     0.4000
+  Final Validation MAE:              0.4286
+==================================================================
+
+[SUCCESS] Module 02 deliverables successfully saved to outputs/Module_02_Baseline_ConvNeXt_Small

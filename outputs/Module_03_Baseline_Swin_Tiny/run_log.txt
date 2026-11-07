@@ -1,0 +1,79 @@
+==================================================================
+  MODULE 03: SWIN-TINY BASELINE MODEL EXECUTION
+  Device: mps (Apple Silicon MPS / CPU)
+==================================================================
+
+--- [Phase 2/4] Initializing Swin-Tiny Baseline ---
+[Swin-Tiny] Loading cached torchvision weights: /Users/jahnavi/.cache/torch/hub/checkpoints/swin_t-704ceda3.pth
+Swin-Tiny: Total Parameters = 27,523,199 | Trainable = 27,523,199
+
+--- [Phase 1/4] Running Forward & Backward Verification Test ---
+  Forward Pass: Input torch.Size([2, 3, 224, 224]) -> Logits torch.Size([2, 5])
+  Spatial Features: Input torch.Size([2, 3, 224, 224]) -> Feature Map torch.Size([2, 768, 7, 7])
+  Backward Pass: Loss = 1.6623
+  [SUCCESS] Verification test passed: All tensor shapes and gradients verified.
+
+--- [Phase 3/4] Preparing DataLoaders ---
+[Dataset] Real 3.2GB image download is still in progress; using verified DDR development dataset (data_manifests/sample_dataset/images).
+[Dataset] Loaded 35 train samples, 7 val samples.
+--- [Phase 4/4] Executing Model Training & Validation ---
+
+[Trainer] Starting training on device: mps for 5 epochs...
+
+Training:   0%|          | 0/4 [00:00<?, ?it/s]
+Training:  25%|██▌       | 1/4 [00:00<00:01,  1.61it/s]
+Training:  50%|█████     | 2/4 [00:00<00:00,  2.65it/s]
+Training:  75%|███████▌  | 3/4 [00:01<00:00,  3.27it/s]
+Training: 100%|██████████| 4/4 [00:01<00:00,  3.71it/s]
+                                                       
+Epoch 01/05 [1.5s] | Train Loss: 1.6775 Acc: 0.250 | Val Loss: 1.4252 Acc: 0.143 QWK: 0.0000 F1: 0.0500 MAE: 1.286
+  --> Saved new best checkpoint to outputs/Module_03_Baseline_Swin_Tiny/best_model.pth (QWK: 0.0000)
+
+Training:   0%|          | 0/4 [00:00<?, ?it/s]
+Training:  25%|██▌       | 1/4 [00:00<00:00,  3.97it/s]
+Training:  50%|█████     | 2/4 [00:00<00:00,  4.35it/s]
+Training:  75%|███████▌  | 3/4 [00:00<00:00,  4.53it/s]
+Training: 100%|██████████| 4/4 [00:00<00:00,  4.58it/s]
+                                                       
+Epoch 02/05 [1.0s] | Train Loss: 1.3781 Acc: 0.281 | Val Loss: 1.1379 Acc: 0.714 QWK: 0.9449 F1: 0.7000 MAE: 0.286
+  --> Saved new best checkpoint to outputs/Module_03_Baseline_Swin_Tiny/best_model.pth (QWK: 0.9449)
+
+Training:   0%|          | 0/4 [00:00<?, ?it/s]
+Training:  25%|██▌       | 1/4 [00:00<00:00,  4.96it/s]
+Training:  50%|█████     | 2/4 [00:00<00:00,  4.86it/s]
+Training:  75%|███████▌  | 3/4 [00:00<00:00,  4.79it/s]
+Training: 100%|██████████| 4/4 [00:00<00:00,  4.77it/s]
+                                                       
+Epoch 03/05 [0.9s] | Train Loss: 1.2736 Acc: 0.406 | Val Loss: 1.0003 Acc: 0.571 QWK: 0.9231 F1: 0.4600 MAE: 0.429
+
+Training:   0%|          | 0/4 [00:00<?, ?it/s]
+Training:  25%|██▌       | 1/4 [00:00<00:00,  4.92it/s]
+Training:  50%|█████     | 2/4 [00:00<00:00,  4.95it/s]
+Training:  75%|███████▌  | 3/4 [00:00<00:00,  4.95it/s]
+Training: 100%|██████████| 4/4 [00:00<00:00,  4.91it/s]
+                                                       
+Epoch 04/05 [0.9s] | Train Loss: 0.9979 Acc: 0.562 | Val Loss: 0.8485 Acc: 0.571 QWK: 0.9106 F1: 0.5667 MAE: 0.429
+
+Training:   0%|          | 0/4 [00:00<?, ?it/s]
+Training:  25%|██▌       | 1/4 [00:00<00:00,  4.90it/s]
+Training:  50%|█████     | 2/4 [00:00<00:00,  4.87it/s]
+Training:  75%|███████▌  | 3/4 [00:00<00:00,  4.84it/s]
+Training: 100%|██████████| 4/4 [00:00<00:00,  4.79it/s]
+                                                       
+Epoch 05/05 [0.9s] | Train Loss: 0.9296 Acc: 0.625 | Val Loss: 0.8124 Acc: 0.857 QWK: 0.9630 F1: 0.8667 MAE: 0.143
+  --> Saved new best checkpoint to outputs/Module_03_Baseline_Swin_Tiny/best_model.pth (QWK: 0.9630)
+[Trainer] Saved training history -> outputs/Module_03_Baseline_Swin_Tiny/training_history.csv
+[Trainer] Reloaded best checkpoint from epoch 5 (QWK: 0.9630)
+Saved evaluation artifacts to outputs/Module_03_Baseline_Swin_Tiny
+Saved per-sample predictions (7 rows) -> outputs/Module_03_Baseline_Swin_Tiny/predictions.csv
+
+==================================================================
+  SWIN-TINY TRAINING COMPLETED IN 9.1s
+  Final Validation QWK:              0.9630
+  Final Validation Macro-F1:         0.8667
+  Final Validation Accuracy:         0.8571
+  Final Validation Balanced Acc:     0.9000
+  Final Validation MAE:              0.1429
+==================================================================
+
+[SUCCESS] Module 03 deliverables successfully saved to outputs/Module_03_Baseline_Swin_Tiny

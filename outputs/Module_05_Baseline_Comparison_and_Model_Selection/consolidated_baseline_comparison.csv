@@ -1,0 +1,4 @@
+Model,Checkpoint_Path,Epoch,Val_Samples,Accuracy,Accuracy_Pct,Quadratic_Weighted_Kappa,Macro_F1,Weighted_F1,MAE,Total_Parameters,Total_Parameters_M,Trainable_Parameters,Trainable_Parameters_M
+ConvNeXt-Small,outputs/Module_02_Baseline_ConvNeXt_Small/full_ddr/best_model.pth,5,1247,0.8444,84.44%,0.889,0.6958,0.8468,0.2173,49458533,49.46,49458533,49.46
+EfficientNet-B3,outputs/Module_04_Baseline_EfficientNet_B3/full_ddr/best_model.pth,5,1247,0.7281,72.81%,0.8261,0.6078,0.7542,0.3577,10703917,10.7,10703917,10.7
+Swin-Tiny,outputs/Module_03_Baseline_Swin_Tiny/clean_run/best_model_clean.pth,8,1247,0.7033,70.33%,0.8643,0.569,0.7376,0.3416,27520126,27.52,27520126,27.52

@@ -1,0 +1,198 @@
+{
+  "audit_metadata": {
+    "task": "Module 05 Baseline Final Audit and Consolidation",
+    "dataset": "OIA-DDR Full Clinical Dataset",
+    "split": "80/10/10 leak-free split",
+    "validation_manifest": "data_manifests/split_80_10_10/val_manifest.csv",
+    "validation_samples": 1247,
+    "audit_timestamp": "2026-11-01",
+    "leading_candidate": "ConvNeXt-Small"
+  },
+  "overall_comparison": [
+    {
+      "Model": "ConvNeXt-Small",
+      "Checkpoint_Path": "outputs/Module_02_Baseline_ConvNeXt_Small/full_ddr/best_model.pth",
+      "Epoch": 5,
+      "Val_Samples": 1247,
+      "Accuracy": 0.8444,
+      "Accuracy_Pct": "84.44%",
+      "Quadratic_Weighted_Kappa": 0.889,
+      "Macro_F1": 0.6958,
+      "Weighted_F1": 0.8468,
+      "MAE": 0.2173,
+      "Total_Parameters": 49458533,
+      "Total_Parameters_M": 49.46,
+      "Trainable_Parameters": 49458533,
+      "Trainable_Parameters_M": 49.46
+    },
+    {
+      "Model": "EfficientNet-B3",
+      "Checkpoint_Path": "outputs/Module_04_Baseline_EfficientNet_B3/full_ddr/best_model.pth",
+      "Epoch": 5,
+      "Val_Samples": 1247,
+      "Accuracy": 0.7281,
+      "Accuracy_Pct": "72.81%",
+      "Quadratic_Weighted_Kappa": 0.8261,
+      "Macro_F1": 0.6078,
+      "Weighted_F1": 0.7542,
+      "MAE": 0.3577,
+      "Total_Parameters": 10703917,
+      "Total_Parameters_M": 10.7,
+      "Trainable_Parameters": 10703917,
+      "Trainable_Parameters_M": 10.7
+    },
+    {
+      "Model": "Swin-Tiny",
+      "Checkpoint_Path": "outputs/Module_03_Baseline_Swin_Tiny/clean_run/best_model_clean.pth",
+      "Epoch": 8,
+      "Val_Samples": 1247,
+      "Accuracy": 0.7033,
+      "Accuracy_Pct": "70.33%",
+      "Quadratic_Weighted_Kappa": 0.8643,
+      "Macro_F1": 0.569,
+      "Weighted_F1": 0.7376,
+      "MAE": 0.3416,
+      "Total_Parameters": 27520126,
+      "Total_Parameters_M": 27.52,
+      "Trainable_Parameters": 27520126,
+      "Trainable_Parameters_M": 27.52
+    }
+  ],
+  "per_grade_breakdown": [
+    {
+      "Model": "ConvNeXt-Small",
+      "Grade": 0,
+      "Grade_Name": "Grade 0 (No DR)",
+      "Support": 626,
+      "Precision": 0.9173,
+      "Recall": 0.9217,
+      "F1_Score": 0.9195
+    },
+    {
+      "Model": "ConvNeXt-Small",
+      "Grade": 1,
+      "Grade_Name": "Grade 1 (Mild NPDR)",
+      "Support": 66,
+      "Precision": 0.2973,
+      "Recall": 0.3333,
+      "F1_Score": 0.3143
+    },
+    {
+      "Model": "ConvNeXt-Small",
+      "Grade": 2,
+      "Grade_Name": "Grade 2 (Moderate NPDR)",
+      "Support": 439,
+      "Precision": 0.8609,
+      "Recall": 0.8178,
+      "F1_Score": 0.8388
+    },
+    {
+      "Model": "ConvNeXt-Small",
+      "Grade": 3,
+      "Grade_Name": "Grade 3 (Severe NPDR)",
+      "Support": 28,
+      "Precision": 0.4857,
+      "Recall": 0.6071,
+      "F1_Score": 0.5397
+    },
+    {
+      "Model": "ConvNeXt-Small",
+      "Grade": 4,
+      "Grade_Name": "Grade 4 (Proliferative DR)",
+      "Support": 88,
+      "Precision": 0.8478,
+      "Recall": 0.8864,
+      "F1_Score": 0.8667
+    },
+    {
+      "Model": "EfficientNet-B3",
+      "Grade": 0,
+      "Grade_Name": "Grade 0 (No DR)",
+      "Support": 626,
+      "Precision": 0.8706,
+      "Recall": 0.8387,
+      "F1_Score": 0.8544
+    },
+    {
+      "Model": "EfficientNet-B3",
+      "Grade": 1,
+      "Grade_Name": "Grade 1 (Mild NPDR)",
+      "Support": 66,
+      "Precision": 0.1739,
+      "Recall": 0.4848,
+      "F1_Score": 0.256
+    },
+    {
+      "Model": "EfficientNet-B3",
+      "Grade": 2,
+      "Grade_Name": "Grade 2 (Moderate NPDR)",
+      "Support": 439,
+      "Precision": 0.8382,
+      "Recall": 0.59,
+      "F1_Score": 0.6925
+    },
+    {
+      "Model": "EfficientNet-B3",
+      "Grade": 3,
+      "Grade_Name": "Grade 3 (Severe NPDR)",
+      "Support": 28,
+      "Precision": 0.2903,
+      "Recall": 0.6429,
+      "F1_Score": 0.4
+    },
+    {
+      "Model": "EfficientNet-B3",
+      "Grade": 4,
+      "Grade_Name": "Grade 4 (Proliferative DR)",
+      "Support": 88,
+      "Precision": 0.8315,
+      "Recall": 0.8409,
+      "F1_Score": 0.8362
+    },
+    {
+      "Model": "Swin-Tiny",
+      "Grade": 0,
+      "Grade_Name": "Grade 0 (No DR)",
+      "Support": 626,
+      "Precision": 0.8915,
+      "Recall": 0.893,
+      "F1_Score": 0.8923
+    },
+    {
+      "Model": "Swin-Tiny",
+      "Grade": 1,
+      "Grade_Name": "Grade 1 (Mild NPDR)",
+      "Support": 66,
+      "Precision": 0.1061,
+      "Recall": 0.3182,
+      "F1_Score": 0.1591
+    },
+    {
+      "Model": "Swin-Tiny",
+      "Grade": 2,
+      "Grade_Name": "Grade 2 (Moderate NPDR)",
+      "Support": 439,
+      "Precision": 0.8739,
+      "Recall": 0.4579,
+      "F1_Score": 0.6009
+    },
+    {
+      "Model": "Swin-Tiny",
+      "Grade": 3,
+      "Grade_Name": "Grade 3 (Severe NPDR)",
+      "Support": 28,
+      "Precision": 0.1875,
+      "Recall": 0.75,
+      "F1_Score": 0.3
+    },
+    {
+      "Model": "Swin-Tiny",
+      "Grade": 4,
+      "Grade_Name": "Grade 4 (Proliferative DR)",
+      "Support": 88,
+      "Precision": 0.9375,
+      "Recall": 0.8523,
+      "F1_Score": 0.8929
+    }
+  ]
+}

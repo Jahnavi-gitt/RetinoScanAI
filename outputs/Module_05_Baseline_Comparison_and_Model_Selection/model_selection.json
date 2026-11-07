@@ -1,0 +1,86 @@
+{
+    "selected_model": "Swin-Tiny",
+    "selection_criteria": "Highest validation Quadratic Weighted Kappa (QWK) on standardized DDR split",
+    "validation_metrics": {
+        "quadratic_weighted_kappa": 0.963,
+        "macro_f1": 0.8667,
+        "accuracy": 0.8571,
+        "balanced_accuracy": 0.9,
+        "mean_absolute_error": 0.1429,
+        "loss": 0.8124
+    },
+    "architecture_specifications": {
+        "name": "Swin-Tiny",
+        "backbone_type": "Hierarchical Vision Transformer (Shifted Windows)",
+        "parameter_count": 27523199,
+        "feature_dim": 768,
+        "spatial_feature_shape": [
+            768,
+            7,
+            7
+        ],
+        "num_spatial_tokens": 49,
+        "checkpoint_path": "outputs/Module_03_Baseline_Swin_Tiny/best_model.pth"
+    },
+    "downstream_integration_contracts": {
+        "module_06_radiomics": {
+            "spatial_grid": "3x3 sub-regions",
+            "feature_alignment": "Spatial pooling matches 2D retinal anatomy"
+        },
+        "module_07_cross_attention": {
+            "query_modality": "Visual spatial tokens (B, 49, 768)",
+            "key_value_modality": "Radiomic spatial tokens (B, 9, 768)",
+            "output_shape": "(B, 49, 768)"
+        },
+        "module_08_imbalance": {
+            "strategy": "Effective Number of Samples Class-Balanced Loss & Cost-Sensitive Matrix"
+        },
+        "module_09_ordinal": {
+            "strategy": "CORAL Ordinal Regression (4 binary rank classifiers)"
+        }
+    },
+    "comparison_summary": [
+        {
+            "Rank": 1,
+            "Model": "Swin-Tiny",
+            "Validation QWK": 0.963,
+            "Validation Macro-F1": 0.8667,
+            "Validation Accuracy": 0.8571,
+            "Validation Balanced Acc": 0.9,
+            "Validation MAE": 0.1429,
+            "Validation Loss": 0.8124,
+            "Parameters (M)": 27.52,
+            "Training Time (s)": 6.39,
+            "Feature Dim": 768,
+            "Spatial Token Grid": "7x7"
+        },
+        {
+            "Rank": 2,
+            "Model": "ConvNeXt-Small",
+            "Validation QWK": 0.9014,
+            "Validation Macro-F1": 0.2933,
+            "Validation Accuracy": 0.5714,
+            "Validation Balanced Acc": 0.4,
+            "Validation MAE": 0.4286,
+            "Validation Loss": 1.3674,
+            "Parameters (M)": 49.46,
+            "Training Time (s)": 9.76,
+            "Feature Dim": 768,
+            "Spatial Token Grid": "7x7"
+        },
+        {
+            "Rank": 3,
+            "Model": "EfficientNet-B3",
+            "Validation QWK": 0.467,
+            "Validation Macro-F1": 0.4,
+            "Validation Accuracy": 0.4286,
+            "Validation Balanced Acc": 0.4,
+            "Validation MAE": 1.0,
+            "Validation Loss": 1.47,
+            "Parameters (M)": 10.7,
+            "Training Time (s)": 7.17,
+            "Feature Dim": 1536,
+            "Spatial Token Grid": "7x7"
+        }
+    ]
+}

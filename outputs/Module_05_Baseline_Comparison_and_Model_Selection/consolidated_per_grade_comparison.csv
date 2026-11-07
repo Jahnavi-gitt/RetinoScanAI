@@ -1,0 +1,16 @@
+Model,Grade,Grade_Name,Support,Precision,Recall,F1_Score
+ConvNeXt-Small,0,Grade 0 (No DR),626,0.9173,0.9217,0.9195
+ConvNeXt-Small,1,Grade 1 (Mild NPDR),66,0.2973,0.3333,0.3143
+ConvNeXt-Small,2,Grade 2 (Moderate NPDR),439,0.8609,0.8178,0.8388
+ConvNeXt-Small,3,Grade 3 (Severe NPDR),28,0.4857,0.6071,0.5397
+ConvNeXt-Small,4,Grade 4 (Proliferative DR),88,0.8478,0.8864,0.8667
+EfficientNet-B3,0,Grade 0 (No DR),626,0.8706,0.8387,0.8544
+EfficientNet-B3,1,Grade 1 (Mild NPDR),66,0.1739,0.4848,0.256
+EfficientNet-B3,2,Grade 2 (Moderate NPDR),439,0.8382,0.59,0.6925
+EfficientNet-B3,3,Grade 3 (Severe NPDR),28,0.2903,0.6429,0.4
+EfficientNet-B3,4,Grade 4 (Proliferative DR),88,0.8315,0.8409,0.8362
+Swin-Tiny,0,Grade 0 (No DR),626,0.8915,0.893,0.8923
+Swin-Tiny,1,Grade 1 (Mild NPDR),66,0.1061,0.3182,0.1591
+Swin-Tiny,2,Grade 2 (Moderate NPDR),439,0.8739,0.4579,0.6009
+Swin-Tiny,3,Grade 3 (Severe NPDR),28,0.1875,0.75,0.3
+Swin-Tiny,4,Grade 4 (Proliferative DR),88,0.9375,0.8523,0.8929
